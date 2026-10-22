@@ -33,6 +33,7 @@
   frames.forEach((f) => f.addEventListener('load', () => {
     if (f.dataset.site === current) loading.classList.add('done');
   }));
+  load(frames.find((f) => f.dataset.site === current));
   // backstop: never leave the spinner up if a load event is missed
   setTimeout(() => loading.classList.add('done'), 8000);
 
