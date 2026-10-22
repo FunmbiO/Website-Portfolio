@@ -54,34 +54,30 @@
   </div>
 
   <div class="hero-visual">
-    <div class="cap"><span>[01] LIVE PREVIEW</span><span>X:1280PX Y:800PX</span></div>
+    <div class="cap"><span>[01] LIVE PREVIEW</span><span id="preview-dim">1280 × 800</span></div>
     <div class="browser">
       <div class="browser-bar">
         <i></i><i></i><i></i>
-        <div class="url" id="preview-url">jadedmedia.ca</div>
+        <div class="url" id="preview-url">www.jadedmedia.ca</div>
+        <a class="open" id="preview-open" href="https://www.jadedmedia.ca" target="_blank" rel="noopener" aria-label="Open this site in a new tab">↗</a>
       </div>
-      <div class="browser-body">
-        <div class="mock on" data-mock="jaded-media" data-url="jadedmedia.ca">
-          <div class="mock-row"><div class="bar" style="width:80px;height:12px;background:var(--text)"></div><div class="mock-nav"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div></div>
-          <div class="bar t" style="width:82%;margin-top:18px"></div>
-          <div class="bar t" style="width:58%"></div>
-          <div class="bar" style="width:68%"></div>
-          <div class="bar pill"></div>
-          <div class="mock-tiles"><div class="tile"></div><div class="tile l"></div><div class="tile"></div></div>
-        </div>
-        <div class="mock" data-mock="edgeline-exports" data-url="edgeline-exports.vercel.app">
-          <div class="mock-row"><div class="bar" style="width:96px;height:12px;background:var(--text)"></div><div class="mock-nav"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div></div>
-          <div class="bar t" style="width:70%;margin-top:18px"></div>
-          <div class="bar t" style="width:90%"></div>
-          <div class="bar" style="width:52%"></div>
-          <div class="bar pill" style="width:148px"></div>
-          <div class="mock-tiles"><div class="tile l"></div><div class="tile a"></div><div class="tile"></div></div>
+      <div class="viewport" id="viewport" data-device="desktop">
+        <div class="vp-loading" id="vp-loading"><span></span>Loading live site</div>
+        <div class="vp-stage" id="vp-stage">
+          <iframe class="vp-frame on" title="Jaded Media live site" data-site="jaded-media" data-url="www.jadedmedia.ca" data-href="https://www.jadedmedia.ca" src="https://www.jadedmedia.ca" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+          <iframe class="vp-frame" title="Edgeline Exports live site" data-site="edgeline-exports" data-url="edgeline-exports.vercel.app" data-href="https://edgeline-exports.vercel.app" data-src="https://edgeline-exports.vercel.app" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
         </div>
       </div>
     </div>
-    <div class="tabs" role="tablist" aria-label="Preview a project">
-      <button class="tab" role="tab" aria-selected="true" data-target="jaded-media">Jaded Media</button>
-      <button class="tab" role="tab" aria-selected="false" data-target="edgeline-exports">Edgeline Exports</button>
+    <div class="controls">
+      <div class="tabs" role="tablist" aria-label="Choose a project">
+        <button class="tab" role="tab" aria-selected="true" data-target="jaded-media">Jaded Media</button>
+        <button class="tab" role="tab" aria-selected="false" data-target="edgeline-exports">Edgeline Exports</button>
+      </div>
+      <div class="tabs devices" role="group" aria-label="Preview size">
+        <button class="tab" aria-pressed="true" data-device="desktop">Desktop</button>
+        <button class="tab" aria-pressed="false" data-device="mobile">Mobile</button>
+      </div>
     </div>
   </div>
 </section>

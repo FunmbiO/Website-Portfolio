@@ -309,3 +309,21 @@ h1 em.serif { font-size: 1.08em; }
 .foot-cols span { color: var(--gold); }
 .tab[aria-selected="true"] { background: var(--gold-grad); border-color: var(--gold); }
 .tile.a { background: var(--gold-grad); border-color: transparent; }
+
+/* ---------- live preview ---------- */
+.browser-bar .open { margin-left: 6px; font-family: var(--font-mono); font-size: 13px; color: var(--gold); border: 1px solid var(--gold-line); border-radius: 999px; width: 28px; height: 22px; display: inline-flex; align-items: center; justify-content: center; flex: none; }
+.browser-bar .open:hover { background: var(--gold); color: var(--bg); }
+.viewport { position: relative; width: 100%; aspect-ratio: 16 / 10; background: #fff; overflow: hidden; }
+.viewport[data-device="mobile"] { background: radial-gradient(500px 300px at 50% 0, rgba(61, 220, 151, .14), transparent), var(--panel-2); }
+.vp-stage { position: absolute; top: 0; left: 0; width: 1280px; height: 800px; transform-origin: top left; }
+.vp-frame { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #fff; opacity: 0; pointer-events: none; transition: opacity .35s ease; }
+.vp-frame.on { opacity: 1; pointer-events: auto; }
+.viewport[data-device="mobile"] .vp-frame { border-radius: 36px; box-shadow: 0 0 0 10px #050505, 0 0 0 11px var(--gold-line); }
+.vp-loading { position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: center; gap: 12px; background: var(--panel); color: var(--muted); font: 500 12px var(--font-mono); letter-spacing: .14em; text-transform: uppercase; transition: opacity .4s ease, visibility .4s; }
+.vp-loading.done { opacity: 0; visibility: hidden; pointer-events: none; }
+.vp-loading span { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--gold-line); border-top-color: var(--gold); animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.controls { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 14px; }
+.controls .tabs { margin-top: 0; }
+.tab[aria-pressed="true"] { background: var(--gold-grad); color: var(--accent-ink); border-color: var(--gold); }
+@media (max-width: 720px) { .controls { justify-content: flex-start; } }
