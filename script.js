@@ -54,6 +54,25 @@
     fit();
   }));
 
+  // work-card thumbnails: scale to card width, load when near the viewport
+  const thumbs = document.querySelectorAll('.thumb');
+  const sizeThumb = (t) => t.style.setProperty('--k', (t.clientWidth / 1280).toFixed(4));
+  const thumbIO = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      const f = e.target.querySelector('iframe');
+      f.addEventListener('load', () => f.classList.add('ready'));
+      f.src = f.dataset.src;
+      thumbIO.unobserve(e.target);
+    });
+  }, { rootMargin: '300px' }) : null;
+  thumbs.forEach((t) => {
+    new ResizeObserver(() => sizeThumb(t)).observe(t);
+    sizeThumb(t);
+    if (thumbIO) thumbIO.observe(t);
+    else { const f = t.querySelector('iframe'); f.src = f.dataset.src; f.classList.add('ready'); }
+  });
+
   // warm the second site once the page is idle
   const idle = window.requestIdleCallback || ((fn) => setTimeout(fn, 2500));
   idle(() => frames.forEach(load));

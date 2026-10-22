@@ -327,3 +327,13 @@ h1 em.serif { font-size: 1.08em; }
 .controls .tabs { margin-top: 0; }
 .tab[aria-pressed="true"] { background: var(--gold-grad); color: var(--accent-ink); border-color: var(--gold); }
 @media (max-width: 720px) { .controls { justify-content: flex-start; } }
+
+/* ---------- live thumbnails in work cards ---------- */
+.case-art { padding: 0; display: block; background: #fff; }
+.thumb { position: absolute; inset: 0; overflow: hidden; }
+.thumb iframe { position: absolute; top: 0; left: 0; width: 1280px; height: 1000px; border: 0; transform-origin: top left; transform: scale(var(--k, .4)); pointer-events: none; background: #fff; opacity: 0; transition: opacity .5s ease; }
+.thumb iframe.ready { opacity: 1; }
+.case-art::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10, 11, 10, .35) 0%, transparent 28%, transparent 70%, rgba(10, 11, 10, .45) 100%); pointer-events: none; }
+.case-art .tag, .case-art .go { z-index: 2; }
+.case-art .tag { background: rgba(10, 11, 10, .78); border: 1px solid var(--gold-line); border-radius: 999px; padding: 4px 12px; color: var(--gold-hi); backdrop-filter: blur(6px); }
+.case-art .go { background: var(--gold-grad); }
