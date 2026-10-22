@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jaded Works — Sites built to work as hard as you do</title>
-<meta name="description" content="Jaded Works is the portfolio of FunmbiO: fast, clear websites for creative and automotive businesses, including Jaded Media and Edgeline Exports.">
+<title>Jaded Works — Websites for photographers, filmmakers and dealers</title>
+<meta name="description" content="Jaded Works is the portfolio of FunmbiO: custom websites for creative and automotive businesses. Browse Jaded Media and Edgeline Exports live.">
 <meta name="theme-color" content="#0A0A0A">
-<meta property="og:title" content="Jaded Works — Sites built to work as hard as you do">
-<meta property="og:description" content="Portfolio of FunmbiO: Jaded Media (photo &amp; film) and Edgeline Exports (online dealership).">
+<meta property="og:title" content="Jaded Works — Websites for photographers, filmmakers and dealers">
+<meta property="og:description" content="Browse two live builds by FunmbiO: Jaded Media (photo &amp; film) and Edgeline Exports (online dealership).">
 <meta property="og:type" content="website">
 <meta property="og:image" content="/assets/og.svg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Hanken+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Hanken+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
         <li class="hide-sm"><a href="#process">Process</a></li>
         <li class="hide-sm"><a href="#engage">Work with me</a></li>
         <li class="hide-sm"><a href="#faq">FAQ</a></li>
-        <li><a class="btn sm" href="#contact">Start a project →</a></li>
+        <li><a class="btn sm" href="#contact">Get a quote →</a></li>
       </ul>
     </nav>
   </div>
@@ -39,60 +39,56 @@
 
 <section class="wrap hero">
   <div class="hero-copy">
-    <div class="eyebrow">Web design · Photo &amp; film · Automotive — Canada &amp; beyond</div>
-    <h1>Websites built to work as hard as you do.</h1>
-    <p class="lede">One builder, one point of contact. I design and ship fast, clear sites that bring in customers, then keep them running.</p>
+    <div class="eyebrow">Web design · Photo &amp; film · Automotive</div>
+    <h1>Websites that look <em class="serif">expensive</em> and load fast.</h1>
+    <p class="lede">I'm FunmbiO. I design, code and host websites for photographers, filmmakers and dealerships. Two of them are live on this page. Scroll through them below.</p>
     <div class="hero-actions">
-      <a class="btn" href="#contact">Price my site →</a>
-      <a class="btn ghost" href="#work">View the work</a>
+      <a class="btn" href="#contact">Get a quote →</a>
+      <a class="btn ghost" href="#work">See the work</a>
     </div>
     <div class="pills">
       <span>2 sites live</span>
-      <span>No page-builders</span>
+      <span>Hand-coded</span>
       <span>Hosted on Vercel</span>
     </div>
   </div>
 
   <div class="hero-visual">
-    <div class="cap"><span>[01] LIVE PREVIEW</span><span>X:1280PX Y:800PX</span></div>
+    <div class="cap"><span>[01] LIVE PREVIEW</span><span id="preview-dim">1280 × 800</span></div>
     <div class="browser">
       <div class="browser-bar">
         <i></i><i></i><i></i>
-        <div class="url" id="preview-url">jadedmedia.ca</div>
+        <div class="url" id="preview-url">www.jadedmedia.ca</div>
+        <a class="open" id="preview-open" href="https://www.jadedmedia.ca" target="_blank" rel="noopener" aria-label="Open this site in a new tab">↗</a>
       </div>
-      <div class="browser-body">
-        <div class="mock on" data-mock="jaded-media" data-url="jadedmedia.ca">
-          <div class="mock-row"><div class="bar" style="width:80px;height:12px;background:var(--text)"></div><div class="mock-nav"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div></div>
-          <div class="bar t" style="width:82%;margin-top:18px"></div>
-          <div class="bar t" style="width:58%"></div>
-          <div class="bar" style="width:68%"></div>
-          <div class="bar pill"></div>
-          <div class="mock-tiles"><div class="tile"></div><div class="tile l"></div><div class="tile"></div></div>
-        </div>
-        <div class="mock" data-mock="edgeline-exports" data-url="edgeline-exports.vercel.app">
-          <div class="mock-row"><div class="bar" style="width:96px;height:12px;background:var(--text)"></div><div class="mock-nav"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div></div>
-          <div class="bar t" style="width:70%;margin-top:18px"></div>
-          <div class="bar t" style="width:90%"></div>
-          <div class="bar" style="width:52%"></div>
-          <div class="bar pill" style="width:148px"></div>
-          <div class="mock-tiles"><div class="tile l"></div><div class="tile a"></div><div class="tile"></div></div>
+      <div class="viewport" id="viewport" data-device="desktop">
+        <div class="vp-loading" id="vp-loading"><span></span>Loading live site</div>
+        <div class="vp-stage" id="vp-stage">
+          <iframe class="vp-frame on" title="Jaded Media live site" data-site="jaded-media" data-url="www.jadedmedia.ca" data-href="https://www.jadedmedia.ca" data-src="https://www.jadedmedia.ca" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+          <iframe class="vp-frame" title="Edgeline Exports live site" data-site="edgeline-exports" data-url="edgeline-exports.vercel.app" data-href="https://edgeline-exports.vercel.app" data-src="https://edgeline-exports.vercel.app" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
         </div>
       </div>
     </div>
-    <div class="tabs" role="tablist" aria-label="Preview a project">
-      <button class="tab" role="tab" aria-selected="true" data-target="jaded-media">Jaded Media</button>
-      <button class="tab" role="tab" aria-selected="false" data-target="edgeline-exports">Edgeline Exports</button>
+    <div class="controls">
+      <div class="tabs" role="tablist" aria-label="Choose a project">
+        <button class="tab" role="tab" aria-selected="true" data-target="jaded-media">Jaded Media</button>
+        <button class="tab" role="tab" aria-selected="false" data-target="edgeline-exports">Edgeline Exports</button>
+      </div>
+      <div class="tabs devices" role="group" aria-label="Preview size">
+        <button class="tab" aria-pressed="true" data-device="desktop">Desktop</button>
+        <button class="tab" aria-pressed="false" data-device="mobile">Mobile</button>
+      </div>
     </div>
   </div>
 </section>
 
 <div class="strip">
   <div class="wrap">
-    <div class="label">Shipped for</div>
+    <div class="label">Built for</div>
     <div class="item">JADED MEDIA</div>
     <div class="item">EDGELINE EXPORTS</div>
-    <div class="item">VERCEL</div>
-    <div class="item">YOU, NEXT</div>
+    <div class="item">CANADA</div>
+    <div class="item">USA</div>
   </div>
 </div>
 
@@ -100,50 +96,48 @@
   <div class="head row">
     <div>
       <div class="eyebrow">Selected work</div>
-      <h2>Real sites. Really live.</h2>
+      <h2>Two sites, <em class="serif">both live</em>.</h2>
     </div>
     <a href="https://github.com/FunmbiO" rel="noopener" style="font-weight:700;text-underline-offset:5px;text-decoration:underline">More on GitHub →</a>
   </div>
 
   <div class="work-grid">
-    <a class="case big rv" href="https://jadedmedia.ca" target="_blank" rel="noopener">
+    <a class="case big rv" href="https://www.jadedmedia.ca" target="_blank" rel="noopener">
       <div class="case-art">
+        <div class="thumb"><iframe title="" tabindex="-1" aria-hidden="true" loading="lazy" data-src="https://www.jadedmedia.ca" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin"></iframe></div>
         <span class="tag">[01] Photo &amp; film</span><span class="go">Visit ↗</span>
-        <div class="blk light" style="flex:3;height:78%"></div>
-        <div class="blk accent" style="flex:1;height:52%"></div>
       </div>
       <div class="case-meta"><b>Jaded Media</b><span>Photography &amp; film</span></div>
-      <p class="case-blurb">The home of my own photography and film business. A bold, editorial site built around one line, “Photo and film, let's make art,” with the work front and centre.</p>
+      <p class="case-blurb">Studio site for Jaded Media, my own photography and film business. It opens with one line, “Photo and film, let's make art.”, and then gets out of the way of the work.</p>
     </a>
     <a class="case rv" href="https://edgeline-exports.vercel.app" target="_blank" rel="noopener">
-      <div class="case-art grid">
+      <div class="case-art">
+        <div class="thumb"><iframe title="" tabindex="-1" aria-hidden="true" loading="lazy" data-src="https://edgeline-exports.vercel.app" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin"></iframe></div>
         <span class="tag">[02] Automotive</span><span class="go">Visit ↗</span>
-        <div class="blk dark"></div><div class="blk light"></div>
-        <div class="blk accent"></div><div class="blk dark"></div>
       </div>
       <div class="case-meta"><b>Edgeline Exports</b><span>Online dealership</span></div>
-      <p class="case-blurb">An online-only dealership that buys, sells and sources performance and luxury vehicles across Canada and the US. Inventory, sourcing and selling flows, bilingual (EN/FR) with light and dark modes.</p>
+      <p class="case-blurb">Site for an online-only dealership selling performance and luxury cars across Canada and the US. It has inventory listings, a source-a-car request, a sell-your-car flow, English and French, and light and dark themes.</p>
     </a>
   </div>
 
   <div class="stats">
-    <div class="stat"><b>02</b><span>Live projects</span></div>
-    <div class="stat"><b>01</b><span>Point of contact</span></div>
-    <div class="stat"><b>24/7</b><span>Always on, on Vercel</span></div>
-    <div class="stat"><b>0</b><span>Templates reused</span></div>
+    <div class="stat"><b>02</b><span>Sites live</span></div>
+    <div class="stat"><b>CA/US</b><span>Markets served</span></div>
+    <div class="stat"><b>EN/FR</b><span>Bilingual build</span></div>
+    <div class="stat"><b>0</b><span>Page-builder code</span></div>
   </div>
 </section>
 
 <section id="services" class="wrap section">
   <div class="head">
     <div class="eyebrow">What I build</div>
-    <h2 style="max-width:700px">Four ways I help you grow online.</h2>
+    <h2 style="max-width:700px">What I <em class="serif">build</em>.</h2>
   </div>
   <div class="cards">
-    <div class="card rv"><div class="n">[01]</div><h3>Brand &amp; creative sites</h3><p>Portfolio-first sites for photographers, filmmakers and studios that let the work do the talking.</p></div>
-    <div class="card rv"><div class="n">[02]</div><h3>Dealership &amp; commerce sites</h3><p>Inventory, sourcing and enquiry flows for businesses selling across borders, with trust built in.</p></div>
-    <div class="card rv"><div class="n">[03]</div><h3>Custom web apps</h3><p>Booking tools, portals and dashboards shaped around how your team actually works.</p></div>
-    <div class="card rv"><div class="n">[04]</div><h3>Care &amp; hosting</h3><p>Deploys, updates and edits handled for you, so your site never goes stale.</p></div>
+    <div class="card rv"><div class="n">[01]</div><h3>Studio &amp; portfolio sites</h3><p>For photographers, filmmakers and studios. The work leads and the interface stays quiet.</p></div>
+    <div class="card rv"><div class="n">[02]</div><h3>Dealership &amp; catalogue sites</h3><p>Inventory pages, sourcing requests and sell-to-us forms for businesses moving high-value goods.</p></div>
+    <div class="card rv"><div class="n">[03]</div><h3>Custom web apps</h3><p>Booking tools, admin panels and client portals built around one team's workflow.</p></div>
+    <div class="card rv"><div class="n">[04]</div><h3>Hosting &amp; upkeep</h3><p>Domains, deploys, updates and small edits handled each month.</p></div>
   </div>
 </section>
 
@@ -151,8 +145,8 @@
   <div class="split">
     <div class="split-copy">
       <div class="eyebrow">Signal / noise</div>
-      <h2>Same business. Very different first impression.</h2>
-      <p>A slow, cluttered site costs you customers before they ever get in touch. I replace it with something fast, clear and easy to trust.</p>
+      <h2>Cut the <em class="serif">clutter</em>.</h2>
+      <p>Most small-business sites bury the one thing a visitor came for. I give each page a single job: show the work, show the stock, or start the conversation.</p>
     </div>
     <div class="ba">
       <div class="ba-col">
@@ -182,19 +176,19 @@
 
 <section class="wrap section">
   <div class="eyebrow" style="margin-bottom:24px">Philosophy</div>
-  <p class="statement">A good website isn't decoration. It's the hardest-working person on your team, and it <em>never</em> takes a day off.</p>
+  <p class="statement">Your website is the first meeting. It should <em>dress for it</em>.</p>
 </section>
 
 <section id="process" class="wrap section">
   <div class="head">
     <div class="eyebrow">How it works</div>
-    <h2>From first call to live in days.</h2>
+    <h2>From first call to <em class="serif">launch</em>.</h2>
   </div>
   <div class="steps">
-    <div class="step"><div class="n">[01] →</div><b>Discovery call</b><p>A short chat about your goals, customers and deadline.</p></div>
-    <div class="step"><div class="n">[02] →</div><b>Fixed proposal</b><p>Clear scope, clear price, clear dates. No surprises later.</p></div>
-    <div class="step"><div class="n">[03] →</div><b>Design and build</b><p>Follow progress on a live Vercel preview link and request changes as we go.</p></div>
-    <div class="step"><div class="n">[04]</div><b>Launch</b><p>Domain, hosting and go-live handled, then I stay on call.</p></div>
+    <div class="step"><div class="n">[01] →</div><b>Discovery call</b><p>A short call about what you sell, who buys it and when you want to launch.</p></div>
+    <div class="step"><div class="n">[02] →</div><b>Fixed proposal</b><p>Scope, price and dates written down before any work starts.</p></div>
+    <div class="step"><div class="n">[03] →</div><b>Design and build</b><p>You get a private preview link and can comment while the site takes shape.</p></div>
+    <div class="step"><div class="n">[04]</div><b>Launch</b><p>Domain, hosting and go-live are handled. I stay reachable after.</p></div>
   </div>
 </section>
 
@@ -202,22 +196,22 @@
   <div class="wrap">
     <div class="head">
       <div class="eyebrow">Why Jaded Works</div>
-      <h2>Template shop vs. Jaded Works.</h2>
+      <h2>Template vs. <em class="serif" style="filter:brightness(.7)">tailored</em>.</h2>
     </div>
     <div class="vs">
       <div class="them">
-        <b>Typical template shop</b>
-        <div>The same layout everyone else is using</div>
-        <div>Heavy page-builder code and slow loads</div>
-        <div>You hand over content, then wait</div>
-        <div>Edits billed by the hour</div>
+        <b>Off-the-shelf template</b>
+        <div>Same layout as thousands of other sites</div>
+        <div>Page-builder code that slows every load</div>
+        <div>You send content and wait</div>
+        <div>Every edit is a billable ticket</div>
       </div>
       <div class="us">
         <b>Jaded Works</b>
-        <div>A real design to react to, built for your brand</div>
-        <div>Hand-written, lightweight, fast on mobile</div>
-        <div>Content guidance so you don't stall</div>
-        <div>Small edits included in every care plan</div>
+        <div>Layout drawn around your brand</div>
+        <div>Hand-coded, light and quick on a phone</div>
+        <div>Help shaping the copy and imagery</div>
+        <div>Small edits included with a care plan</div>
       </div>
     </div>
   </div>
@@ -226,25 +220,25 @@
 <section id="engage" class="wrap section">
   <div class="head">
     <div class="eyebrow">Work with me</div>
-    <h2>Three ways in. One clear quote each.</h2>
+    <h2>Three ways to <em class="serif">start</em>.</h2>
   </div>
   <div class="plans">
     <div class="plan">
       <div class="top"><span class="name">Starter</span></div>
       <div class="price">Quote</div>
-      <ul><li>A focused one-page site</li><li>Mobile-ready design</li><li>Contact route</li></ul>
+      <ul><li>One-page site</li><li>Phone, tablet and desktop layouts</li><li>Contact form or email link</li></ul>
       <a class="btn ghost block" href="#contact">Choose Starter</a>
     </div>
     <div class="plan hot">
-      <div class="top"><span class="name">Grow</span><span class="badge">MOST PICKED</span></div>
+      <div class="top"><span class="name">Grow</span><span class="badge">FULL BUILD</span></div>
       <div class="price">Quote</div>
-      <ul><li>Multi-page custom design</li><li>Copy and content direction</li><li>SEO setup and launch</li><li>Care plan available</li></ul>
+      <ul><li>Multi-page custom design</li><li>Copy and image direction</li><li>SEO setup and launch</li><li>Care plan optional</li></ul>
       <a class="btn block" href="#contact">Choose Grow</a>
     </div>
     <div class="plan">
       <div class="top"><span class="name">Scale</span></div>
       <div class="price">Quote</div>
-      <ul><li>Stores and web apps</li><li>Integrations and logins</li><li>Priority support</li></ul>
+      <ul><li>Catalogues, stores and web apps</li><li>Logins and integrations</li><li>Priority support</li></ul>
       <a class="btn ghost block" href="#contact">Request a quote</a>
     </div>
   </div>
@@ -254,13 +248,13 @@
   <div class="faq">
     <div class="faq-head">
       <div class="eyebrow">FAQ</div>
-      <h2>Questions I get a lot.</h2>
+      <h2>Before you <em class="serif">ask</em>.</h2>
     </div>
     <div class="faq-list">
-      <details><summary>How long does a project take?</summary><p>A focused site can be live in days; larger builds are scoped in the proposal with dates in writing.</p></details>
-      <details><summary>Do I own the website?</summary><p>Yes. The code, content and domain are yours at handover.</p></details>
-      <details><summary>What if I need changes after launch?</summary><p>Small edits are included with a care plan. Bigger changes are quoted up front.</p></details>
-      <details><summary>Can you move my existing site?</summary><p>Yes. I can rebuild or migrate it to fast hosting without losing your content or search rankings.</p></details>
+      <details><summary>How long does a project take?</summary><p>A one-page site can launch within a week. Larger builds get dates in the proposal.</p></details>
+      <details><summary>Do I own the website?</summary><p>Yes. Code, content and domain transfer to you at handover.</p></details>
+      <details><summary>What if I need changes after launch?</summary><p>Small edits come with a care plan. Anything bigger is quoted first.</p></details>
+      <details><summary>Can you move my existing site?</summary><p>Yes. I rebuild or migrate it and keep your URLs so search rankings carry over.</p></details>
     </div>
   </div>
 </section>
@@ -268,12 +262,12 @@
 <section id="contact" class="wrap section">
   <div class="cta">
     <div class="cta-copy">
-      <h2>Let's talk about your project.</h2>
-      <p>Tell me a little about what you need. I reply with next steps and a ballpark quote.</p>
+      <h2>Have a site in <em class="serif" style="filter:brightness(.35)">mind</em>?</h2>
+      <p>Send a few lines on what you sell and when you want to launch. You'll get next steps and a rough quote back.</p>
     </div>
     <div class="cta-actions">
-      <span class="eyebrow">Say hello</span>
-      <a class="btn dark" href="mailto:funmbiolajubu@gmail.com?subject=New%20project%20enquiry">Start your project →</a>
+      <span class="eyebrow">Email</span>
+      <a class="btn dark" href="mailto:funmbiolajubu@gmail.com?subject=New%20project%20enquiry">Email me →</a>
       <a class="mail" href="mailto:funmbiolajubu@gmail.com">funmbiolajubu@gmail.com</a>
     </div>
   </div>
@@ -289,7 +283,7 @@
     </div>
     <div class="foot-cols">
       <div><span>EXPLORE</span><a href="#work">Work</a><a href="#services">Services</a><a href="#engage">Work with me</a></div>
-      <div><span>PROJECTS</span><a href="https://jadedmedia.ca" target="_blank" rel="noopener">Jaded Media</a><a href="https://edgeline-exports.vercel.app" target="_blank" rel="noopener">Edgeline Exports</a></div>
+      <div><span>PROJECTS</span><a href="https://www.jadedmedia.ca" target="_blank" rel="noopener">Jaded Media</a><a href="https://edgeline-exports.vercel.app" target="_blank" rel="noopener">Edgeline Exports</a></div>
       <div><span>CONTACT</span><a href="mailto:funmbiolajubu@gmail.com">Email</a><a href="https://github.com/FunmbiO" target="_blank" rel="noopener">GitHub</a></div>
     </div>
   </div>
