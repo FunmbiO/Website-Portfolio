@@ -378,3 +378,41 @@ body::before { content: ''; position: fixed; inset: 0; z-index: -1; opacity: .05
 .foot { background: #150403; }
 @media (max-width: 720px) { .hero::before { width: 55%; right: 0; transform: none; opacity: .55; clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%); } }
 body { overflow-x: clip; }
+
+/* ---------- sage surfaces and black accents ---------- */
+:root { --black: #0A0A0A; --ink: #170504; }
+.sage-band { background: var(--sage); color: var(--ink); margin-top: 104px; padding-bottom: 96px; position: relative; }
+.sage-band .section { padding-top: 96px; }
+.sage-band .eyebrow { color: var(--burgundy); }
+.sage-band .eyebrow::before { background: var(--burgundy); }
+.sage-band h2, .sage-band .statement { color: var(--ink); }
+.sage-band em.serif, .sage-band .statement em { background: none; color: var(--burgundy); -webkit-text-fill-color: var(--burgundy); }
+.sage-band .head.row a { color: var(--ink); }
+.sage-band .head.row a:hover { color: var(--burgundy); }
+.sage-band .case { color: var(--ink); }
+.sage-band .case:hover { color: var(--ink); }
+.sage-band .case-art { border-color: var(--black); background: var(--black); }
+.sage-band .case:hover .case-art { border-color: var(--burgundy); }
+.sage-band .case-meta span { color: #3A3C33; }
+.sage-band .case-blurb { color: #2C2E27; }
+.sage-band .stats { border-color: rgba(23, 5, 4, .3); }
+.sage-band .stat b { background: none; color: var(--burgundy); -webkit-text-fill-color: var(--burgundy); }
+.sage-band .stat span { color: #2C2E27; }
+.sage-band .case-art .tag { background: var(--black); color: var(--cream); border-color: var(--black); }
+.sage-band .case-art .go { background: var(--burgundy); color: var(--cream); }
+/* black */
+.nav { background: rgba(10, 10, 10, .92); border-bottom: 1px solid rgba(165, 167, 155, .22); }
+.strip { background: var(--black); }
+.foot { background: var(--black); }
+.pills span { background: var(--black); }
+.cta .btn.dark { background: var(--black); color: var(--cream); }
+.cta .btn.dark:hover { color: #fff; }
+.plan { background: linear-gradient(180deg, #120403 0%, #0A0A0A 100%); }
+.plan.hot { background: linear-gradient(170deg, var(--burgundy) 0%, #2A0605 100%); }
+.ba-box { background: #120403; }
+.browser-bar { background: var(--black); }
+.browser-bar .url { background: #1A1A1A; }
+.btn.ghost { background: var(--black); }
+.hero::before { background: linear-gradient(160deg, var(--burgundy) 0%, #2A0605 55%, var(--black) 100%); }
+.vs .them { color: #1C1410; }
+@media (max-width: 720px) { .sage-band { margin-top: 72px; padding-bottom: 64px; } .sage-band .section { padding-top: 64px; } }
