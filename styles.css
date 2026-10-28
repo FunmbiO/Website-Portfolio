@@ -376,4 +376,5 @@ body::before { content: ''; position: fixed; inset: 0; z-index: -1; opacity: .05
 .tab[aria-selected="true"], .tab[aria-pressed="true"] { color: var(--accent-ink); }
 .strip { background: rgba(89, 9, 7, .35); }
 .foot { background: #150403; }
-@media (max-width: 720px) { .hero::before { width: 60%; right: -10%; opacity: .6; } }
+@media (max-width: 720px) { .hero::before { width: 55%; right: 0; transform: none; opacity: .55; clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%); } }
+body { overflow-x: clip; }
