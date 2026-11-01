@@ -416,3 +416,8 @@ body { overflow-x: clip; }
 .hero::before { background: linear-gradient(160deg, var(--burgundy) 0%, #2A0605 55%, var(--black) 100%); }
 .vs .them { color: #1C1410; }
 @media (max-width: 720px) { .sage-band { margin-top: 72px; padding-bottom: 64px; } .sage-band .section { padding-top: 64px; } }
+
+/* ---------- project stack tags ---------- */
+.stack { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 2px 0 0; padding: 0; }
+.stack li { font: 500 12px var(--font-mono); letter-spacing: .06em; text-transform: uppercase; padding: 4px 12px; border-radius: 999px; border: 1px solid var(--hl-line); color: var(--hl-hi); }
+.sage-band .stack li { border-color: rgba(23, 5, 4, .4); color: var(--ink); }
