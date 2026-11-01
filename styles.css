@@ -421,3 +421,17 @@ body { overflow-x: clip; }
 .stack { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 2px 0 0; padding: 0; }
 .stack li { font: 500 12px var(--font-mono); letter-spacing: .06em; text-transform: uppercase; padding: 4px 12px; border-radius: 999px; border: 1px solid var(--hl-line); color: var(--hl-hi); }
 .sage-band .stack li { border-color: rgba(23, 5, 4, .4); color: var(--ink); }
+
+/* ---------- about ---------- */
+.about { display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start; }
+.about-head { flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+.about-head h2 { font-size: clamp(34px, 4.5vw, 52px); }
+.about-body { flex: 1.4 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
+.about-body > p { color: var(--text); font-size: 19px; max-width: 620px; }
+.about-body > p + p { color: var(--muted); font-size: 17px; }
+.facts { margin: 14px 0 0; border-top: 1px solid var(--hl-line); }
+.facts > div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding: 16px 0; border-bottom: 1px solid var(--hl-line); }
+.facts dt { font: 500 12px var(--font-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--hl); }
+.facts dd { margin: 0; text-align: right; }
+.facts a { text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 720px) { .facts dd { text-align: left; } }
