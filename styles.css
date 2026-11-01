@@ -435,3 +435,10 @@ body { overflow-x: clip; }
 .facts dd { margin: 0; text-align: right; }
 .facts a { text-decoration: underline; text-underline-offset: 4px; }
 @media (max-width: 720px) { .facts dd { text-align: left; } }
+
+/* ---------- toolkit ---------- */
+.kit { display: flex; flex-wrap: wrap; gap: 20px; }
+.kit > div { flex: 1 1 260px; min-width: 0; background: var(--burgundy); color: var(--text); border-radius: 16px; padding: 28px 28px 24px; display: flex; flex-direction: column; gap: 16px; }
+.kit b { font-family: var(--font-display); font-weight: 800; font-size: 24px; color: var(--cream); }
+.kit ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.kit li { padding: 10px 0; border-top: 1px solid rgba(232, 210, 181, .22); font-size: 17px; }
