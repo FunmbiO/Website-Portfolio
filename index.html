@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FunmbiO — Web developer and founder of Jaded Media</title>
 <meta name="description" content="Portfolio of FunmbiO: web developer and founder of Jaded Media. Browse two live builds, Jaded Media and Edgeline Exports.">
-<meta name="theme-color" content="#110C08">
+<meta name="theme-color" content="#80907A">
 <meta property="og:title" content="FunmbiO — Web developer and founder of Jaded Media">
 <meta property="og:description" content="Two live builds you can scroll through: Jaded Media and Edgeline Exports.">
 <meta property="og:type" content="website">
@@ -16,23 +16,25 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,700;0,800;0,900;1,300;1,700;1,800;1,900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 <a class="skip" href="#top">Skip to content</a>
-
+<div class="topline"></div>
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#top">Funmbi<span>/</span>O</a>
+    <a class="brand" href="/" aria-label="FunmbiO, home"><b>Funmbi</b><span>Portfolio</span></a>
     <nav aria-label="Primary">
       <ul>
         <li><a href="#work">Projects</a></li>
-        <li><a href="/certifications" class="nav-cert">Certifications</a></li>
+        <li><a href="/certifications">Certifications</a></li>
         <li class="hide-sm"><a href="#about">About</a></li>
         <li class="hide-sm"><a href="#services">Services</a></li>
-        <li class="hide-sm"><a href="#toolkit">Toolkit</a></li>
-        <li><a class="btn sm" href="mailto:funmbiolajubu@gmail.com?subject=Hello">Email me →</a></li>
+        <li class="hide-sm"><a href="#contact">Contact</a></li>
+        <li class="hide-sm slash" aria-hidden="true">/</li>
+        <li class="hide-sm"><a class="icon-link" href="https://github.com/FunmbiO" target="_blank" rel="noopener" aria-label="GitHub"><img src="/assets/icons/github.svg" alt="" width="20" height="20"></a></li>
+        <li><a class="btn sm" href="mailto:funmbiolajubu@gmail.com?subject=Hello">Email me <i>[ ↗ ]</i></a></li>
       </ul>
     </nav>
   </div>
@@ -40,198 +42,207 @@
 
 <main id="top">
 
-<section class="wrap hero">
-  <div class="hero-copy">
-    <div class="eyebrow">Portfolio of FunmbiO</div>
-    <h1>Web developer and founder of <em class="serif">Jaded Media</em></h1>
-    <p class="lede">I build, host and maintain websites for creative and automotive businesses. Two of them are live on this page, so scroll through them.</p>
-    <div class="hero-actions">
-      <a class="btn" href="mailto:funmbiolajubu@gmail.com?subject=Hello">Email me →</a>
-      <a class="btn ghost" href="#work">See my work</a>
-    </div>
-  </div>
-
-  <div class="hero-visual">
-    <div class="browser">
-      <div class="browser-bar">
-        <i></i><i></i><i></i>
-        <div class="url" id="preview-url">www.jadedmedia.ca</div>
-        <a class="open" id="preview-open" href="https://www.jadedmedia.ca" target="_blank" rel="noopener" aria-label="Open this site in a new tab">↗</a>
+<div class="frame">
+<section class="hero halftone">
+  <div class="explore" aria-hidden="true"><span>Explore work</span><i></i></div>
+  <div class="inner">
+    <div class="hero-copy">
+      <h1><span>Web</span><span>Developer</span></h1>
+      <span class="tagchip">Founder of Jaded Media</span>
+      <p class="lede">I build, host and maintain websites for creative and automotive businesses. 2 of them are live on this page, so scroll through them.</p>
+      <div class="chips"><span class="chip">2 sites live</span><span class="chip">Next.js</span><span class="chip">TypeScript</span><span class="chip">Supabase</span></div>
+      <div class="hero-actions">
+        <a class="btn" href="mailto:funmbiolajubu@gmail.com?subject=Hello">Email me →</a>
+        <a class="btn ghost" href="#work">See my work</a>
       </div>
-      <div class="viewport" id="viewport" data-device="desktop">
-        <div class="vp-loading" id="vp-loading"><span></span>Loading live site</div>
-        <div class="vp-stage" id="vp-stage">
-          <iframe class="vp-frame on" title="Jaded Media live site" data-site="jaded-media" data-url="www.jadedmedia.ca" data-href="https://www.jadedmedia.ca" data-src="https://www.jadedmedia.ca" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
-          <iframe class="vp-frame" title="Edgeline Exports live site" data-site="edgeline-exports" data-url="edgeline-exports.vercel.app" data-href="https://edgeline-exports.vercel.app" data-src="https://edgeline-exports.vercel.app" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+      <p class="note">Open to projects</p>
+    </div>
+
+    <div class="hero-visual">
+      <div class="browser">
+        <div class="browser-bar">
+          <i></i><i></i><i></i>
+          <div class="url" id="preview-url">www.jadedmedia.ca</div>
+          <a class="open" id="preview-open" href="https://www.jadedmedia.ca" target="_blank" rel="noopener" aria-label="Open this site in a new tab">↗</a>
+        </div>
+        <div class="viewport" id="viewport" data-device="desktop">
+          <div class="vp-loading" id="vp-loading"><span></span>&gt; Loading live site</div>
+          <div class="vp-stage" id="vp-stage">
+            <iframe class="vp-frame on" title="Jaded Media live site" data-site="jaded-media" data-url="www.jadedmedia.ca" data-href="https://www.jadedmedia.ca" data-src="https://www.jadedmedia.ca" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+            <iframe class="vp-frame" title="Edgeline Exports live site" data-site="edgeline-exports" data-url="edgeline-exports.vercel.app" data-href="https://edgeline-exports.vercel.app" data-src="https://edgeline-exports.vercel.app" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="tabs" role="tablist" aria-label="Choose a project">
+          <button class="tab" role="tab" aria-selected="true" data-target="jaded-media">Jaded Media</button>
+          <button class="tab" role="tab" aria-selected="false" data-target="edgeline-exports">Edgeline Exports</button>
+        </div>
+        <div class="tabs devices" role="group" aria-label="Preview size">
+          <button class="tab" aria-pressed="true" data-device="desktop">Desktop</button>
+          <button class="tab" aria-pressed="false" data-device="mobile">Mobile</button>
         </div>
       </div>
     </div>
-    <div class="controls">
-      <div class="tabs" role="tablist" aria-label="Choose a project">
-        <button class="tab" role="tab" aria-selected="true" data-target="jaded-media">Jaded Media</button>
-        <button class="tab" role="tab" aria-selected="false" data-target="edgeline-exports">Edgeline Exports</button>
-      </div>
-      <div class="tabs devices" role="group" aria-label="Preview size">
-        <button class="tab" aria-pressed="true" data-device="desktop">Desktop</button>
-        <button class="tab" aria-pressed="false" data-device="mobile">Mobile</button>
-      </div>
-    </div>
   </div>
 </section>
-
-<section id="certifications" class="ground ground-green">
-<div class="wrap">
-  <div class="head row">
-    <div>
-      <div class="eyebrow">Credentials</div>
-      <h2>Certifications</h2>
-      <p class="sub">Each one links to the official record.</p>
-    </div>
-    <div class="cert-total"><b id="home-cert-count">—</b><span>Earned so far</span></div>
-  </div>
-  <div class="cert-grid" id="home-cert-grid" aria-live="polite"></div>
-  <p class="cert-more" id="home-cert-more"><a class="btn ghost" href="/certifications">See all certifications →</a></p>
 </div>
-</section>
 
-<section id="work" class="ground ground-sage">
-<div class="wrap">
-  <div class="head row">
-    <div>
-      <div class="eyebrow">Selected work</div>
-      <h2>Three projects</h2>
-    </div>
-    <a class="plain-link" href="https://github.com/FunmbiO" target="_blank" rel="noopener">See the code on GitHub ↗</a>
-  </div>
-
-  <div class="work-list">
-    <article class="case">
-      <a class="case-art" href="https://www.jadedmedia.ca" target="_blank" rel="noopener" aria-label="Open Jaded Media in a new tab">
-        <div class="thumb"><iframe title="" tabindex="-1" aria-hidden="true" loading="lazy" data-src="https://www.jadedmedia.ca" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin"></iframe></div>
-      </a>
-      <div class="case-text">
-        <span class="live">Live</span>
-        <h3>Jaded Media</h3>
-        <p class="case-role">Founder and developer</p>
-        <p class="case-blurb">Site for my photography and film business, built around the line “Photo and film, let's make art.”</p>
-        <ul class="stack"><li>Full-stack Next.js</li><li>Video uploads</li><li>Security hardening</li><li>Admin dashboard</li></ul>
-        <p class="case-links"><a href="/work/jaded-media">Read the case study →</a><a href="https://www.jadedmedia.ca" target="_blank" rel="noopener">Open the site ↗</a></p>
-      </div>
-    </article>
-    <article class="case">
-      <a class="case-art" href="https://edgeline-exports.vercel.app" target="_blank" rel="noopener" aria-label="Open Edgeline Exports in a new tab">
-        <div class="thumb"><iframe title="" tabindex="-1" aria-hidden="true" loading="lazy" data-src="https://edgeline-exports.vercel.app" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin"></iframe></div>
-      </a>
-      <div class="case-text">
-        <span class="live">Live</span>
-        <h3>Edgeline Exports</h3>
-        <p class="case-role">Developer</p>
-        <p class="case-blurb">Online dealership for performance and luxury cars in Canada and the US, with buy, source and sell paths.</p>
-        <ul class="stack"><li>English and French</li><li>Light and dark themes</li><li>SEO</li><li>Tailwind CSS</li></ul>
-        <p class="case-links"><a href="/work/edgeline-exports">Read the case study →</a><a href="https://edgeline-exports.vercel.app" target="_blank" rel="noopener">Open the site ↗</a></p>
-      </div>
-    </article>
-    <article class="case">
-      <a class="case-art" href="/work/portfolio" aria-label="Read the case study for this portfolio">
-        <div class="thumb"><iframe title="" tabindex="-1" aria-hidden="true" loading="lazy" data-src="/work/portfolio" sandbox="allow-scripts allow-same-origin"></iframe></div>
-      </a>
-      <div class="case-text">
-        <h3>This portfolio</h3>
-        <p class="case-role">Designer and developer</p>
-        <p class="case-blurb">Live previews of my work, certifications that link to official records, and a private admin page for adding new ones.</p>
-        <ul class="stack"><li>Front-end</li><li>Serverless backend</li><li>Auth and security</li><li>Testing</li></ul>
-        <p class="case-links"><a href="/work/portfolio">Read the case study →</a></p>
-      </div>
-    </article>
-  </div>
-</div>
-</section>
-
-<section id="about" class="wrap section">
-  <div class="about">
-    <div class="about-head">
-      <div class="eyebrow">About</div>
-      <h2>About me</h2>
-    </div>
-    <div class="about-body">
-      <p>I'm FunmbiO, a web developer. I build sites end to end: layout, code, hosting and upkeep.</p>
-      <p>I also run Jaded Media, a photography and film business, so I've been both the client and the builder.</p>
-      <dl class="facts">
-        <div><dt>Focus</dt><dd>Websites and web apps</dd></div>
-        <div><dt>Business</dt><dd>Jaded Media, photography and film</dd></div>
-        <div><dt>Main tools</dt><dd>Next.js, TypeScript, Supabase, Vercel</dd></div>
-        <div><dt>Email</dt><dd><a href="mailto:funmbiolajubu@gmail.com">funmbiolajubu@gmail.com</a></dd></div>
-      </dl>
-    </div>
-  </div>
-</section>
-
-<section class="ground ground-cream">
+<section id="certifications" class="ground ground-black">
   <div class="wrap">
-    <div class="eyebrow" style="margin-bottom:24px">Approach</div>
-    <p class="statement">I build every site as if <em>my own business depends on it</em>. One of them does.</p>
+    <div class="sec-title">
+      <h2>My <span class="out">Certifications</span></h2>
+      <i class="rule"></i>
+      <div class="count"><b id="home-cert-count">—</b><span>Earned</span></div>
+    </div>
+    <div class="cert-grid" id="home-cert-grid" aria-live="polite"></div>
+    <p class="cert-more" id="home-cert-more"><a class="btn ghost" href="/certifications">See all certifications →</a></p>
   </div>
 </section>
 
-<section id="services" class="ground ground-brown">
-<div class="wrap">
-  <div class="head">
-    <div class="eyebrow">Services</div>
-    <h2>What I build</h2>
+<section id="about" class="ground ground-night">
+  <div class="wrap">
+    <div class="panel">
+      <div class="about">
+        <div class="about-title">
+          <h2><span>About</span><span class="out">Me</span></h2>
+          <span class="label">Web development · Hosting · Jaded Media</span>
+        </div>
+        <div class="about-body">
+          <h3 class="statement">I build every site as if <b>my own business depends on it.</b></h3>
+          <hr>
+          <div class="about-cols">
+            <div><h4>01. Studio sites <small>// Jaded Media</small></h4><p>Built the site for my own photography and film business, with an admin area, <b>video uploads</b> and hardened security headers.</p></div>
+            <div><h4>02. Dealership sites <small>// Edgeline Exports</small></h4><p>Built an online dealership for <b>performance and luxury cars</b> across Canada and the US, in English and French.</p></div>
+          </div>
+          <div class="statusbar">Open to projects // <a href="mailto:funmbiolajubu@gmail.com">funmbiolajubu@gmail.com</a></div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="cards">
-    <div class="card"><div class="n">[01]</div><h3>Builds studio and portfolio sites</h3><p>For photographers, filmmakers and studios. The work comes first and the interface stays out of the way.</p><div class="icons"><img class="ico" src="/assets/icons/nextjs.svg" alt="" width="28" height="28" loading="lazy"><img class="ico" src="/assets/icons/vercel.svg" alt="" width="28" height="28" loading="lazy"></div></div>
-    <div class="card"><div class="n">[02]</div><h3>Builds dealership and catalogue sites</h3><p>Inventory pages, sourcing requests and sell-to-us forms for businesses selling high-value goods.</p><div class="icons"><img class="ico" src="/assets/icons/nextjs.svg" alt="" width="28" height="28" loading="lazy"><img class="ico" src="/assets/icons/tailwindcss.svg" alt="" width="28" height="28" loading="lazy"></div></div>
-    <div class="card"><div class="n">[03]</div><h3>Builds web apps and admin panels</h3><p>Logins, uploads and admin areas on Supabase, with security headers set up.</p><div class="icons"><img class="ico" src="/assets/icons/supabase.svg" alt="" width="28" height="28" loading="lazy"><img class="ico" src="/assets/icons/typescript.svg" alt="" width="28" height="28" loading="lazy"></div></div>
-    <div class="card"><div class="n">[04]</div><h3>Hosts and maintains sites</h3><p>Domains, deploys and updates on Vercel, so a site stays online after launch.</p><div class="icons"><img class="ico" src="/assets/icons/vercel.svg" alt="" width="28" height="28" loading="lazy"><img class="ico" src="/assets/icons/github.svg" alt="" width="28" height="28" loading="lazy"></div></div>
-  </div>
-</div>
 </section>
 
-<section id="toolkit" class="ground ground-sage">
-<div class="wrap">
-  <div class="head">
-    <div class="eyebrow">Toolkit</div>
-    <h2>Tools I use</h2>
+<section id="work" class="ground ground-black">
+  <div class="wrap">
+    <div class="sec-title">
+      <h2><span style="color:var(--grey)">Selected</span> <span class="out">Projects</span></h2>
+      <i class="rule"></i>
+    </div>
+    <div class="work-list">
+      <article class="case">
+        <a class="case-art" href="https://www.jadedmedia.ca" target="_blank" rel="noopener" aria-label="Open Jaded Media in a new tab">
+          <div class="thumb"><iframe title="" tabindex="-1" aria-hidden="true" loading="lazy" data-src="https://www.jadedmedia.ca" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin"></iframe></div>
+        </a>
+        <div class="case-text">
+          <div class="top"><div><span class="live">Live</span><h3>Jaded Media</h3><p class="case-role">Founder and developer</p></div><a class="arrow" href="https://www.jadedmedia.ca" target="_blank" rel="noopener" aria-label="Open the Jaded Media site">↗</a></div>
+          <p class="case-blurb">Site for my photography and film business, built around the line “Photo and film, let's make art.”</p>
+          <ul class="stack"><li>Next.js</li><li>Supabase</li><li>Cloudflare R2</li><li>Admin</li></ul>
+          <p class="case-links"><a href="/work/jaded-media">Read the case study →</a></p>
+        </div>
+      </article>
+      <article class="case">
+        <a class="case-art" href="https://edgeline-exports.vercel.app" target="_blank" rel="noopener" aria-label="Open Edgeline Exports in a new tab">
+          <div class="thumb"><iframe title="" tabindex="-1" aria-hidden="true" loading="lazy" data-src="https://edgeline-exports.vercel.app" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin"></iframe></div>
+        </a>
+        <div class="case-text">
+          <div class="top"><div><span class="live">Live</span><h3>Edgeline Exports</h3><p class="case-role">Developer</p></div><a class="arrow" href="https://edgeline-exports.vercel.app" target="_blank" rel="noopener" aria-label="Open the Edgeline Exports site">↗</a></div>
+          <p class="case-blurb">Online dealership for performance and luxury cars in Canada and the US, with buy, source and sell paths.</p>
+          <ul class="stack"><li>Next.js</li><li>EN / FR</li><li>SEO</li><li>Tailwind</li></ul>
+          <p class="case-links"><a href="/work/edgeline-exports">Read the case study →</a></p>
+        </div>
+      </article>
+      <article class="case">
+        <a class="case-art" href="/work/portfolio" aria-label="Read the case study for this portfolio">
+          <div class="thumb"><iframe title="" tabindex="-1" aria-hidden="true" loading="lazy" data-src="/work/portfolio" sandbox="allow-scripts allow-same-origin"></iframe></div>
+        </a>
+        <div class="case-text">
+          <div class="top"><div><h3>This portfolio</h3><p class="case-role">Designer and developer</p></div><a class="arrow" href="/work/portfolio" aria-label="Read the case study for this portfolio">→</a></div>
+          <p class="case-blurb">Live previews of my work, certifications that link to official records, and a private admin page for adding new ones.</p>
+          <ul class="stack"><li>Front-end</li><li>Serverless</li><li>Auth</li><li>Tests</li></ul>
+          <p class="case-links"><a href="/work/portfolio">Read the case study →</a></p>
+        </div>
+      </article>
+    </div>
   </div>
-  <div class="kit">
-    <div><b>Build</b><ul><li><img class="ico" src="/assets/icons/nextjs.svg" alt="" width="28" height="28" loading="lazy"><span>Next.js</span></li><li><img class="ico" src="/assets/icons/react.svg" alt="" width="28" height="28" loading="lazy"><span>React</span></li><li><img class="ico" src="/assets/icons/typescript.svg" alt="" width="28" height="28" loading="lazy"><span>TypeScript</span></li></ul></div>
-    <div><b>Front end</b><ul><li><img class="ico" src="/assets/icons/html5.svg" alt="" width="28" height="28" loading="lazy"><span>HTML</span></li><li><img class="ico" src="/assets/icons/css3.svg" alt="" width="28" height="28" loading="lazy"><span>CSS</span></li><li><img class="ico" src="/assets/icons/tailwindcss.svg" alt="" width="28" height="28" loading="lazy"><span>Tailwind CSS</span></li></ul></div>
-    <div><b>Data and hosting</b><ul><li><img class="ico" src="/assets/icons/supabase.svg" alt="" width="28" height="28" loading="lazy"><span>Supabase</span></li><li><img class="ico" src="/assets/icons/cloudflare.svg" alt="" width="28" height="28" loading="lazy"><span>Cloudflare R2</span></li><li><img class="ico" src="/assets/icons/vercel.svg" alt="" width="28" height="28" loading="lazy"><span>Vercel</span></li><li><img class="ico" src="/assets/icons/github.svg" alt="" width="28" height="28" loading="lazy"><span>GitHub</span></li></ul></div>
-  </div>
-</div>
 </section>
 
-<section id="contact" class="wrap section">
-  <div class="cta">
-    <div class="cta-copy">
-      <h2>Contact</h2>
+<section id="stack" class="ground ground-black" style="padding-top:0">
+  <div class="wrap">
+    <div class="stack-panel">
+      <div class="stack-head"><h2>Tech <span class="out">Stack</span></h2></div>
+      <div class="st-tabs" role="tablist" aria-label="Tool groups">
+        <button class="st-tab" role="tab" id="t-build" aria-controls="st-build" aria-selected="true"><small>Framework // 01</small><b>Build</b></button>
+        <button class="st-tab" role="tab" id="t-front" aria-controls="st-front" aria-selected="false"><small>Interface // 02</small><b>Front end</b></button>
+        <button class="st-tab" role="tab" id="t-data" aria-controls="st-data" aria-selected="false"><small>Platform // 03</small><b>Data and hosting</b></button>
+      </div>
+    <div class="st-body" id="st-build" role="tabpanel" aria-labelledby="t-build">
+      <div><span class="tagline">Framework // 01</span><h3>Production sites from design to deployment.</h3><p class="copy">Hand-written layouts on a typed, component-based stack.</p></div>
+      <ul class="tools"><li class="tool"><span>Next.js</span><img src="/assets/icons/nextjs.svg" alt="" width="34" height="34" loading="lazy"></li><li class="tool"><span>React</span><img src="/assets/icons/react.svg" alt="" width="34" height="34" loading="lazy"></li><li class="tool"><span>TypeScript</span><img src="/assets/icons/typescript.svg" alt="" width="34" height="34" loading="lazy"></li><li class="tool"><span>Tailwind CSS</span><img src="/assets/icons/tailwindcss.svg" alt="" width="34" height="34" loading="lazy"></li></ul>
+    </div>
+    <div class="st-body" id="st-front" role="tabpanel" aria-labelledby="t-front" hidden>
+      <div><span class="tagline">Interface // 02</span><h3>Fast, readable pages on plain web standards.</h3><p class="copy">Semantic HTML and CSS with no page-builder code.</p></div>
+      <ul class="tools"><li class="tool"><span>HTML</span><img src="/assets/icons/html5.svg" alt="" width="34" height="34" loading="lazy"></li><li class="tool"><span>CSS</span><img src="/assets/icons/css3.svg" alt="" width="34" height="34" loading="lazy"></li><li class="tool"><span>Tailwind CSS</span><img src="/assets/icons/tailwindcss.svg" alt="" width="34" height="34" loading="lazy"></li></ul>
+    </div>
+    <div class="st-body" id="st-data" role="tabpanel" aria-labelledby="t-data" hidden>
+      <div><span class="tagline">Platform // 03</span><h3>Data, media and hosting that stay online.</h3><p class="copy">Supabase, Cloudflare R2 and Vercel, with GitHub for every change.</p></div>
+      <ul class="tools"><li class="tool"><span>Supabase</span><img src="/assets/icons/supabase.svg" alt="" width="34" height="34" loading="lazy"></li><li class="tool"><span>Cloudflare R2</span><img src="/assets/icons/cloudflare.svg" alt="" width="34" height="34" loading="lazy"></li><li class="tool"><span>Vercel</span><img src="/assets/icons/vercel.svg" alt="" width="34" height="34" loading="lazy"></li><li class="tool"><span>GitHub</span><img src="/assets/icons/github.svg" alt="" width="34" height="34" loading="lazy"></li></ul>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="ground ground-night">
+  <div class="wrap">
+    <div class="sec-title">
+      <h2>What I <span class="out">Build</span></h2>
+      <i class="rule"></i>
+    </div>
+    <div class="cols">
+      <div class="col"><span class="label">// 01 Studio</span><div class="icons"><img class="ico" src="/assets/icons/nextjs.svg" alt="" width="30" height="30" loading="lazy"><img class="ico" src="/assets/icons/vercel.svg" alt="" width="30" height="30" loading="lazy"></div><h3>Studio and portfolio sites</h3><p>For photographers, filmmakers and studios. The work comes first and the interface stays out of the way.</p><span class="foot-label">Next.js · Vercel</span></div>
+      <div class="col"><span class="label">// 02 Dealership</span><div class="icons"><img class="ico" src="/assets/icons/nextjs.svg" alt="" width="30" height="30" loading="lazy"><img class="ico" src="/assets/icons/tailwindcss.svg" alt="" width="30" height="30" loading="lazy"></div><h3>Dealership and catalogue sites</h3><p>Inventory pages, sourcing requests and sell-to-us forms for businesses selling high-value goods.</p><span class="foot-label">Next.js · Tailwind</span></div>
+      <div class="col"><span class="label">// 03 Apps</span><div class="icons"><img class="ico" src="/assets/icons/supabase.svg" alt="" width="30" height="30" loading="lazy"><img class="ico" src="/assets/icons/typescript.svg" alt="" width="30" height="30" loading="lazy"></div><h3>Web apps and admin panels</h3><p>Logins, uploads and admin areas on Supabase, with security headers set up.</p><span class="foot-label">Supabase · TypeScript</span></div>
+      <div class="col"><span class="label">// 04 Hosting</span><div class="icons"><img class="ico" src="/assets/icons/vercel.svg" alt="" width="30" height="30" loading="lazy"><img class="ico" src="/assets/icons/github.svg" alt="" width="30" height="30" loading="lazy"></div><h3>Hosting and upkeep</h3><p>Domains, deploys and updates on Vercel, so a site stays online after launch.</p><span class="foot-label">Vercel · GitHub</span></div>
+    </div>
+    <div class="connect">
       <p>Send a few lines on what you need and when you want to launch. I reply with next steps and a rough quote.</p>
+      <a href="#contact">Connect <span aria-hidden="true">→</span></a>
     </div>
-    <div class="cta-actions">
-      <a class="btn" href="mailto:funmbiolajubu@gmail.com?subject=Hello">Email me →</a>
-      <button class="btn ghost" type="button" id="copy-mail" data-email="funmbiolajubu@gmail.com">Copy email address</button>
+  </div>
+</section>
+
+<section id="contact" class="contact halftone">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <span class="tagchip">Contact // Collaboration</span>
+        <h2>Funmbi</h2>
+        <div class="bar"></div>
+        <span class="inq">Inquiries</span>
+        <a class="mail" href="mailto:funmbiolajubu@gmail.com">funmbiolajubu@gmail.com</a>
+      </div>
+      <div class="contact-side">
+        <div><span class="tiny">Web developer // Hosting</span><p>Websites for creative and automotive businesses.</p></div>
+        <div class="icon-boxes">
+          <a class="icon-box" href="https://github.com/FunmbiO" target="_blank" rel="noopener" aria-label="GitHub"><img src="/assets/icons/github.svg" alt="" width="22" height="22"></a>
+          <a class="icon-box" href="mailto:funmbiolajubu@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="3" y="5" width="18" height="14"/><path d="M3 7l9 7 9-7"/></svg></a>
+        </div>
+        <a class="btn" href="mailto:funmbiolajubu@gmail.com?subject=Hello">Email me ↗</a>
+        <button class="copy-btn" type="button" id="copy-mail" data-email="funmbiolajubu@gmail.com">Copy email address</button>
+      </div>
     </div>
+    <div class="legal">
+      <span>Open to projects</span>
+      <span>© <span id="year">2026</span> FunmbiO</span>
+      <span><a href="#work">Projects</a> · <a href="/certifications">Certifications</a></span>
+    </div>
+    <p class="fine" style="margin-top:14px">Product names and logos are trademarks of their owners.</p>
   </div>
 </section>
 
 </main>
 
-<footer class="foot">
-  <div class="wrap">
-    <div class="foot-brand">
-      <a class="brand" href="#top">Funmbi<span>/</span>O</a>
-      <p>Web developer and founder of Jaded Media.<br>© <span id="year">2026</span> FunmbiO<br><span class="fine">Product names and logos are trademarks of their owners.</span></p>
-    </div>
-    <div class="foot-cols">
-      <div><span>EXPLORE</span><a href="#work">Projects</a><a href="/certifications">Certifications</a><a href="#about">About</a><a href="#toolkit">Toolkit</a></div>
-      <div><span>PROJECTS</span><a href="https://www.jadedmedia.ca" target="_blank" rel="noopener">Jaded Media</a><a href="https://edgeline-exports.vercel.app" target="_blank" rel="noopener">Edgeline Exports</a></div>
-      <div><span>CONTACT</span><a href="mailto:funmbiolajubu@gmail.com">Email</a><a href="https://github.com/FunmbiO" target="_blank" rel="noopener">GitHub</a></div>
-    </div>
-  </div>
-</footer>
-
 <script src="/script.js" defer></script>
 <script type="module" src="/js/home-certs.js"></script>
+<script src="/js/stack-tabs.js" defer></script>
 </body>
 </html>
