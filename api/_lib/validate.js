@@ -1,0 +1,77 @@
+const BLOB_HOST = /^https:\/\/[a-z0-9-]+\.public\.blob\.vercel-storage\.com\//i;
+const DATE = /^\d{4}-(0[1-9]|1[0-2])(-(0[1-9]|[12]\d|3[01]))?$/;
+
+const clean = (v, max) => (typeof v === 'string' ? v.trim().slice(0, max) : '');
+
+function httpsUrl(v) {
+  const s = clean(v, 500);
+  if (!s) return '';
+  try {
+    const u = new URL(s);
+    return u.protocol === 'https:' ? u.toString() : null;
+  } catch {
+    return null;
+  }
+}
+
+export function validateCert(input) {
+  const errors = [];
+  const title = clean(input?.title, 140);
+  const issuer = clean(input?.issuer, 100);
+  const issuedOn = clean(input?.issuedOn, 10);
+  const expiresOn = clean(input?.expiresOn, 10);
+  const credentialId = clean(input?.credentialId, 100);
+  const description = clean(input?.description, 600);
+  const fileName = clean(input?.fileName, 120);
+
+  if (!title) errors.push('Title is required.');
+  if (!issuer) errors.push('Issuer is required.');
+  if (!DATE.test(issuedOn)) errors.push('Issue date must look like 2026-03 or 2026-03-15.');
+  if (expiresOn && !DATE.test(expiresOn)) errors.push('Expiry date must look like 2028-03 or 2028-03-15.');
+
+  const verifyUrl = httpsUrl(input?.verifyUrl);
+  if (verifyUrl === null) errors.push('Verification link must be a full https:// address.');
+
+  let fileUrl = clean(input?.fileUrl, 500);
+  if (fileUrl && !BLOB_HOST.test(fileUrl)) errors.push('Certificate file must be uploaded through the admin page.');
+
+  if (!verifyUrl && !fileUrl) errors.push('Add a verification link, an uploaded certificate, or both.');
+
+  const skills = Array.isArray(input?.skills)
+    ? [...new Set(input.skills.map((s) => clean(s, 40)).filter(Boolean))].slice(0, 12)
+    : [];
+
+  if (errors.length) return { ok: false, errors };
+  return {
+    ok: true,
+    value: {
+      title, issuer, issuedOn,
+      expiresOn: expiresOn || '',
+      credentialId,
+      verifyUrl: verifyUrl || '',
+      fileUrl: fileUrl || '',
+      fileName: fileUrl ? fileName : '',
+      skills,
+      description,
+      featured: input?.featured === true,
+    },
+  };
+}
+
+export const ALLOWED_UPLOADS = {
+  'application/pdf': 'pdf',
+  'image/png': 'png',
+  'image/jpeg': 'jpg',
+  'image/webp': 'webp',
+};
+export const MAX_UPLOAD_BYTES = 4 * 1024 * 1024;
+
+export function safeFilename(name, ext) {
+  const base = clean(name, 80).replace(/\.[a-z0-9]+$/i, '').replace(/[^a-z0-9]+/gi, '-').replace(/^-+|-+$/g, '').toLowerCase();
+  return `${base || 'certificate'}.${ext}`;
+}
+
+// Newest first; featured certificates float to the top of the home page list.
+export function sortCerts(items) {
+  return [...items].sort((a, b) => (b.issuedOn || '').localeCompare(a.issuedOn || ''));
+}
