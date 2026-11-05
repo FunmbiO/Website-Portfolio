@@ -37,3 +37,6 @@ loadCerts()
     draw();
   })
   .catch(() => { count.textContent = '—'; renderState(grid, 'error'); });
+
+const y = document.getElementById('year');
+if (y) y.textContent = new Date().getFullYear();
