@@ -78,21 +78,6 @@
   const idle = window.requestIdleCallback || ((fn) => setTimeout(fn, 2500));
   idle(() => frames.forEach(load));
 
-  // highlight the nav link for the section in view
-  const links = [...document.querySelectorAll('.nav a[href^="#"]')];
-  const byId = new Map(links.map((a) => [a.getAttribute('href').slice(1), a]));
-  if ('IntersectionObserver' in window && byId.size) {
-    const sections = [...byId.keys()].map((id) => document.getElementById(id)).filter(Boolean);
-    const spy = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        const a = byId.get(e.target.id);
-        if (!a) return;
-        if (e.isIntersecting) { links.forEach((l) => l.removeAttribute('aria-current')); a.setAttribute('aria-current', 'true'); }
-      });
-    }, { rootMargin: '-45% 0px -50% 0px' });
-    sections.forEach((el) => spy.observe(el));
-  }
-
   // copy-email button
   const copy = document.getElementById('copy-mail');
   if (copy) {

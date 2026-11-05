@@ -614,3 +614,12 @@ h3 { font-family: var(--font-body); font-weight: 700; font-size: 20px; letter-sp
 .kit li { display: flex; align-items: center; gap: 14px; }
 .ico { flex: none; width: 28px; height: 28px; padding: 4px; background: #F4EFE6; border-radius: 8px; object-fit: contain; }
 .fine { font-size: 13px; opacity: .8; }
+
+/* ---------- checker follow-ups ---------- */
+h1, h2, h3, .statement, .case-blurb, .lede, .cta p { text-wrap: balance; }
+.cta { background: var(--black); color: var(--text); }
+.cta h2 { color: var(--text); }
+.cta p { color: var(--text); opacity: .85; font-weight: 400; }
+.cta .eyebrow, .cta .eyebrow::before { color: var(--text); }
+.cta-actions { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 12px; }
+.mail { color: var(--text); }

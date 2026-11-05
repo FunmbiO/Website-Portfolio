@@ -62,7 +62,7 @@ export function renderProject(p, all) {
     <a class="brand" href="/">Funmbi<span>/</span>O</a>
     <nav aria-label="Primary">
       <ul>
-        <li><a href="/#work" aria-current="page">Work</a></li>
+        <li><a href="/#work" aria-current="page">Projects</a></li>
         <li><a href="/certifications" class="nav-cert">Certifications</a></li>
         <li class="hide-sm"><a href="/#about">About</a></li>
         <li class="hide-sm"><a href="/#toolkit">Toolkit</a></li>
@@ -74,7 +74,7 @@ export function renderProject(p, all) {
 
 <main id="main">
   <article class="wrap case">
-    <nav class="crumbs" aria-label="Breadcrumb"><a href="/#work">Work</a><span aria-hidden="true">/</span><span>${esc(p.name)}</span></nav>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/#work">Projects</a><span aria-hidden="true">/</span><span>${esc(p.name)}</span></nav>
     <div class="case-head">
       <div class="eyebrow">${esc(p.kind)}</div>
       <h1>${esc(p.name)}</h1>
@@ -83,7 +83,7 @@ export function renderProject(p, all) {
         <div><dt>My role</dt><dd>${esc(p.role)}</dd></div>
         <div><dt>Built with</dt><dd>${p.stack.map(esc).join(' · ')}</dd></div>
       </dl>
-      <div class="hero-actions">${live}<a class="btn ghost" href="/#work">All work</a></div>
+      <div class="hero-actions">${live}<a class="btn ghost" href="/#work">All projects</a></div>
     </div>
 
     <section class="case-block" aria-labelledby="h-skills">
@@ -114,7 +114,7 @@ ${p.highlights.map((h) => `        <li>${esc(h)}</li>`).join('\n')}
       <p>Web developer and founder of Jaded Media.<br>© <span id="year">2026</span> FunmbiO</p>
     </div>
     <div class="foot-cols">
-      <div><span>EXPLORE</span><a href="/#work">Work</a><a href="/certifications">Certifications</a><a href="/#about">About</a></div>
+      <div><span>EXPLORE</span><a href="/#work">Projects</a><a href="/certifications">Certifications</a><a href="/#about">About</a></div>
       <div><span>CONTACT</span><a href="mailto:funmbiolajubu@gmail.com">Email</a><a href="https://github.com/FunmbiO" target="_blank" rel="noopener">GitHub</a></div>
     </div>
   </div>
