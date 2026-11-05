@@ -378,3 +378,4 @@ button.btn { font-family: var(--font); }
 [hidden] { display: none !important; }
 .statement em { font-style: normal; color: var(--mark); }
 .ground-cream .statement em, .ground-sage .statement em { color: var(--green); }
+#app { display: flex; flex-direction: column; gap: 24px; }
