@@ -377,3 +377,31 @@ body { overflow-x: clip; }
 .kit li { padding: 10px 0; border-top: 1px solid rgba(232, 210, 181, .22); font-size: 17px; }
 
 .band h2 em.serif { background: none; color: var(--burgundy); -webkit-text-fill-color: var(--burgundy); }
+
+/* ---------- certifications ---------- */
+.page-head { padding-top: 80px; padding-bottom: 24px; display: flex; flex-direction: column; gap: 20px; align-items: flex-start; position: relative; }
+.page-head h1 { font-size: clamp(52px, 9vw, 104px); }
+.cert-total { display: flex; align-items: baseline; gap: 16px; margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--hl-line); width: 100%; }
+.cert-total b { font-family: var(--font-display); font-weight: 900; font-size: 56px; line-height: 1; background: var(--hl-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.cert-total span { font: 500 13px var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.cert-section { padding-top: 32px; padding-bottom: 24px; }
+.cert-filters { margin: 0 0 24px; flex-wrap: wrap; }
+.cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+.cert-card { background: linear-gradient(180deg, var(--panel) 0%, #230706 100%); border: 1px solid var(--hl-line); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px; transition: border-color .2s ease, transform .2s ease; }
+.cert-card:hover { border-color: var(--cream); transform: translateY(-3px); }
+.cert-card h3 { font-size: 24px; line-height: 1.15; }
+.cert-issuer { font: 500 12px var(--font-mono); letter-spacing: .16em; text-transform: uppercase; color: var(--hl); }
+.cert-desc { color: var(--muted); font-size: 16px; }
+.cert-meta { margin: 4px 0 0; display: flex; flex-direction: column; border-top: 1px solid var(--hl-line); }
+.cert-meta > div { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--hl-line); font-size: 15px; }
+.cert-meta dt { font: 500 11px var(--font-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); align-self: center; }
+.cert-meta dd { margin: 0; text-align: right; overflow-wrap: anywhere; }
+.cert-meta .mono { font-family: var(--font-mono); font-size: 13px; }
+.cert-meta .is-expired { color: #E58A7E; }
+.cert-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 6px; }
+.cert-state { grid-column: 1 / -1; border: 1px dashed var(--hl-line); border-radius: 16px; padding: 48px 28px; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; color: var(--muted); }
+.cert-state b { font-family: var(--font-display); font-weight: 800; font-size: 24px; color: var(--text); }
+.nav-cert { color: var(--hl-hi); border-bottom: 1px solid var(--hl); padding-bottom: 2px; }
+.nav a[aria-current="page"] { color: var(--hl-hi); }
+@media (max-width: 720px) { .cert-grid { grid-template-columns: 1fr; } .page-head { padding-top: 48px; } }
+@media print { body, .cert-card { background: #fff !important; color: #000 !important; } .nav, .foot, .cert-actions .btn { display: none; } .cert-card { break-inside: avoid; border-color: #999; } }
