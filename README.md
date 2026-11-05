@@ -41,27 +41,27 @@ that site's `Content-Security-Policy` and `X-Frame-Options` headers.
 
 ## Design
 
-A terminal / code-editor look: JetBrains Mono everywhere, square corners, 1 px borders, flat grounds.
-Colours are CSS variables at the top of `styles.css`.
+Neo-brutalist: heavy italic uppercase type with outlined second words, thick black borders, hard offset
+shadows, a black frame and halftone texture on the hero. Deep sage and black are the main colours.
+Colours and fonts are CSS variables at the top of `styles.css`.
 
 | Token | Hex | Used for |
 | --- | --- | --- |
-| `--bg` | `#110C08` | Page background (deep brown-black) |
-| `--green` | `#0D3B2C` | Certifications band and toolkit cards (deep green) |
-| `--green-2` | `#14573F` | Primary buttons and selected tabs |
-| `--brown-2` | `#2C1D12` | Services band (deep brown) |
-| `--sage` | `#A5A79B` | Projects and toolkit bands |
-| `--cream` | `#E8D2B5` | Approach band, headings accents |
-| `--black` | `#0A0A0A` | Nav, footer, preview frame |
-| `--burgundy` | `#590907` | Reserved; not used on the page |
+| `--black` | `#0B0B0B` | Main dark ground, borders, primary buttons |
+| `--night` | `#111312` | Panels and alternate dark bands |
+| `--sage` | `#80907A` | Main light ground: nav, hero, project cards, contact |
+| `--sage-3` | `#B7C1AF` | Tech stack panel |
+| `--green` / `--green-hi` | `#06281E` / `#3F9E7B` | Deep green marks: live dots, focus ring, top line |
+| `--burgundy` | `#590907` | Hard shadows and thin section rules |
 
-Rules the design follows, from the installed `design-taste-frontend` skill and `DESIGN.md`:
+Fonts: Archivo (italic display), Hanken Grotesk (body), JetBrains Mono (small labels).
 
-- Nothing moves on load or on scroll. Motion is a hover and focus layer only (2 px card lift, 1 px button step, drawn underlines, 2 px focus ring) and is switched off under reduced motion.
-- Flat grounds, with one faint grid behind the hero. Grounds alternate dark, green, sage, dark, cream, brown, sage, dark.
+Rules the design follows, from the installed `design-taste-frontend` skill:
+
+- Nothing moves on load or on scroll. Motion is a hover and focus layer only and is switched off under reduced motion.
 - No captions or labels on visuals; text sits beside them.
-- Plain noun headings, buttons that start with a verb, and one main action (Email me) worded the same everywhere.
-- Real tool logos from the CC0 SVG Logos set (see `icons-credits.json`), shown on cream chips.
+- Plain headings, buttons that start with a verb, one main action (Email me) worded the same everywhere.
+- Real tool logos from the CC0 SVG Logos set (see `icons-credits.json`).
 
 ## Deploy
 

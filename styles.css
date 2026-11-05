@@ -402,3 +402,12 @@ button.btn { font-family: var(--font-display); }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; scroll-behavior: auto !important; }
   .btn:hover, .btn:active, .cert-card:hover, .case:hover, .case-art:hover .thumb { transform: none !important; }
 }
+
+/* ---------- fixes: hero headline fit, thumbnail ground ---------- */
+h1 { font-size: clamp(46px, 6.4vw, 100px); }
+.hero-copy { flex: 1 1 50%; }
+.hero-visual { flex: 1 1 44%; }
+.hero h1 span { white-space: nowrap; }
+.case-art { background: #1E231F; }
+.ground-black .case { border-color: var(--paper); }
+@media (max-width: 900px) { .hero h1 { font-size: clamp(44px, 14vw, 90px); } }
