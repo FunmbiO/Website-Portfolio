@@ -2,6 +2,11 @@ import { put, head } from '@vercel/blob';
 
 const PATH = 'certifications.json';
 
+// An empty store is normal on day one; the SDK words this a few different ways.
+export function isBlobNotFound(err) {
+  return err?.name === 'BlobNotFoundError' || /does not exist|not.?found/i.test(err?.message || '');
+}
+
 export async function readAll() {
   try {
     const meta = await head(PATH);
@@ -10,7 +15,7 @@ export async function readAll() {
     const data = await res.json();
     return Array.isArray(data) ? data : [];
   } catch (err) {
-    if (err?.name === 'BlobNotFoundError' || /not.?found/i.test(err?.message || '')) return [];
+    if (isBlobNotFound(err)) return [];
     throw err;
   }
 }
