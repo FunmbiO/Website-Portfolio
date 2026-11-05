@@ -55,3 +55,19 @@ test('sorts newest first', () => {
   const out = sortCerts([{ issuedOn: '2024-01' }, { issuedOn: '2026-05' }, { issuedOn: '2025-12' }]);
   assert.deepEqual(out.map((c) => c.issuedOn), ['2026-05', '2025-12', '2024-01']);
 });
+
+import { detectType } from '../api/_lib/validate.js';
+
+test('detects file types from content, not names', () => {
+  const pad = Buffer.alloc(16);
+  assert.equal(detectType(Buffer.concat([Buffer.from('%PDF-1.7'), pad])), 'application/pdf');
+  assert.equal(detectType(Buffer.concat([Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]), pad])), 'image/png');
+  assert.equal(detectType(Buffer.concat([Buffer.from([0xff, 0xd8, 0xff, 0xe0]), pad])), 'image/jpeg');
+  assert.equal(detectType(Buffer.concat([Buffer.from('RIFF'), Buffer.alloc(4), Buffer.from('WEBP'), pad])), 'image/webp');
+});
+
+test('rejects scripts and html disguised as certificates', () => {
+  assert.equal(detectType(Buffer.from('<script>alert(1)</script>  padding')), null);
+  assert.equal(detectType(Buffer.from('<svg xmlns="http://www.w3.org/2000/svg"></svg>')), null);
+  assert.equal(detectType(Buffer.from('short')), null);
+});
