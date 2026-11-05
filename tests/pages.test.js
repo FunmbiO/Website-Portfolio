@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
-import { loadProjects, renderProject, esc } from '../scripts/build-pages.mjs';
+import { loadProjects, renderProject, renderSitemap, esc } from '../scripts/build-pages.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const projects = loadProjects();
@@ -40,4 +40,11 @@ test('committed pages match the data (run: node scripts/build-pages.mjs)', () =>
     assert.ok(existsSync(file), `${file} is missing`);
     assert.equal(readFileSync(file, 'utf8'), renderProject(p, projects), `${p.slug}.html is out of date`);
   }
+});
+
+test('sitemap lists every public page and matches the committed file', () => {
+  const xml = renderSitemap(projects);
+  for (const u of ['/', '/certifications', ...projects.map((p) => `/work/${p.slug}`)]) assert.ok(xml.includes(`https://jaded-works.vercel.app${u}</loc>`), u);
+  assert.ok(!xml.includes('/admin') && !xml.includes('/api'));
+  assert.equal(readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8'), xml);
 });

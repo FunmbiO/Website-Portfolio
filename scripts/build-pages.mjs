@@ -125,10 +125,16 @@ ${p.highlights.map((h) => `        <li>${esc(h)}</li>`).join('\n')}
 `;
 }
 
+export function renderSitemap(all) {
+  const urls = ['/', '/certifications', ...all.map((p) => `/work/${p.slug}`)];
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${SITE}${u === '/' ? '/' : u}</loc></url>`).join('\n')}\n</urlset>\n`;
+}
+
 export function build() {
   const all = loadProjects();
   mkdirSync(path.join(ROOT, 'work'), { recursive: true });
   for (const p of all) writeFileSync(path.join(ROOT, 'work', `${p.slug}.html`), renderProject(p, all));
+  writeFileSync(path.join(ROOT, 'sitemap.xml'), renderSitemap(all));
   return all.length;
 }
 
