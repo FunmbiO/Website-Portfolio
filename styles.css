@@ -623,3 +623,7 @@ h1, h2, h3, .statement, .case-blurb, .lede, .cta p { text-wrap: balance; }
 .cta .eyebrow, .cta .eyebrow::before { color: var(--text); }
 .cta-actions { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 12px; }
 .mail { color: var(--text); }
+
+/* the hero slab must never widen the page */
+main { overflow-x: clip; }
+html { overflow-x: clip; }
