@@ -577,3 +577,29 @@ h3 { font-family: var(--font-body); font-weight: 700; font-size: 20px; letter-sp
 .sage-band { margin-top: var(--section); }
 .browser, .case-art, .card, .cert-card, .skill, .panel-box, .kit > div, .cta { border-radius: var(--r-lg); }
 @media (max-width: 720px) { :root { --section: 72px; } }
+
+/* ---------- home layout: grounds, hero, project rows ---------- */
+.hero { min-height: calc(100svh - 86px); padding-top: 48px; padding-bottom: 64px; }
+.burgundy-band { background: var(--burgundy); }
+.burgundy-band + .sage-band { margin-top: 0; }
+.burgundy-band .cert-home { padding-bottom: var(--section); }
+.burgundy-band .cert-card { background: var(--black); border-color: rgba(232, 210, 181, .22); }
+.burgundy-band .cert-card:hover { border-color: var(--cream); }
+.sub { color: var(--text); opacity: .8; font-size: 18px; margin-top: 4px; }
+.plain-link { font-weight: 700; color: var(--ink); background: linear-gradient(currentColor, currentColor) no-repeat 100% 100% / 0 1px; padding-bottom: 3px; }
+.plain-link:hover { color: var(--ink); background-position: 0 100%; background-size: 100% 1px; }
+.work-list { display: flex; flex-direction: column; gap: 56px; }
+.case { display: grid; grid-template-columns: 7fr 5fr; gap: 40px; align-items: center; transform: none; }
+.case-art { height: auto; aspect-ratio: 16 / 10; display: block; padding: 0; background: var(--black); border: 1px solid var(--black); }
+.case-text { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; min-width: 0; }
+.case-text h3 { font-family: var(--font-serif); font-weight: 500; font-size: clamp(34px, 3.6vw, 48px); letter-spacing: -.015em; line-height: 1.05; color: var(--ink); }
+.case-role { font: 500 13px var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: #3A3C33; margin: -4px 0 0; }
+.sage-band .case-blurb { font-size: 18px; max-width: 460px; color: #1F211B; }
+.thumb iframe { height: calc(100% / var(--k, .4)); }
+@media (hover: hover) and (pointer: fine) {
+  .case:hover { transform: none; }
+  .case-art:hover { transform: translateY(-2px); border-color: var(--burgundy); }
+}
+.card { min-height: 0; }
+.card h3 { color: var(--text); }
+@media (max-width: 900px) { .case { grid-template-columns: 1fr; gap: 24px; } .hero { min-height: 0; } }

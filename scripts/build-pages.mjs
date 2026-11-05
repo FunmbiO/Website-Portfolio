@@ -66,7 +66,7 @@ export function renderProject(p, all) {
         <li><a href="/certifications" class="nav-cert">Certifications</a></li>
         <li class="hide-sm"><a href="/#about">About</a></li>
         <li class="hide-sm"><a href="/#toolkit">Toolkit</a></li>
-        <li><a class="btn sm" href="/#contact">Say hello →</a></li>
+        <li><a class="btn sm" href="mailto:funmbiolajubu@gmail.com?subject=Hello">Email me →</a></li>
       </ul>
     </nav>
   </div>
