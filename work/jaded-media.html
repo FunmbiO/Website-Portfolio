@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jaded Media — case study | FunmbiO</title>
+<meta name="description" content="Jaded Media: Photography &amp; film business site. Founder &amp; developer. Skills shown: Full-stack development, Media handling, Security, Compliance &amp; accessibility, Delivery.">
+<link rel="canonical" href="https://jaded-works.vercel.app/work/jaded-media">
+<meta property="og:title" content="Jaded Media — case study | FunmbiO">
+<meta property="og:description" content="The website for my own photography and film business. It opens with one line, “Photo and film, let&#39;s make art.”, and puts the work first. Behind the public pages sits an admin area for managing content and video.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://jaded-works.vercel.app/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1C0504">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Hanken+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Jaded Media","description":"The website for my own photography and film business. It opens with one line, “Photo and film, let's make art.”, and puts the work first. Behind the public pages sits an admin area for managing content and video.","creator":{"@type":"Person","name":"FunmbiO","url":"https://jaded-works.vercel.app"},"url":"https://jaded-works.vercel.app/work/jaded-media","keywords":"Next.js, TypeScript, Supabase, Cloudflare R2, Vercel"}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/">Funmbi<span>/</span>O</a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/#work" aria-current="page">Work</a></li>
+        <li><a href="/certifications" class="nav-cert">Certifications</a></li>
+        <li class="hide-sm"><a href="/#about">About</a></li>
+        <li class="hide-sm"><a href="/#toolkit">Toolkit</a></li>
+        <li><a class="btn sm" href="/#contact">Say hello →</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <article class="wrap case">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/#work">Work</a><span aria-hidden="true">/</span><span>Jaded Media</span></nav>
+    <div class="case-head">
+      <div class="eyebrow">Photography &amp; film business site</div>
+      <h1>Jaded Media</h1>
+      <p class="lede">The website for my own photography and film business. It opens with one line, “Photo and film, let&#39;s make art.”, and puts the work first. Behind the public pages sits an admin area for managing content and video.</p>
+      <dl class="case-facts">
+        <div><dt>My role</dt><dd>Founder &amp; developer</dd></div>
+        <div><dt>Built with</dt><dd>Next.js · TypeScript · Supabase · Cloudflare R2 · Vercel</dd></div>
+      </dl>
+      <div class="hero-actions"><a class="btn" href="https://www.jadedmedia.ca" target="_blank" rel="noopener">Visit jadedmedia.ca ↗</a><a class="btn ghost" href="/#work">All work</a></div>
+    </div>
+
+    <section class="case-block" aria-labelledby="h-skills">
+      <h2 id="h-skills">Skills shown</h2>
+      <div class="skill-grid">
+        <div class="skill"><h3>Full-stack development</h3><ul><li>Next.js App Router and TypeScript</li><li>Admin dashboard with protected routes</li><li>Supabase backend for site data</li></ul></div>
+        <div class="skill"><h3>Media handling</h3><ul><li>Direct-to-storage video uploads with signed URLs</li><li>Content-type allowlists on uploads</li><li>Image and video delivery from Cloudflare R2</li></ul></div>
+        <div class="skill"><h3>Security</h3><ul><li>Content Security Policy with per-request nonces</li><li>Password-reset redirect hardening</li><li>Rate limiting on sensitive admin actions</li><li>Security audit with documented fixes</li></ul></div>
+        <div class="skill"><h3>Compliance &amp; accessibility</h3><ul><li>Privacy policy and consent flow</li><li>Accessibility review</li></ul></div>
+        <div class="skill"><h3>Delivery</h3><ul><li>Vercel deployments and custom domains</li><li>Phase-by-phase written documentation</li></ul></div>
+      </div>
+    </section>
+
+    <section class="case-block" aria-labelledby="h-notes">
+      <h2 id="h-notes">What's in it</h2>
+      <ul class="notes">
+        <li>Videos upload straight from the browser to Cloudflare R2 through short-lived signed URLs, so large files never pass through the app server.</li>
+        <li>Security was audited in a dedicated pass: a nonce-based Content Security Policy, HSTS, clickjacking protection, a locked-down Permissions-Policy, link-scheme checks on rendered markdown, and an hourly cap on admin email sending.</li>
+        <li>Legal, privacy, cookie-consent and accessibility work was done as its own phase and documented.</li>
+        <li>Runs on a custom domain, with a preview deployment for every branch before anything reaches production.</li>
+      </ul>
+    </section>
+
+    <nav class="case-next" aria-label="Next project">
+      <span class="mono">Next project</span>
+      <a href="/work/edgeline-exports">Edgeline Exports →</a>
+    </nav>
+  </article>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-brand">
+      <a class="brand" href="/">Funmbi<span>/</span>O</a>
+      <p>Web developer and founder of Jaded Media.<br>© <span id="year">2026</span> FunmbiO</p>
+    </div>
+    <div class="foot-cols">
+      <div><span>EXPLORE</span><a href="/#work">Work</a><a href="/certifications">Certifications</a><a href="/#about">About</a></div>
+      <div><span>CONTACT</span><a href="mailto:funmbiolajubu@gmail.com">Email</a><a href="https://github.com/FunmbiO" target="_blank" rel="noopener">GitHub</a></div>
+    </div>
+  </div>
+</footer>
+<script src="/js/common.js" defer></script>
+</body>
+</html>
