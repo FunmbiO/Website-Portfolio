@@ -603,3 +603,9 @@ h3 { font-family: var(--font-body); font-weight: 700; font-size: 20px; letter-sp
 .card { min-height: 0; }
 .card h3 { color: var(--text); }
 @media (max-width: 900px) { .case { grid-template-columns: 1fr; gap: 24px; } .hero { min-height: 0; } }
+
+/* ---------- fixes ---------- */
+.band .statement em, .sage-band .statement em { background: none; -webkit-text-fill-color: var(--burgundy); color: var(--burgundy); }
+.thumb iframe { visibility: hidden; }
+.thumb iframe.ready { visibility: visible; }
+.case-art::after, .hero::after { content: none; }
