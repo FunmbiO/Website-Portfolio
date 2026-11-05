@@ -1,0 +1,18 @@
+{
+  "set": "SVG Logos (Gil Barbara)",
+  "source": "@iconify-json/logos on npm, from https://github.com/gilbarbara/logos",
+  "licence": "CC0-1.0",
+  "note": "Every mark is its owner's trademark; used only to name the tool.",
+  "icons": [
+    "cloudflare",
+    "css3",
+    "github",
+    "html5",
+    "nextjs",
+    "react",
+    "supabase",
+    "tailwindcss",
+    "typescript",
+    "vercel"
+  ]
+}

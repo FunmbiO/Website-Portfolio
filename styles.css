@@ -609,3 +609,8 @@ h3 { font-family: var(--font-body); font-weight: 700; font-size: 20px; letter-sp
 .thumb iframe { visibility: hidden; }
 .thumb iframe.ready { visibility: visible; }
 .case-art::after, .hero::after { content: none; }
+
+/* ---------- tool icons ---------- */
+.kit li { display: flex; align-items: center; gap: 14px; }
+.ico { flex: none; width: 28px; height: 28px; padding: 4px; background: #F4EFE6; border-radius: 8px; object-fit: contain; }
+.fine { font-size: 13px; opacity: .8; }
