@@ -198,9 +198,6 @@ p { margin: 0; }
 .foot-cols div { display: flex; flex-direction: column; gap: 10px; }
 .foot-cols span { font-family: var(--font-mono); font-size: 12px; letter-spacing: .1em; color: var(--muted); }
 
-/* reveal on scroll */
-.rv { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
-.rv.in { opacity: 1; transform: none; }
 
 @media (max-width: 720px) {
   .wrap { padding: 0 20px; }
@@ -215,7 +212,6 @@ p { margin: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .rv { opacity: 1; transform: none; transition: none; }
   .mock.on { animation: none; }
 }
 
@@ -279,7 +275,7 @@ h1 em.serif { font-size: 1.08em; }
 /* ---------- live thumbnails in work cards ---------- */
 .case-art { padding: 0; display: block; background: #fff; }
 .thumb { position: absolute; inset: 0; overflow: hidden; }
-.thumb iframe { position: absolute; top: 0; left: 0; width: 1280px; height: 1000px; border: 0; transform-origin: top left; transform: scale(var(--k, .4)); pointer-events: none; background: #fff; opacity: 0; transition: opacity .5s ease; }
+.thumb iframe { position: absolute; top: 0; left: 0; width: 1280px; height: 1000px; border: 0; transform-origin: top left; transform: scale(var(--k, .4)); pointer-events: none; background: #fff; }
 .thumb iframe.ready { opacity: 1; }
 .case-art::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(28, 5, 4, .4) 0%, transparent 28%, transparent 70%, rgba(28, 5, 4, .5) 100%); pointer-events: none; }
 .case-art .tag, .case-art .go { z-index: 2; }
@@ -493,3 +489,34 @@ a.case-art { display: block; color: inherit; }
 .nav a[aria-current="true"]:not(.btn) { color: var(--hl-hi); }
 .copy-mail { align-self: center; background: none; border: 1px solid rgba(23, 5, 4, .45); color: var(--accent-ink); border-radius: 999px; padding: 8px 18px; font: 500 13px var(--font-mono); letter-spacing: .06em; cursor: pointer; transition: background .15s ease; }
 .copy-mail:hover { background: rgba(23, 5, 4, .1); }
+
+/* ---------- motion layer (hover and focus only; nothing moves on load or scroll) ---------- */
+:root {
+  --m-in: 140ms; --m-out: 200ms; --m-press: 90ms; --m-card: 180ms; --m-image: 600ms;
+  --m-ease: cubic-bezier(.2, .8, .2, 1);
+}
+.btn, .tab, .copy-mail, .case, .cert-card, .card, .skill, .case-art, .case-art .go, .thumb iframe {
+  transition: transform var(--m-out) var(--m-ease), background-color var(--m-out) var(--m-ease), border-color var(--m-out) var(--m-ease), color var(--m-out) var(--m-ease), filter var(--m-out) var(--m-ease);
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover { transform: translateY(-1px); filter: brightness(1.08); transition-duration: var(--m-in); }
+  .btn:active { transform: translateY(1px) scale(.985); transition-duration: var(--m-press); }
+  .case:hover, .cert-card:hover, .card:hover { transform: translateY(-2px); transition-duration: var(--m-card); }
+  .case-art:hover .thumb { transform: scale(1.03); }
+  .thumb { transition: transform var(--m-image) var(--m-ease); }
+  .case-art:hover .go, .case-art:focus-visible .go { opacity: 1; transform: none; }
+}
+/* links draw a 1px line left to right and leave to the right */
+.nav ul a:not(.btn), .foot a, .case-links a, .crumbs a, .faq-list a, .facts a, .copy-mail {
+  background: linear-gradient(currentColor, currentColor) no-repeat 100% 100% / 0 1px;
+  transition: background-size var(--m-out) var(--m-ease), color var(--m-out) var(--m-ease);
+}
+.nav ul a:not(.btn):hover, .foot a:hover, .case-links a:hover, .crumbs a:hover, .facts a:hover { background-position: 0 100%; background-size: 100% 1px; }
+.case-links a { text-decoration: none; padding-bottom: 3px; }
+/* focus: a 2px ring that settles inward */
+a, button, input, textarea, summary { outline: 2px solid transparent; outline-offset: 6px; transition-property: outline-color, outline-offset, transform, background-color, border-color, color, filter, background-size; }
+:focus-visible { outline: 2px solid var(--hl); outline-offset: 2px; border-radius: inherit; transition-duration: var(--m-out); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; scroll-behavior: auto !important; }
+  .btn:hover, .btn:active, .case:hover, .cert-card:hover, .card:hover, .case-art:hover .thumb { transform: none; }
+}

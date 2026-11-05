@@ -78,17 +78,6 @@
   const idle = window.requestIdleCallback || ((fn) => setTimeout(fn, 2500));
   idle(() => frames.forEach(load));
 
-  // reveal on scroll
-  const els = document.querySelectorAll('.rv');
-  if ('IntersectionObserver' in window) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    els.forEach((el) => io.observe(el));
-  } else {
-    els.forEach((el) => el.classList.add('in'));
-  }
-
   // highlight the nav link for the section in view
   const links = [...document.querySelectorAll('.nav a[href^="#"]')];
   const byId = new Map(links.map((a) => [a.getAttribute('href').slice(1), a]));
