@@ -488,3 +488,8 @@ a.case-art { display: block; color: inherit; }
 .case.self .case-links a { color: var(--hl-hi); }
 .case.self .case-links a:hover { color: #fff; }
 @media (max-width: 720px) { .case.self .self-art { flex-basis: 100%; min-height: 120px; } }
+
+/* ---------- polish: nav state, copy button ---------- */
+.nav a[aria-current="true"]:not(.btn) { color: var(--hl-hi); }
+.copy-mail { align-self: center; background: none; border: 1px solid rgba(23, 5, 4, .45); color: var(--accent-ink); border-radius: 999px; padding: 8px 18px; font: 500 13px var(--font-mono); letter-spacing: .06em; cursor: pointer; transition: background .15s ease; }
+.copy-mail:hover { background: rgba(23, 5, 4, .1); }
