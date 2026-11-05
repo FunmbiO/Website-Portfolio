@@ -134,7 +134,7 @@
       "The previews are the real sites loaded in scaled frames, with a desktop and mobile toggle, so a visitor sees the actual work instead of screenshots.",
       "Certifications are managed from a password-protected admin page that supports file upload, editing and deletion, and every entry links to the issuer's official record or the uploaded certificate.",
       "The backend checks everything it receives: uploads are identified by their contents, links must be https, and admin actions need a signed session cookie plus a request header.",
-      "Twenty-one automated tests and an end-to-end browser run cover login, uploads, validation, public pages and the security checks."
+      "More than twenty automated tests and an end-to-end browser run cover login, uploads, validation, public pages and the security checks."
     ],
     "skills": [
       {
