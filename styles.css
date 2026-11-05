@@ -18,7 +18,9 @@
   --hl-hi: #F6EAD4;
   --hl-lo: #A5A79B;
   --hl-line: rgba(165, 167, 155, .30);
-  --hl-grad: linear-gradient(120deg, #F6EAD4 0%, #E8D2B5 45%, #A5A79B 100%);
+  --hl-grad: linear-gradient(#E8D2B5, #E8D2B5);
+  --action: #3DDC97;
+  --action-ink: #06150E;
   --ivory: #E8D2B5;
   --font-display: 'Archivo', sans-serif;
   --font-body: 'Hanken Grotesk', sans-serif;
@@ -520,3 +522,31 @@ a, button, input, textarea, summary { outline: 2px solid transparent; outline-of
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; scroll-behavior: auto !important; }
   .btn:hover, .btn:active, .case:hover, .cert-card:hover, .card:hover, .case-art:hover .thumb { transform: none; }
 }
+
+/* ---------- flat grounds, one action colour ---------- */
+body { background: var(--bg); }
+body::before { content: none; }
+.hero::before { background: var(--burgundy); opacity: 1; }
+.card, .cert-card, .skill, .plan, .kit > div { background: var(--panel); }
+.cta { background: var(--sage); box-shadow: none; }
+.browser { box-shadow: none; }
+.btn { box-shadow: none; background: var(--action); color: var(--action-ink); }
+.btn:hover { color: var(--action-ink); }
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--hl-line); }
+.btn.ghost:hover { color: var(--text); border-color: var(--hl); background: rgba(232, 210, 181, .08); }
+.btn.dark { background: var(--black); color: var(--text); border: 0; }
+.btn.dark:hover { color: var(--action); }
+.nav { background: var(--black); backdrop-filter: none; }
+.tab[aria-selected="true"], .tab[aria-pressed="true"] { background: var(--action); color: var(--action-ink); border-color: var(--action); }
+.case-art .go { background: var(--action); color: var(--action-ink); }
+.sage-band .case-art .go { background: var(--action); color: var(--action-ink); }
+:focus-visible { outline-color: var(--action); }
+.nav a[aria-current="true"]:not(.btn), .nav a[aria-current="page"]:not(.btn) { color: var(--text); box-shadow: inset 0 -2px 0 var(--action); }
+.nav-cert { border-bottom: 0; padding-bottom: 0; }
+.skip { background: var(--action); color: var(--action-ink); }
+.skill li::before { background: var(--action); }
+.admin .notice.ok { border-color: var(--action); }
+.live { display: inline-flex; align-items: center; gap: 8px; font: 500 12px var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--text); }
+.live::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--action); }
+.sage-band .live { color: var(--ink); }
+.sage-band .live::before { background: var(--burgundy); }
