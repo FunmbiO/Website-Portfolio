@@ -11,82 +11,89 @@
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://jaded-works.vercel.app/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#110C08">
+<meta name="theme-color" content="#80907A">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,700;0,800;0,900;1,300;1,700;1,800;1,900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"This portfolio","description":"The site you're on. It shows my other work in live, scrollable previews, lists my certifications with links to the official records, and has a private admin page where I add new certifications without touching code.","creator":{"@type":"Person","name":"FunmbiO","url":"https://jaded-works.vercel.app"},"url":"https://jaded-works.vercel.app/work/portfolio","keywords":"HTML, CSS, JavaScript, Vercel Functions, Vercel Blob"}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="topline"></div>
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="/">Funmbi<span>/</span>O</a>
+    <a class="brand" href="/" aria-label="FunmbiO, home"><b>Funmbi</b><span>Portfolio</span></a>
     <nav aria-label="Primary">
       <ul>
         <li><a href="/#work" aria-current="page">Projects</a></li>
-        <li><a href="/certifications" class="nav-cert">Certifications</a></li>
+        <li><a href="/certifications">Certifications</a></li>
         <li class="hide-sm"><a href="/#about">About</a></li>
-        <li class="hide-sm"><a href="/#toolkit">Toolkit</a></li>
-        <li><a class="btn sm" href="mailto:funmbiolajubu@gmail.com?subject=Hello">Email me →</a></li>
+        <li class="hide-sm"><a href="/#services">Services</a></li>
+        <li class="hide-sm"><a href="/#contact">Contact</a></li>
+        <li class="hide-sm slash" aria-hidden="true">/</li>
+        <li class="hide-sm"><a class="icon-link" href="https://github.com/FunmbiO" target="_blank" rel="noopener" aria-label="GitHub"><img src="/assets/icons/github.svg" alt="" width="20" height="20"></a></li>
+        <li><a class="btn sm" href="mailto:funmbiolajubu@gmail.com?subject=Hello">Email me <i>[ ↗ ]</i></a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <main id="main">
-  <article class="wrap case-page">
-    <nav class="crumbs" aria-label="Breadcrumb"><a href="/#work">Projects</a><span aria-hidden="true">/</span><span>This portfolio</span></nav>
-    <div class="case-head">
-      <div class="eyebrow">Personal portfolio with an admin backend</div>
-      <h1>This portfolio</h1>
-      <p class="lede">The site you&#39;re on. It shows my other work in live, scrollable previews, lists my certifications with links to the official records, and has a private admin page where I add new certifications without touching code.</p>
-      <dl class="case-facts">
-        <div><dt>My role</dt><dd>Designer &amp; developer</dd></div>
-        <div><dt>Built with</dt><dd>HTML · CSS · JavaScript · Vercel Functions · Vercel Blob</dd></div>
-      </dl>
-      <div class="hero-actions"><a class="btn" href="/">Back to the home page →</a><a class="btn ghost" href="/#work">All projects</a></div>
-    </div>
-
-    <section class="case-block" aria-labelledby="h-skills">
-      <h2 id="h-skills">Skills shown</h2>
-      <div class="skill-grid">
-        <div class="skill"><h3>Front-end development</h3><ul><li>Hand-written HTML, CSS and JavaScript with no framework</li><li>Responsive layout with CSS grid and fluid type</li><li>A colour system built from three brand colours plus black</li><li>Live iframe previews scaled with ResizeObserver</li></ul></div>
-        <div class="skill"><h3>Back-end development</h3><ul><li>Serverless API routes on Vercel</li><li>File storage and JSON data in Vercel Blob</li><li>Create, read, update and delete from an admin page</li></ul></div>
-        <div class="skill"><h3>Security</h3><ul><li>Signed, HttpOnly, SameSite session cookies</li><li>Constant-time password comparison and login throttling</li><li>Upload type checked from file contents</li><li>Content Security Policy and security headers</li></ul></div>
-        <div class="skill"><h3>Quality</h3><ul><li>Unit tests with Node&#39;s built-in test runner</li><li>End-to-end browser testing</li><li>Accessibility basics: skip link, focus styles, reduced-motion support</li></ul></div>
-        <div class="skill"><h3>SEO &amp; sharing</h3><ul><li>Structured data, sitemap and canonical URLs</li><li>Share image and social metadata</li></ul></div>
+  <section class="case-hero halftone">
+    <div class="wrap case-page">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/#work">Projects</a><span aria-hidden="true">/</span><span>This portfolio</span></nav>
+      <div class="case-head">
+        <span class="tagchip">Personal portfolio with an admin backend</span>
+        <h1>This portfolio</h1>
+        <p class="lede">The site you&#39;re on. It shows my other work in live, scrollable previews, lists my certifications with links to the official records, and has a private admin page where I add new certifications without touching code.</p>
+        <dl class="case-facts">
+          <div><dt>My role</dt><dd>Designer &amp; developer</dd></div>
+          <div><dt>Built with</dt><dd>HTML · CSS · JavaScript · Vercel Functions · Vercel Blob</dd></div>
+        </dl>
+        <div class="hero-actions"><a class="btn" href="/">Back to the home page →</a><a class="btn ghost" href="/#work">All projects</a></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="case-block" aria-labelledby="h-notes">
-      <h2 id="h-notes">What's in it</h2>
-      <ul class="notes">
-        <li>The previews are the real sites loaded in scaled frames, with a desktop and mobile toggle, so a visitor sees the actual work instead of screenshots.</li>
-        <li>Certifications are managed from a password-protected admin page that supports file upload, editing and deletion, and every entry links to the issuer&#39;s official record or the uploaded certificate.</li>
-        <li>The backend checks everything it receives: uploads are identified by their contents, links must be https, and admin actions need a signed session cookie plus a request header.</li>
-        <li>More than twenty automated tests and an end-to-end browser run cover login, uploads, validation, public pages and the security checks.</li>
-      </ul>
-    </section>
+  <section class="ground ground-black">
+    <div class="wrap case-page">
+      <section class="case-block" aria-labelledby="h-skills">
+        <div class="sec-title"><h2 id="h-skills">Skills <span class="out">shown</span></h2><i class="rule"></i></div>
+        <div class="skill-grid">
+          <div class="skill"><h3>Front-end development</h3><ul><li>Hand-written HTML, CSS and JavaScript with no framework</li><li>Responsive layout with CSS grid and fluid type</li><li>A colour system built from three brand colours plus black</li><li>Live iframe previews scaled with ResizeObserver</li></ul></div>
+          <div class="skill"><h3>Back-end development</h3><ul><li>Serverless API routes on Vercel</li><li>File storage and JSON data in Vercel Blob</li><li>Create, read, update and delete from an admin page</li></ul></div>
+          <div class="skill"><h3>Security</h3><ul><li>Signed, HttpOnly, SameSite session cookies</li><li>Constant-time password comparison and login throttling</li><li>Upload type checked from file contents</li><li>Content Security Policy and security headers</li></ul></div>
+          <div class="skill"><h3>Quality</h3><ul><li>Unit tests with Node&#39;s built-in test runner</li><li>End-to-end browser testing</li><li>Accessibility basics: skip link, focus styles, reduced-motion support</li></ul></div>
+          <div class="skill"><h3>SEO &amp; sharing</h3><ul><li>Structured data, sitemap and canonical URLs</li><li>Share image and social metadata</li></ul></div>
+        </div>
+      </section>
 
-    <nav class="case-next" aria-label="Next project">
-      <span class="mono">Next project</span>
-      <a href="/work/jaded-media">Jaded Media →</a>
-    </nav>
-  </article>
+      <section class="case-block" aria-labelledby="h-notes">
+        <div class="sec-title"><h2 id="h-notes">What's <span class="out">in it</span></h2><i class="rule"></i></div>
+        <ul class="notes">
+          <li>The previews are the real sites loaded in scaled frames, with a desktop and mobile toggle, so a visitor sees the actual work instead of screenshots.</li>
+          <li>Certifications are managed from a password-protected admin page that supports file upload, editing and deletion, and every entry links to the issuer&#39;s official record or the uploaded certificate.</li>
+          <li>The backend checks everything it receives: uploads are identified by their contents, links must be https, and admin actions need a signed session cookie plus a request header.</li>
+          <li>More than twenty automated tests and an end-to-end browser run cover login, uploads, validation, public pages and the security checks.</li>
+        </ul>
+      </section>
+
+      <nav class="case-next" aria-label="Next project">
+        <span class="mono">Next project</span>
+        <a href="/work/jaded-media">Jaded Media →</a>
+      </nav>
+    </div>
+  </section>
 </main>
 
-<footer class="foot">
+<footer class="site-foot">
   <div class="wrap">
-    <div class="foot-brand">
-      <a class="brand" href="/">Funmbi<span>/</span>O</a>
-      <p>Web developer and founder of Jaded Media.<br>© <span id="year">2026</span> FunmbiO</p>
-    </div>
-    <div class="foot-cols">
-      <div><span>EXPLORE</span><a href="/#work">Projects</a><a href="/certifications">Certifications</a><a href="/#about">About</a></div>
-      <div><span>CONTACT</span><a href="mailto:funmbiolajubu@gmail.com">Email</a><a href="https://github.com/FunmbiO" target="_blank" rel="noopener">GitHub</a></div>
+    <div class="legal">
+      <span>Open to projects</span>
+      <span>© <span id="year">2026</span> FunmbiO</span>
+      <span><a href="/#work">Projects</a> · <a href="/certifications">Certifications</a> · <a href="https://github.com/FunmbiO" target="_blank" rel="noopener">GitHub</a></span>
     </div>
   </div>
 </footer>

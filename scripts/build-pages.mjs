@@ -47,75 +47,82 @@ export function renderProject(p, all) {
 <meta property="og:type" content="article">
 <meta property="og:image" content="${SITE}/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#110C08">
+<meta name="theme-color" content="#80907A">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,700;0,800;0,900;1,300;1,700;1,800;1,900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <script type="application/ld+json">${jsonForScript(ld)}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="topline"></div>
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="/">Funmbi<span>/</span>O</a>
+    <a class="brand" href="/" aria-label="FunmbiO, home"><b>Funmbi</b><span>Portfolio</span></a>
     <nav aria-label="Primary">
       <ul>
         <li><a href="/#work" aria-current="page">Projects</a></li>
-        <li><a href="/certifications" class="nav-cert">Certifications</a></li>
+        <li><a href="/certifications">Certifications</a></li>
         <li class="hide-sm"><a href="/#about">About</a></li>
-        <li class="hide-sm"><a href="/#toolkit">Toolkit</a></li>
-        <li><a class="btn sm" href="mailto:funmbiolajubu@gmail.com?subject=Hello">Email me →</a></li>
+        <li class="hide-sm"><a href="/#services">Services</a></li>
+        <li class="hide-sm"><a href="/#contact">Contact</a></li>
+        <li class="hide-sm slash" aria-hidden="true">/</li>
+        <li class="hide-sm"><a class="icon-link" href="https://github.com/FunmbiO" target="_blank" rel="noopener" aria-label="GitHub"><img src="/assets/icons/github.svg" alt="" width="20" height="20"></a></li>
+        <li><a class="btn sm" href="mailto:funmbiolajubu@gmail.com?subject=Hello">Email me <i>[ ↗ ]</i></a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <main id="main">
-  <article class="wrap case-page">
-    <nav class="crumbs" aria-label="Breadcrumb"><a href="/#work">Projects</a><span aria-hidden="true">/</span><span>${esc(p.name)}</span></nav>
-    <div class="case-head">
-      <div class="eyebrow">${esc(p.kind)}</div>
-      <h1>${esc(p.name)}</h1>
-      <p class="lede">${esc(p.summary)}</p>
-      <dl class="case-facts">
-        <div><dt>My role</dt><dd>${esc(p.role)}</dd></div>
-        <div><dt>Built with</dt><dd>${p.stack.map(esc).join(' · ')}</dd></div>
-      </dl>
-      <div class="hero-actions">${live}<a class="btn ghost" href="/#work">All projects</a></div>
-    </div>
-
-    <section class="case-block" aria-labelledby="h-skills">
-      <h2 id="h-skills">Skills shown</h2>
-      <div class="skill-grid">
-${p.skills.map((g) => `        <div class="skill"><h3>${esc(g.group)}</h3><ul>${g.items.map((it) => `<li>${esc(it)}</li>`).join('')}</ul></div>`).join('\n')}
+  <section class="case-hero halftone">
+    <div class="wrap case-page">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/#work">Projects</a><span aria-hidden="true">/</span><span>${esc(p.name)}</span></nav>
+      <div class="case-head">
+        <span class="tagchip">${esc(p.kind)}</span>
+        <h1>${esc(p.name)}</h1>
+        <p class="lede">${esc(p.summary)}</p>
+        <dl class="case-facts">
+          <div><dt>My role</dt><dd>${esc(p.role)}</dd></div>
+          <div><dt>Built with</dt><dd>${p.stack.map(esc).join(' · ')}</dd></div>
+        </dl>
+        <div class="hero-actions">${live}<a class="btn ghost" href="/#work">All projects</a></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="case-block" aria-labelledby="h-notes">
-      <h2 id="h-notes">What's in it</h2>
-      <ul class="notes">
-${p.highlights.map((h) => `        <li>${esc(h)}</li>`).join('\n')}
-      </ul>
-    </section>
+  <section class="ground ground-black">
+    <div class="wrap case-page">
+      <section class="case-block" aria-labelledby="h-skills">
+        <div class="sec-title"><h2 id="h-skills">Skills <span class="out">shown</span></h2><i class="rule"></i></div>
+        <div class="skill-grid">
+${p.skills.map((g) => `          <div class="skill"><h3>${esc(g.group)}</h3><ul>${g.items.map((it) => `<li>${esc(it)}</li>`).join('')}</ul></div>`).join('\n')}
+        </div>
+      </section>
 
-    <nav class="case-next" aria-label="Next project">
-      <span class="mono">Next project</span>
-      <a href="/work/${esc(next.slug)}">${esc(next.name)} →</a>
-    </nav>
-  </article>
+      <section class="case-block" aria-labelledby="h-notes">
+        <div class="sec-title"><h2 id="h-notes">What's <span class="out">in it</span></h2><i class="rule"></i></div>
+        <ul class="notes">
+${p.highlights.map((h) => `          <li>${esc(h)}</li>`).join('\n')}
+        </ul>
+      </section>
+
+      <nav class="case-next" aria-label="Next project">
+        <span class="mono">Next project</span>
+        <a href="/work/${esc(next.slug)}">${esc(next.name)} →</a>
+      </nav>
+    </div>
+  </section>
 </main>
 
-<footer class="foot">
+<footer class="site-foot">
   <div class="wrap">
-    <div class="foot-brand">
-      <a class="brand" href="/">Funmbi<span>/</span>O</a>
-      <p>Web developer and founder of Jaded Media.<br>© <span id="year">2026</span> FunmbiO</p>
-    </div>
-    <div class="foot-cols">
-      <div><span>EXPLORE</span><a href="/#work">Projects</a><a href="/certifications">Certifications</a><a href="/#about">About</a></div>
-      <div><span>CONTACT</span><a href="mailto:funmbiolajubu@gmail.com">Email</a><a href="https://github.com/FunmbiO" target="_blank" rel="noopener">GitHub</a></div>
+    <div class="legal">
+      <span>Open to projects</span>
+      <span>© <span id="year">2026</span> FunmbiO</span>
+      <span><a href="/#work">Projects</a> · <a href="/certifications">Certifications</a> · <a href="https://github.com/FunmbiO" target="_blank" rel="noopener">GitHub</a></span>
     </div>
   </div>
 </footer>

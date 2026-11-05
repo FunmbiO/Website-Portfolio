@@ -5,58 +5,62 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Certifications — FunmbiO</title>
 <meta name="description" content="Professional certifications earned by FunmbiO, each with a link to the official certificate or the issuer's verification page.">
-<meta name="theme-color" content="#110C08">
+<meta name="theme-color" content="#80907A">
 <link rel="canonical" href="https://jaded-works.vercel.app/certifications">
 <meta property="og:title" content="Certifications — FunmbiO">
 <meta property="og:image" content="https://jaded-works.vercel.app/assets/og.png">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,700;0,800;0,900;1,300;1,700;1,800;1,900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 <a class="skip" href="#top">Skip to content</a>
-
+<div class="topline"></div>
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="/">Funmbi<span>/</span>O</a>
+    <a class="brand" href="/" aria-label="FunmbiO, home"><b>Funmbi</b><span>Portfolio</span></a>
     <nav aria-label="Primary">
       <ul>
         <li><a href="/#work">Projects</a></li>
-        <li><a href="/certifications" aria-current="page" class="nav-cert">Certifications</a></li>
+        <li><a href="/certifications" aria-current="page">Certifications</a></li>
         <li class="hide-sm"><a href="/#about">About</a></li>
-        <li class="hide-sm"><a href="/#toolkit">Toolkit</a></li>
-        <li><a class="btn sm" href="mailto:funmbiolajubu@gmail.com?subject=Hello">Email me →</a></li>
+        <li class="hide-sm"><a href="/#services">Services</a></li>
+        <li class="hide-sm"><a href="/#contact">Contact</a></li>
+        <li class="hide-sm slash" aria-hidden="true">/</li>
+        <li class="hide-sm"><a class="icon-link" href="https://github.com/FunmbiO" target="_blank" rel="noopener" aria-label="GitHub"><img src="/assets/icons/github.svg" alt="" width="20" height="20"></a></li>
+        <li><a class="btn sm" href="mailto:funmbiolajubu@gmail.com?subject=Hello">Email me <i>[ ↗ ]</i></a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <main id="top">
-  <section class="wrap page-head">
-    <div class="eyebrow">Credentials</div>
-    <h1>Certifications.</h1>
-    <p class="lede">Every certificate below links to the official record, so you can check it with the issuer yourself.</p>
-    <div class="cert-total"><b id="cert-count">—</b><span>Earned so far</span></div>
+  <section class="ground ground-black page-head">
+    <div class="wrap">
+      <span class="eyebrow">Credentials</span>
+      <h1>My <span class="out">Certifications</span></h1>
+      <p class="lede">Every certificate below links to the official record, so you can check it with the issuer yourself.</p>
+      <div class="cert-total"><b id="cert-count">—</b><span>Earned so far</span></div>
+    </div>
   </section>
 
-  <section class="wrap cert-section">
-    <div class="tabs cert-filters" id="cert-filters" role="group" aria-label="Filter by issuer"></div>
-    <div class="cert-grid" id="cert-grid" aria-live="polite"></div>
-    <noscript><p class="cert-state"><b>Certifications need JavaScript to load.</b></p></noscript>
+  <section class="ground ground-night cert-section">
+    <div class="wrap">
+      <div class="tabs cert-filters" id="cert-filters" role="group" aria-label="Filter by issuer"></div>
+      <div class="cert-grid" id="cert-grid" aria-live="polite"></div>
+      <noscript><p class="cert-state"><b>Certifications need JavaScript to load.</b></p></noscript>
+    </div>
   </section>
 </main>
 
-<footer class="foot">
+<footer class="site-foot">
   <div class="wrap">
-    <div class="foot-brand">
-      <a class="brand" href="/">Funmbi<span>/</span>O</a>
-      <p>Web developer and founder of Jaded Media.<br>© <span id="year">2026</span> FunmbiO</p>
-    </div>
-    <div class="foot-cols">
-      <div><span>EXPLORE</span><a href="/#work">Projects</a><a href="/certifications">Certifications</a><a href="/#about">About</a></div>
-      <div><span>CONTACT</span><a href="mailto:funmbiolajubu@gmail.com">Email</a><a href="https://github.com/FunmbiO" target="_blank" rel="noopener">GitHub</a></div>
+    <div class="legal">
+      <span>Open to projects</span>
+      <span>© <span id="year">2026</span> FunmbiO</span>
+      <span><a href="/#work">Projects</a> · <a href="/certifications">Certifications</a> · <a href="https://github.com/FunmbiO" target="_blank" rel="noopener">GitHub</a></span>
     </div>
   </div>
 </footer>

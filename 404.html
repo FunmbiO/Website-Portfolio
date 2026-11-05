@@ -5,22 +5,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Page not found — FunmbiO</title>
-<meta name="theme-color" content="#110C08">
+<meta name="theme-color" content="#80907A">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,700;0,800;0,900;1,300;1,700;1,800;1,900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<header class="nav"><div class="wrap"><a class="brand" href="/">Funmbi<span>/</span>O</a></div></header>
-<main class="wrap page-head" style="min-height:70vh;justify-content:center">
-  <div class="eyebrow">Error 404</div>
-  <h1>That page <em class="serif">wandered off</em>.</h1>
-  <p class="lede">The link may be old or mistyped. These will get you back on track.</p>
-  <div class="hero-actions">
-    <a class="btn" href="/">Home →</a>
-    <a class="btn ghost" href="/certifications">Certifications</a>
-    <a class="btn ghost" href="/#work">Projects</a>
+<div class="topline"></div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="FunmbiO, home"><b>Funmbi</b><span>Portfolio</span></a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/#work">Projects</a></li>
+        <li><a href="/certifications">Certifications</a></li>
+        <li class="hide-sm"><a href="/#about">About</a></li>
+        <li class="hide-sm"><a href="/#services">Services</a></li>
+        <li class="hide-sm"><a href="/#contact">Contact</a></li>
+        <li class="hide-sm slash" aria-hidden="true">/</li>
+        <li class="hide-sm"><a class="icon-link" href="https://github.com/FunmbiO" target="_blank" rel="noopener" aria-label="GitHub"><img src="/assets/icons/github.svg" alt="" width="20" height="20"></a></li>
+        <li><a class="btn sm" href="mailto:funmbiolajubu@gmail.com?subject=Hello">Email me <i>[ ↗ ]</i></a></li>
+      </ul>
+    </nav>
   </div>
+</header>
+<main id="top">
+  <section class="ground ground-black page-head" style="min-height:70vh;display:flex;align-items:center">
+    <div class="wrap">
+      <span class="eyebrow">Error 404</span>
+      <h1>Page <span class="out">not found</span></h1>
+      <p class="lede">The link may be old or mistyped. These will get you back on track.</p>
+      <div class="hero-actions">
+        <a class="btn" href="/">Go home →</a>
+        <a class="btn ghost" href="/certifications">Certifications</a>
+        <a class="btn ghost" href="/#work">Projects</a>
+      </div>
+    </div>
+  </section>
 </main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="legal">
+      <span>Open to projects</span>
+      <span>© <span id="year">2026</span> FunmbiO</span>
+      <span><a href="/#work">Projects</a> · <a href="/certifications">Certifications</a> · <a href="https://github.com/FunmbiO" target="_blank" rel="noopener">GitHub</a></span>
+    </div>
+  </div>
+</footer>
+<script src="/js/common.js" defer></script>
 </body>
 </html>
