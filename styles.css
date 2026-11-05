@@ -550,3 +550,30 @@ body::before { content: none; }
 .live::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--action); }
 .sage-band .live { color: var(--ink); }
 .sage-band .live::before { background: var(--burgundy); }
+
+/* ---------- type and shape: serif display, rectangular controls (borrowed from DESIGN.md) ---------- */
+:root { --r-btn: 10px; --r-md: 12px; --r-lg: 16px; --section: 96px; }
+h1, h2, .statement, .cert-total b {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -.02em;
+}
+h1 { font-size: clamp(54px, 7.2vw, 96px); line-height: 1; }
+h2 { font-size: clamp(40px, 5vw, 60px); line-height: 1.04; letter-spacing: -.015em; }
+.page-head h1, .case-head h1 { font-size: clamp(54px, 8.4vw, 104px); }
+.statement { font-size: clamp(36px, 5vw, 62px); line-height: 1.08; letter-spacing: -.015em; }
+h1 em.serif, h2 em.serif, .statement em { font-style: italic; font-weight: 500; font-size: 1em; }
+h3 { font-family: var(--font-body); font-weight: 700; font-size: 20px; letter-spacing: 0; line-height: 1.3; }
+.case-meta b { font-family: var(--font-body); font-weight: 700; font-size: 22px; }
+.skill h3, .kit b { font-family: var(--font-body); font-weight: 700; font-size: 20px; }
+.about-head h2 { font-size: clamp(38px, 4.6vw, 56px); }
+.cert-total b { font-size: 64px; }
+.btn { border-radius: var(--r-btn); }
+.skip { border-radius: var(--r-btn); }
+.copy-mail { border-radius: var(--r-btn); }
+.admin input:not([type="checkbox"]):not([type="file"]), .admin textarea { border-radius: var(--r-btn); }
+.section { padding-top: var(--section); }
+.band { margin-top: var(--section); }
+.sage-band { margin-top: var(--section); }
+.browser, .case-art, .card, .cert-card, .skill, .panel-box, .kit > div, .cta { border-radius: var(--r-lg); }
+@media (max-width: 720px) { :root { --section: 72px; } }
