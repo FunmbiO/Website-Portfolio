@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin — FunmbiO</title>
+<meta name="theme-color" content="#1C0504">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Hanken+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body class="admin">
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/">Funmbi<span>/</span>O <small class="mono">admin</small></a>
+    <button class="tab" id="logout" type="button" hidden>Sign out</button>
+  </div>
+</header>
+
+<main class="wrap admin-wrap">
+  <p id="notice" class="notice" role="status" aria-live="polite" hidden></p>
+
+  <section id="login" class="panel-box" hidden>
+    <h1>Sign in</h1>
+    <p class="muted">Enter your admin password to manage certifications.</p>
+    <form id="login-form" autocomplete="on">
+      <label for="pw">Password</label>
+      <input id="pw" type="password" name="password" autocomplete="current-password" required>
+      <button class="btn" type="submit">Sign in →</button>
+    </form>
+  </section>
+
+  <section id="setup" class="panel-box" hidden>
+    <h1>Admin isn't set up yet</h1>
+    <p class="muted">Add an <code>ADMIN_PASSWORD</code> environment variable (12 or more characters) to the Vercel project, redeploy, then come back to this page.</p>
+  </section>
+
+  <div id="app" hidden>
+    <section class="panel-box">
+      <h1 id="form-title">Add a certification</h1>
+      <form id="cert-form" novalidate>
+        <div class="grid2">
+          <div><label for="f-title">Title *</label><input id="f-title" maxlength="140" required></div>
+          <div><label for="f-issuer">Issuer *</label><input id="f-issuer" maxlength="100" required placeholder="e.g. Google, AWS, freeCodeCamp"></div>
+          <div><label for="f-issued">Issued *</label><input id="f-issued" placeholder="2026-03 or 2026-03-15" required></div>
+          <div><label for="f-expires">Expires</label><input id="f-expires" placeholder="Leave empty if it doesn't expire"></div>
+          <div><label for="f-cid">Credential ID</label><input id="f-cid" maxlength="100"></div>
+          <div><label for="f-url">Official verification link</label><input id="f-url" type="url" inputmode="url" placeholder="https://…"></div>
+        </div>
+        <label for="f-file">Certificate file (PDF, PNG, JPG or WebP, up to 4 MB)</label>
+        <div class="file-row">
+          <input id="f-file" type="file" accept="application/pdf,image/png,image/jpeg,image/webp">
+          <span id="file-state" class="muted"></span>
+          <button type="button" class="tab" id="file-clear" hidden>Remove file</button>
+        </div>
+        <label for="f-skills">Skills (comma separated)</label>
+        <input id="f-skills" placeholder="e.g. Cloud basics, Security, JavaScript">
+        <label for="f-desc">Short description</label>
+        <textarea id="f-desc" rows="3" maxlength="600"></textarea>
+        <label class="check"><input id="f-featured" type="checkbox"> Feature on the home page</label>
+        <p class="muted small">Add a verification link, an uploaded file, or both. Visitors see both as buttons.</p>
+        <div class="actions">
+          <button class="btn" type="submit" id="save">Save certification</button>
+          <button class="btn ghost" type="button" id="cancel" hidden>Cancel edit</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel-box">
+      <h2>Your certifications <span id="total" class="muted mono"></span></h2>
+      <ul id="list" class="admin-list"></ul>
+    </section>
+  </div>
+</main>
+
+<script type="module" src="/js/admin.js"></script>
+</body>
+</html>
