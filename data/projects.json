@@ -1,0 +1,70 @@
+[
+  {
+    "slug": "jaded-media",
+    "name": "Jaded Media",
+    "role": "Founder & developer",
+    "kind": "Photography & film business site",
+    "url": "https://www.jadedmedia.ca",
+    "urlLabel": "jadedmedia.ca",
+    "summary": "The website for my own photography and film business. It opens with one line, “Photo and film, let's make art.”, and puts the work first. Behind the public pages sits an admin area for managing content and video.",
+    "stack": ["Next.js", "TypeScript", "Supabase", "Cloudflare R2", "Vercel"],
+    "highlights": [
+      "Videos upload straight from the browser to Cloudflare R2 through short-lived signed URLs, so large files never pass through the app server.",
+      "Security was audited in a dedicated pass: a nonce-based Content Security Policy, HSTS, clickjacking protection, a locked-down Permissions-Policy, link-scheme checks on rendered markdown, and an hourly cap on admin email sending.",
+      "Legal, privacy, cookie-consent and accessibility work was done as its own phase and documented.",
+      "Runs on a custom domain, with a preview deployment for every branch before anything reaches production."
+    ],
+    "skills": [
+      { "group": "Full-stack development", "items": ["Next.js App Router and TypeScript", "Admin dashboard with protected routes", "Supabase for data and authentication"] },
+      { "group": "Media handling", "items": ["Direct-to-storage video uploads with signed URLs", "Content-type allowlists on uploads", "Image and video delivery from Cloudflare R2"] },
+      { "group": "Security", "items": ["Content Security Policy with per-request nonces", "Password-reset redirect hardening", "Rate limiting on sensitive admin actions", "Security audit with documented fixes"] },
+      { "group": "Compliance & accessibility", "items": ["Privacy policy and consent flow", "Accessibility review"] },
+      { "group": "Delivery", "items": ["Vercel deployments and custom domains", "Phase-by-phase written documentation"] }
+    ]
+  },
+  {
+    "slug": "edgeline-exports",
+    "name": "Edgeline Exports",
+    "role": "Developer",
+    "kind": "Online-only vehicle dealership site",
+    "url": "https://edgeline-exports.vercel.app",
+    "urlLabel": "edgeline-exports.vercel.app",
+    "summary": "A site for an online-only dealership that buys, sells and sources performance and luxury vehicles across Canada and the United States. Visitors browse inventory, ask for a specific car to be found, or offer their own for sale.",
+    "stack": ["Next.js", "React", "Tailwind CSS", "Vercel"],
+    "highlights": [
+      "Three customer paths, each with its own page and form: buy from inventory, have a car sourced, or sell to the dealership.",
+      "The whole site switches between English and French and between light and dark themes.",
+      "Search and sharing are covered: structured data for the business, a generated share image, a sitemap, and a robots file that keeps the admin and API routes out of search.",
+      "A separate admin login for the owner, with loading states and a friendly 404 for sold or missing listings."
+    ],
+    "skills": [
+      { "group": "Front-end development", "items": ["Next.js and React with a component-based layout", "Tailwind CSS design system with custom brand tokens", "Responsive layouts from phone to desktop"] },
+      { "group": "Internationalisation", "items": ["English and French content", "Language switch that keeps the visitor on the same page"] },
+      { "group": "User experience", "items": ["Light and dark themes", "Clear paths for buying, sourcing and selling", "Loading and not-found states"] },
+      { "group": "SEO", "items": ["Organization structured data (JSON-LD)", "Open Graph share image", "Sitemap and robots rules"] }
+    ]
+  },
+  {
+    "slug": "portfolio",
+    "name": "This portfolio",
+    "role": "Designer & developer",
+    "kind": "Personal portfolio with an admin backend",
+    "url": "/",
+    "urlLabel": "this site",
+    "summary": "The site you're on. It shows my other work in live, scrollable previews, lists my certifications with links to the official records, and has a private admin page where I add new certifications without touching code.",
+    "stack": ["HTML", "CSS", "JavaScript", "Vercel Functions", "Vercel Blob"],
+    "highlights": [
+      "The previews are the real sites loaded in scaled frames, with a desktop and mobile toggle, so a visitor sees the actual work instead of screenshots.",
+      "Certifications are managed from a password-protected admin page that supports file upload, editing and deletion, and every entry links to the issuer's official record or the uploaded certificate.",
+      "The backend checks everything it receives: uploads are identified by their contents, links must be https, and admin actions need a signed session cookie plus a request header.",
+      "Twenty-one automated tests and an end-to-end browser run cover login, uploads, validation, public pages and the security checks."
+    ],
+    "skills": [
+      { "group": "Front-end development", "items": ["Hand-written HTML, CSS and JavaScript with no framework", "Responsive layout with CSS grid and fluid type", "A colour system built from three brand colours plus black", "Live iframe previews scaled with ResizeObserver"] },
+      { "group": "Back-end development", "items": ["Serverless API routes on Vercel", "File storage and JSON data in Vercel Blob", "Create, read, update and delete from an admin page"] },
+      { "group": "Security", "items": ["Signed, HttpOnly, SameSite session cookies", "Constant-time password comparison and login throttling", "Upload type checked from file contents", "Content Security Policy and security headers"] },
+      { "group": "Quality", "items": ["Unit tests with Node's built-in test runner", "End-to-end browser testing", "Accessibility basics: skip link, focus styles, reduced-motion support"] },
+      { "group": "SEO & sharing", "items": ["Structured data, sitemap and canonical URLs", "Share image and social metadata"] }
+    ]
+  }
+]
