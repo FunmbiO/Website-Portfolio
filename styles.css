@@ -405,3 +405,11 @@ body { overflow-x: clip; }
 .nav a[aria-current="page"] { color: var(--hl-hi); }
 @media (max-width: 720px) { .cert-grid { grid-template-columns: 1fr; } .page-head { padding-top: 48px; } }
 @media print { body, .cert-card { background: #fff !important; color: #000 !important; } .nav, .foot, .cert-actions .btn { display: none; } .cert-card { break-inside: avoid; border-color: #999; } }
+
+.pill-link { border: 1px solid var(--hl); border-radius: 999px; padding: 6px 14px; background: var(--hl-grad); color: var(--accent-ink) !important; font-weight: 500; }
+.pill-link:hover { filter: brightness(1.08); }
+.cert-home { padding-top: 96px; }
+.cert-home .head.row { align-items: flex-end; }
+.cert-home .cert-total { margin: 0; padding: 0; border: 0; width: auto; }
+.cert-more { margin: 28px 0 0; }
+.cert-more[hidden] { display: none; }
