@@ -39,17 +39,27 @@ The previews are iframes of the live sites. A site only appears if it allows
 this page in its `frame-ancestors` CSP directive. If a preview is blank, check
 that site's `Content-Security-Policy` and `X-Frame-Options` headers.
 
-## Palette
+## Design
 
 Colours are CSS variables at the top of `styles.css`.
 
 | Token | Hex | Used for |
 | --- | --- | --- |
-| `--sage` | `#A5A79B` | Section bands, muted text, hairlines |
-| `--cream` | `#E8D2B5` | Buttons, headline accents, toolkit band |
-| `--burgundy` | `#590907` | Surfaces, hover states, hero slab |
-| `--bg` | `#1C0504` | Page background |
-| `--black` | `#0A0A0A` | Nav, strip, footer, cards |
+| `--action` | `#3DDC97` | Green: primary buttons, focus ring, live dots, selected tabs |
+| `--sage` | `#A5A79B` | Sage bands (work, toolkit) and the contact card |
+| `--burgundy` | `#590907` | Certifications band, hero slab, tool cards |
+| `--cream` | `#E8D2B5` | Headline accents, the approach band |
+| `--black` | `#0A0A0A` | Nav, footer, cards |
+| `--bg` | `#1C0504` | Page background (darkened burgundy) |
+
+Rules the design follows, taken from the installed `design-taste-frontend` skill and `DESIGN.md`:
+
+- Nothing moves on load or on scroll. Motion is a hover and focus layer only (2 px card lift, 1 px button step, drawn underlines, 2 px focus ring) and is switched off under reduced motion.
+- Flat grounds: no gradients, glows or grain. Grounds alternate dark, burgundy, sage, dark, cream, dark, sage.
+- No captions or labels on visuals; text sits beside them.
+- Plain noun headings, buttons that start with a verb, and one main action (Email me) worded the same everywhere.
+- Serif display headlines at regular weight with negative tracking, a 10 px button radius and 16 px card radius, 96 px section spacing (from `DESIGN.md`).
+- Real tool logos from the CC0 SVG Logos set (see `icons-credits.json`), shown on cream chips.
 
 ## Deploy
 
