@@ -373,3 +373,8 @@ button.btn { font-family: var(--font); }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; scroll-behavior: auto !important; }
   .btn:hover, .btn:active, .cert-card:hover, .card:hover, .case-art:hover, .case-art:hover .thumb { transform: none !important; }
 }
+
+/* the hidden attribute must always win over component display rules */
+[hidden] { display: none !important; }
+.statement em { font-style: normal; color: var(--mark); }
+.ground-cream .statement em, .ground-sage .statement em { color: var(--green); }

@@ -41,24 +41,26 @@ that site's `Content-Security-Policy` and `X-Frame-Options` headers.
 
 ## Design
 
+A terminal / code-editor look: JetBrains Mono everywhere, square corners, 1 px borders, flat grounds.
 Colours are CSS variables at the top of `styles.css`.
 
 | Token | Hex | Used for |
 | --- | --- | --- |
-| `--action` | `#3DDC97` | Green: primary buttons, focus ring, live dots, selected tabs |
-| `--sage` | `#A5A79B` | Sage bands (work, toolkit) and the contact card |
-| `--burgundy` | `#590907` | Certifications band, hero slab, tool cards |
-| `--cream` | `#E8D2B5` | Headline accents, the approach band |
-| `--black` | `#0A0A0A` | Nav, footer, cards |
-| `--bg` | `#1C0504` | Page background (darkened burgundy) |
+| `--bg` | `#110C08` | Page background (deep brown-black) |
+| `--green` | `#0D3B2C` | Certifications band and toolkit cards (deep green) |
+| `--green-2` | `#14573F` | Primary buttons and selected tabs |
+| `--brown-2` | `#2C1D12` | Services band (deep brown) |
+| `--sage` | `#A5A79B` | Projects and toolkit bands |
+| `--cream` | `#E8D2B5` | Approach band, headings accents |
+| `--black` | `#0A0A0A` | Nav, footer, preview frame |
+| `--burgundy` | `#590907` | Reserved; not used on the page |
 
-Rules the design follows, taken from the installed `design-taste-frontend` skill and `DESIGN.md`:
+Rules the design follows, from the installed `design-taste-frontend` skill and `DESIGN.md`:
 
 - Nothing moves on load or on scroll. Motion is a hover and focus layer only (2 px card lift, 1 px button step, drawn underlines, 2 px focus ring) and is switched off under reduced motion.
-- Flat grounds: no gradients, glows or grain. Grounds alternate dark, burgundy, sage, dark, cream, dark, sage.
+- Flat grounds, with one faint grid behind the hero. Grounds alternate dark, green, sage, dark, cream, brown, sage, dark.
 - No captions or labels on visuals; text sits beside them.
 - Plain noun headings, buttons that start with a verb, and one main action (Email me) worded the same everywhere.
-- Serif display headlines at regular weight with negative tracking, a 10 px button radius and 16 px card radius, 96 px section spacing (from `DESIGN.md`).
 - Real tool logos from the CC0 SVG Logos set (see `icons-credits.json`), shown on cream chips.
 
 ## Deploy
