@@ -47,11 +47,11 @@ export function renderProject(p, all) {
 <meta property="og:type" content="article">
 <meta property="og:image" content="${SITE}/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#1C0504">
+<meta name="theme-color" content="#110C08">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Hanken+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <script type="application/ld+json">${jsonForScript(ld)}</script>
 </head>
@@ -73,7 +73,7 @@ export function renderProject(p, all) {
 </header>
 
 <main id="main">
-  <article class="wrap case">
+  <article class="wrap case-page">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/#work">Projects</a><span aria-hidden="true">/</span><span>${esc(p.name)}</span></nav>
     <div class="case-head">
       <div class="eyebrow">${esc(p.kind)}</div>
