@@ -116,6 +116,80 @@
     ]
   },
   {
+    "slug": "nitrodrp",
+    "name": "NitroDrp",
+    "role": "Designer & developer",
+    "kind": "Self-hosted file transfer app",
+    "url": "https://nitrodrp-demo.vercel.app",
+    "urlLabel": "nitrodrp-demo.vercel.app",
+    "summary": "I got tired of paying for WeTransfer, so I built a prettier one. You upload big files, get an unguessable link, and pick an expiry, an optional password and a download limit. The live demo runs entirely in your browser, so nothing is actually uploaded. The real app is private and runs on my own server.",
+    "stack": [
+      "ASP.NET Core 10",
+      "React + TypeScript",
+      "AWS S3 + CloudFront",
+      "DynamoDB",
+      "Terraform",
+      "Docker"
+    ],
+    "highlights": [
+      "File bytes never touch my server. The API only signs URLs, and the browser sends 16 MiB parts straight to S3, so multi-GB files work and my home connection isn't the bottleneck.",
+      "Uploads resume after a reload. Pick the same files again and it only sends the parts S3 doesn't have yet.",
+      "Links expire on their own. The API refuses expired links, DynamoDB deletes the metadata and S3 rules delete the files, so there's no cleanup job.",
+      "Download limits can't be beaten by racing. The count is one conditional database update, and a concurrency test backs it up.",
+      "Downloads go through CloudFront with short-lived signed URLs, since S3 to CloudFront transfer is free. Passwords are hashed with PBKDF2-SHA256 at 210,000 iterations.",
+      "“Download all” streams a .zip on the fly in flat memory, checked with a 4.8 GB archive."
+    ],
+    "skills": [
+      {
+        "group": "Back-end development",
+        "items": [
+          "ASP.NET Core minimal APIs",
+          "Business rules behind interfaces, tested with in-memory fakes",
+          "Streaming a ZIP64 archive in flat memory"
+        ]
+      },
+      {
+        "group": "Cloud and infrastructure",
+        "items": [
+          "S3 multipart uploads with presigned URLs",
+          "CloudFront signed URLs and cache invalidation",
+          "DynamoDB with TTL expiry",
+          "Terraform for the bucket, CDN, IAM user and budget alert"
+        ]
+      },
+      {
+        "group": "Front-end development",
+        "items": [
+          "React and TypeScript with Vite",
+          "A chunked uploader with retries and resume",
+          "A browser-only demo mode that replaces the whole backend"
+        ]
+      },
+      {
+        "group": "Security",
+        "items": [
+          "PBKDF2 password hashing",
+          "Per-share owner keys stored only as hashes",
+          "Rate limiting, stricter on password attempts",
+          "A least-privilege IAM identity"
+        ]
+      },
+      {
+        "group": "Testing",
+        "items": [
+          "Tests for share rules, the HTTP pipeline, zip streaming, expiry, concurrency, resume and CloudFront signatures"
+        ]
+      },
+      {
+        "group": "Delivery",
+        "items": [
+          "Docker Compose and a Cloudflare Tunnel for the private app",
+          "The demo deployed as a static site on Vercel"
+        ]
+      }
+    ]
+  },
+  {
     "slug": "portfolio",
     "name": "This portfolio",
     "role": "Designer & developer",

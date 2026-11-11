@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NitroDrp — case study | FunmbiO</title>
+<meta name="description" content="NitroDrp: Self-hosted file transfer app. Designer &amp; developer. Skills shown: Back-end development, Cloud and infrastructure, Front-end development, Security, Testing, Delivery.">
+<link rel="canonical" href="https://jaded-works.vercel.app/work/nitrodrp">
+<meta property="og:title" content="NitroDrp — case study | FunmbiO">
+<meta property="og:description" content="I got tired of paying for WeTransfer, so I built a prettier one. You upload big files, get an unguessable link, and pick an expiry, an optional password and a download limit. The live demo runs entirely in your browser, so nothing is actually uploaded. The real app is private and runs on my own server.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://jaded-works.vercel.app/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#80907A">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,700;0,800;0,900;1,300;1,700;1,800;1,900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"NitroDrp","description":"I got tired of paying for WeTransfer, so I built a prettier one. You upload big files, get an unguessable link, and pick an expiry, an optional password and a download limit. The live demo runs entirely in your browser, so nothing is actually uploaded. The real app is private and runs on my own server.","creator":{"@type":"Person","name":"FunmbiO","url":"https://jaded-works.vercel.app"},"url":"https://jaded-works.vercel.app/work/nitrodrp","keywords":"ASP.NET Core 10, React + TypeScript, AWS S3 + CloudFront, DynamoDB, Terraform, Docker"}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topline"></div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="FunmbiO, home"><b>Funmbi</b><span>Portfolio</span></a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/#work" aria-current="page">Projects</a></li>
+        <li><a href="/certifications">Certifications</a></li>
+        <li class="hide-sm"><a href="/#about">About</a></li>
+        <li class="hide-sm"><a href="/#services">Services</a></li>
+        <li class="hide-sm"><a href="/#contact">Contact</a></li>
+        <li class="hide-sm slash" aria-hidden="true">/</li>
+        <li class="hide-sm"><a class="icon-link" href="https://github.com/FunmbiO" target="_blank" rel="noopener" aria-label="GitHub"><img src="/assets/icons/github.svg" alt="" width="20" height="20"></a></li>
+        <li><a class="btn sm" href="mailto:funmbiolajubu@gmail.com?subject=Hello">Email me <i>[ ↗ ]</i></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="case-hero halftone">
+    <div class="wrap case-page">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/#work">Projects</a><span aria-hidden="true">/</span><span>NitroDrp</span></nav>
+      <div class="case-head">
+        <span class="tagchip">Self-hosted file transfer app</span>
+        <h1>NitroDrp</h1>
+        <p class="lede">I got tired of paying for WeTransfer, so I built a prettier one. You upload big files, get an unguessable link, and pick an expiry, an optional password and a download limit. The live demo runs entirely in your browser, so nothing is actually uploaded. The real app is private and runs on my own server.</p>
+        <dl class="case-facts">
+          <div><dt>My role</dt><dd>Designer &amp; developer</dd></div>
+          <div><dt>Built with</dt><dd>ASP.NET Core 10 · React + TypeScript · AWS S3 + CloudFront · DynamoDB · Terraform · Docker</dd></div>
+        </dl>
+        <div class="hero-actions"><a class="btn" href="https://nitrodrp-demo.vercel.app" target="_blank" rel="noopener">Visit nitrodrp-demo.vercel.app ↗</a><a class="btn ghost" href="/#work">All projects</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ground ground-black">
+    <div class="wrap case-page">
+      <section class="case-block" aria-labelledby="h-skills">
+        <div class="sec-title"><h2 id="h-skills">Skills <span class="out">shown</span></h2><i class="rule"></i></div>
+        <div class="skill-grid">
+          <div class="skill"><h3>Back-end development</h3><ul><li>ASP.NET Core minimal APIs</li><li>Business rules behind interfaces, tested with in-memory fakes</li><li>Streaming a ZIP64 archive in flat memory</li></ul></div>
+          <div class="skill"><h3>Cloud and infrastructure</h3><ul><li>S3 multipart uploads with presigned URLs</li><li>CloudFront signed URLs and cache invalidation</li><li>DynamoDB with TTL expiry</li><li>Terraform for the bucket, CDN, IAM user and budget alert</li></ul></div>
+          <div class="skill"><h3>Front-end development</h3><ul><li>React and TypeScript with Vite</li><li>A chunked uploader with retries and resume</li><li>A browser-only demo mode that replaces the whole backend</li></ul></div>
+          <div class="skill"><h3>Security</h3><ul><li>PBKDF2 password hashing</li><li>Per-share owner keys stored only as hashes</li><li>Rate limiting, stricter on password attempts</li><li>A least-privilege IAM identity</li></ul></div>
+          <div class="skill"><h3>Testing</h3><ul><li>Tests for share rules, the HTTP pipeline, zip streaming, expiry, concurrency, resume and CloudFront signatures</li></ul></div>
+          <div class="skill"><h3>Delivery</h3><ul><li>Docker Compose and a Cloudflare Tunnel for the private app</li><li>The demo deployed as a static site on Vercel</li></ul></div>
+        </div>
+      </section>
+
+      <section class="case-block" aria-labelledby="h-notes">
+        <div class="sec-title"><h2 id="h-notes">What's <span class="out">in it</span></h2><i class="rule"></i></div>
+        <ul class="notes">
+          <li>File bytes never touch my server. The API only signs URLs, and the browser sends 16 MiB parts straight to S3, so multi-GB files work and my home connection isn&#39;t the bottleneck.</li>
+          <li>Uploads resume after a reload. Pick the same files again and it only sends the parts S3 doesn&#39;t have yet.</li>
+          <li>Links expire on their own. The API refuses expired links, DynamoDB deletes the metadata and S3 rules delete the files, so there&#39;s no cleanup job.</li>
+          <li>Download limits can&#39;t be beaten by racing. The count is one conditional database update, and a concurrency test backs it up.</li>
+          <li>Downloads go through CloudFront with short-lived signed URLs, since S3 to CloudFront transfer is free. Passwords are hashed with PBKDF2-SHA256 at 210,000 iterations.</li>
+          <li>“Download all” streams a .zip on the fly in flat memory, checked with a 4.8 GB archive.</li>
+        </ul>
+      </section>
+
+      <nav class="case-next" aria-label="Next project">
+        <span class="mono">Next project</span>
+        <a href="/work/portfolio">This portfolio →</a>
+      </nav>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="legal">
+      <span>Open to projects</span>
+      <span>© <span id="year">2026</span> FunmbiO</span>
+      <span><a href="/#work">Projects</a> · <a href="/certifications">Certifications</a> · <a href="https://github.com/FunmbiO" target="_blank" rel="noopener">GitHub</a></span>
+    </div>
+  </div>
+</footer>
+<script src="/js/common.js" defer></script>
+</body>
+</html>
