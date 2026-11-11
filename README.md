@@ -79,7 +79,14 @@ uploaded certificate files live in the same store under `certificates/`.
 | `GET /admin` | you | Private admin page (not linked, `noindex`) |
 | `POST /api/admin/login` | you | Password check, sets an HttpOnly session cookie (8 h) |
 | `GET/POST/PUT/DELETE /api/admin/certs` | you | Manage entries |
-| `POST /api/admin/upload` | you | Upload a PDF/PNG/JPG/WebP (4 MB max, type checked by content) |
+| `POST /api/admin/upload?kind=` | you | Upload a file. `certificate`: PDF/PNG/JPG/WebP, 4 MB. `logo`: PNG/JPG/WebP, 2 MB. `photo`: PNG/JPG/WebP, 4 MB. Type is checked by content |
+| `GET /api/profile` | public | The profile photo address the site shows |
+| `GET/PUT /api/admin/profile` | you | Read or change the profile photo |
+
+### Profile photo and issuer logos
+
+- **Profile photo:** in `/admin`, the Profile photo panel at the top. Pick an image and it uploads, shrinks to 1600 px if needed, and appears in the About section within a minute. Until you upload one, nothing is shown there.
+- **Issuer logo:** the certification form has an Issuer logo field (PNG, JPG or WebP, shrunk to 400 px). Type an issuer you've already used and its logo is attached automatically, so each company's logo is uploaded once. Logos show on every certification card.
 
 ### Setup
 

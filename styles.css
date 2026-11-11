@@ -427,3 +427,7 @@ h1 { font-size: clamp(46px, 6.4vw, 100px); }
 .photo-actions { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; flex: 1 1 260px; min-width: 0; }
 .logo-preview { width: 48px; height: 48px; object-fit: contain; background: var(--paper); border: 3px solid var(--paper); padding: 4px; }
 .admin-list img.row-logo { width: 28px; height: 28px; object-fit: contain; background: var(--paper); padding: 2px; margin-right: 10px; vertical-align: middle; }
+
+/* certification logos */
+.cert-top { display: flex; align-items: center; gap: 14px; }
+.cert-logo { flex: none; width: 44px; height: 44px; object-fit: contain; background: var(--paper); border: 2px solid var(--paper); padding: 5px; }

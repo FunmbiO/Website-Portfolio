@@ -39,7 +39,10 @@ function certCard(c) {
   );
 
   return el('article', { class: 'cert-card', 'data-issuer': c.issuer },
-    el('div', { class: 'cert-issuer', text: c.issuer }),
+    el('div', { class: 'cert-top' },
+      c.logoUrl && el('img', { class: 'cert-logo', src: c.logoUrl, alt: `${c.issuer} logo`, width: '44', height: '44', loading: 'lazy', decoding: 'async' }),
+      el('div', { class: 'cert-issuer', text: c.issuer }),
+    ),
     el('h3', { text: c.title }),
     c.description && el('p', { class: 'cert-desc', text: c.description }),
     c.skills?.length && el('ul', { class: 'stack' }, c.skills.map((s) => el('li', { text: s }))),
