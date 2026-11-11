@@ -39,6 +39,19 @@
   </section>
 
   <div id="app" hidden>
+    <section class="panel-box" id="photo-panel">
+      <h2>Profile photo</h2>
+      <div class="photo-row">
+        <div class="photo-preview" id="photo-preview"><span class="muted small">No photo yet</span></div>
+        <div class="photo-actions">
+          <p class="muted small">A clear, well-lit portrait works best. It's cropped to a 4:5 frame in the About section.</p>
+          <input id="photo-file" type="file" accept="image/png,image/jpeg,image/webp">
+          <span id="photo-state" class="muted small"></span>
+          <button type="button" class="tab danger" id="photo-clear" hidden>Remove photo</button>
+        </div>
+      </div>
+    </section>
+
     <section class="panel-box">
       <h1 id="form-title">Add a certification</h1>
       <form id="cert-form" novalidate>
@@ -49,6 +62,13 @@
           <div><label for="f-expires">Expires</label><input id="f-expires" placeholder="Leave empty if it doesn't expire"></div>
           <div><label for="f-cid">Credential ID</label><input id="f-cid" maxlength="100"></div>
           <div><label for="f-url">Official verification link</label><input id="f-url" type="url" inputmode="url" placeholder="https://…"></div>
+        </div>
+        <label for="f-logo">Issuer logo (PNG, JPG or WebP)</label>
+        <div class="file-row">
+          <img id="logo-preview" class="logo-preview" alt="" hidden>
+          <input id="f-logo" type="file" accept="image/png,image/jpeg,image/webp">
+          <span id="logo-state" class="muted small"></span>
+          <button type="button" class="tab" id="logo-clear" hidden>Remove logo</button>
         </div>
         <label for="f-file">Certificate file (PDF, PNG, JPG or WebP, up to 4 MB)</label>
         <div class="file-row">
