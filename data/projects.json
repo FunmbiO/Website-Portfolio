@@ -6,7 +6,7 @@
     "kind": "Photography & film business site",
     "url": "https://www.jadedmedia.ca",
     "urlLabel": "jadedmedia.ca",
-    "summary": "The website for my own photography and film business. It opens with one line, “Photo and film, let's make art.”, and puts the work first. Behind the public pages sits an admin area for managing content and video.",
+    "summary": "The website for my own photography and film business. It opens with one line, “Photo and film, let's make art.”, then stays out of the way. Behind the public pages there's an admin area for managing content and video.",
     "stack": [
       "Next.js",
       "TypeScript",
@@ -15,10 +15,10 @@
       "Vercel"
     ],
     "highlights": [
-      "Videos upload straight from the browser to Cloudflare R2 through short-lived signed URLs, so large files never pass through the app server.",
+      "Videos upload straight from the browser to Cloudflare R2 through short-lived signed URLs, so big files never touch the app server.",
       "Security was audited in a dedicated pass: a nonce-based Content Security Policy, HSTS, clickjacking protection, a locked-down Permissions-Policy, link-scheme checks on rendered markdown, and an hourly cap on admin email sending.",
-      "Legal, privacy, cookie-consent and accessibility work was done as its own phase and documented.",
-      "Runs on a custom domain, with a preview deployment for every branch before anything reaches production."
+      "Legal, privacy, cookie-consent and accessibility work got its own phase, and it's documented.",
+      "Runs on a custom domain, and every branch gets a preview deployment before anything reaches production."
     ],
     "skills": [
       {
@@ -69,7 +69,7 @@
     "kind": "Online-only vehicle dealership site",
     "url": "https://edgeline-exports.vercel.app",
     "urlLabel": "edgeline-exports.vercel.app",
-    "summary": "A site for an online-only dealership that buys, sells and sources performance and luxury vehicles across Canada and the United States. Visitors browse inventory, ask for a specific car to be found, or offer their own for sale.",
+    "summary": "Site for an online-only dealership that buys, sells and sources performance and luxury cars across Canada and the US. You can browse inventory, ask for a specific car to be found, or offer yours for sale.",
     "stack": [
       "Next.js",
       "React",
@@ -80,7 +80,7 @@
       "Three customer paths, each with its own page and form: buy from inventory, have a car sourced, or sell to the dealership.",
       "The whole site switches between English and French and between light and dark themes.",
       "Search and sharing are covered: structured data for the business, a generated share image, a sitemap, and a robots file that keeps the admin and API routes out of search.",
-      "A separate admin login for the owner, with loading states and a friendly 404 for sold or missing listings."
+      "A separate admin login for the owner, loading states, and a friendly 404 for sold or missing listings."
     ],
     "skills": [
       {
@@ -122,7 +122,7 @@
     "kind": "Personal portfolio with an admin backend",
     "url": "/",
     "urlLabel": "this site",
-    "summary": "The site you're on. It shows my other work in live, scrollable previews, lists my certifications with links to the official records, and has a private admin page where I add new certifications without touching code.",
+    "summary": "The site you're on. It shows my other work in live previews, lists my certifications with links to the official records, and has a private admin page so I can add things without touching code.",
     "stack": [
       "HTML",
       "CSS",

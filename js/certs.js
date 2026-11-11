@@ -55,8 +55,8 @@ export function renderCerts(container, items) {
 export function renderState(container, kind) {
   const copy = {
     loading: ['Loading certifications…', ''],
-    error: ['Certifications could not be loaded.', 'Please refresh the page in a moment.'],
-    empty: ['New certifications are on the way.', 'Check back soon, or get in touch if you would like to see credentials for a specific skill.'],
+    error: ['Couldn\'t load the certifications.', 'Give it a refresh in a moment.'],
+    empty: ['Nothing here yet.', 'New certifications land here as I earn them. Email me if you want to see credentials for a specific skill.'],
   }[kind];
   container.replaceChildren(el('div', { class: `cert-state ${kind}` }, el('b', { text: copy[0] }), copy[1] && el('span', { text: copy[1] })));
 }

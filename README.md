@@ -1,6 +1,6 @@
 # FunmbiO — Portfolio
 
-Personal portfolio of FunmbiO: web developer and founder of Jaded Media.
+Personal portfolio of FunmbiO: a web developer who builds convenience.
 Static HTML, CSS and vanilla JS, plus a small set of Vercel serverless functions for
 the certifications backend. Deployed on Vercel. No build step.
 
