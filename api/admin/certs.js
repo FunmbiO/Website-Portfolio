@@ -24,6 +24,10 @@ export default async function handler(req, res) {
     const result = validateCert(req.body);
     if (!result.ok) return send(res, 400, { error: result.errors.join(' '), errors: result.errors });
 
+    // One company, one spelling: reuse how an earlier certificate wrote the issuer.
+    const same = items.find((c) => c.id !== id && c.issuer.toLowerCase() === result.value.issuer.toLowerCase());
+    if (same) result.value.issuer = same.issuer;
+
     if (req.method === 'POST') {
       const created = { id: randomUUID(), createdAt: new Date().toISOString(), ...result.value };
       await writeAll([...items, created]);
