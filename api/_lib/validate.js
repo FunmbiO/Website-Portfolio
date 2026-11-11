@@ -1,6 +1,18 @@
 const BLOB_HOST = /^https:\/\/[a-z0-9-]+\.public\.blob\.vercel-storage\.com\//i;
 const DATE = /^\d{4}-(0[1-9]|1[0-2])(-(0[1-9]|[12]\d|3[01]))?$/;
 
+// A file we stored ourselves: our blob host, and the right folder inside it.
+export function blobUrl(v, folder) {
+  const s = typeof v === 'string' ? v.trim().slice(0, 500) : '';
+  if (!s) return '';
+  if (!BLOB_HOST.test(s)) return null;
+  try {
+    return new URL(s).pathname.startsWith(`/${folder}/`) ? s : null;
+  } catch {
+    return null;
+  }
+}
+
 const clean = (v, max) => (typeof v === 'string' ? v.trim().slice(0, max) : '');
 
 function httpsUrl(v) {
@@ -32,8 +44,11 @@ export function validateCert(input) {
   const verifyUrl = httpsUrl(input?.verifyUrl);
   if (verifyUrl === null) errors.push('Verification link must be a full https:// address.');
 
-  let fileUrl = clean(input?.fileUrl, 500);
-  if (fileUrl && !BLOB_HOST.test(fileUrl)) errors.push('Certificate file must be uploaded through the admin page.');
+  const fileUrl = blobUrl(input?.fileUrl, 'certificates');
+  if (fileUrl === null) errors.push('Certificate file must be uploaded through the admin page.');
+
+  const logoUrl = blobUrl(input?.logoUrl, 'logos');
+  if (logoUrl === null) errors.push('Logo must be uploaded through the admin page.');
 
   if (!verifyUrl && !fileUrl) errors.push('Add a verification link, an uploaded certificate, or both.');
 
@@ -51,6 +66,7 @@ export function validateCert(input) {
       verifyUrl: verifyUrl || '',
       fileUrl: fileUrl || '',
       fileName: fileUrl ? fileName : '',
+      logoUrl: logoUrl || '',
       skills,
       description,
       featured: input?.featured === true,
@@ -66,9 +82,25 @@ export const ALLOWED_UPLOADS = {
 };
 export const MAX_UPLOAD_BYTES = 4 * 1024 * 1024;
 
-export function safeFilename(name, ext) {
+const IMAGES = ['image/png', 'image/jpeg', 'image/webp'];
+const MB = 1024 * 1024;
+// What each kind of upload may be, where it is stored and how big it can get.
+export const UPLOAD_KINDS = {
+  certificate: { folder: 'certificates', types: ['application/pdf', ...IMAGES], max: 4 * MB, hint: 'a PDF, PNG, JPG or WebP file', fallbackName: 'certificate' },
+  logo: { folder: 'logos', types: IMAGES, max: 2 * MB, hint: 'a PNG, JPG or WebP image', fallbackName: 'logo' },
+  photo: { folder: 'profile', types: IMAGES, max: 4 * MB, hint: 'a PNG, JPG or WebP image', fallbackName: 'photo' },
+};
+export const uploadRule = (kind) => (Object.hasOwn(UPLOAD_KINDS, kind) ? UPLOAD_KINDS[kind] : null);
+
+export function validateProfile(input) {
+  const photoUrl = blobUrl(input?.photoUrl, 'profile');
+  if (photoUrl === null) return { ok: false, errors: ['Photo must be uploaded through the admin page.'] };
+  return { ok: true, value: { photoUrl: photoUrl || '' } };
+}
+
+export function safeFilename(name, ext, fallback = 'certificate') {
   const base = clean(name, 80).replace(/\.[a-z0-9]+$/i, '').replace(/[^a-z0-9]+/gi, '-').replace(/^-+|-+$/g, '').toLowerCase();
-  return `${base || 'certificate'}.${ext}`;
+  return `${base || fallback}.${ext}`;
 }
 
 // Newest first; featured certificates float to the top of the home page list.

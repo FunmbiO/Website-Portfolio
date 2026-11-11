@@ -71,3 +71,47 @@ test('rejects scripts and html disguised as certificates', () => {
   assert.equal(detectType(Buffer.from('<svg xmlns="http://www.w3.org/2000/svg"></svg>')), null);
   assert.equal(detectType(Buffer.from('short')), null);
 });
+
+import { blobUrl, uploadRule, validateProfile } from '../api/_lib/validate.js';
+
+const BLOB = 'https://abc123.public.blob.vercel-storage.com';
+
+test('a logo must be one of our own files in the logos folder', () => {
+  const ok = validateCert({ ...base, logoUrl: `${BLOB}/logos/ab12-google.png` });
+  assert.equal(ok.ok, true);
+  assert.equal(ok.value.logoUrl, `${BLOB}/logos/ab12-google.png`);
+  for (const u of ['https://evil.example/logo.png', `${BLOB}/certificates/x.png`, 'http://abc.public.blob.vercel-storage.com/logos/x.png']) {
+    assert.equal(validateCert({ ...base, logoUrl: u }).ok, false, u);
+  }
+  assert.equal(validateCert(base).value.logoUrl, '');
+});
+
+test('certificate files must now live in the certificates folder', () => {
+  assert.equal(validateCert({ ...base, verifyUrl: '', fileUrl: `${BLOB}/logos/x.png` }).ok, false);
+  assert.equal(validateCert({ ...base, verifyUrl: '', fileUrl: `${BLOB}/certificates/x.pdf` }).ok, true);
+});
+
+test('blobUrl checks host and folder', () => {
+  assert.equal(blobUrl('', 'logos'), '');
+  assert.equal(blobUrl(`${BLOB}/logos/a.png`, 'logos'), `${BLOB}/logos/a.png`);
+  assert.equal(blobUrl(`${BLOB}/logos/a.png`, 'profile'), null);
+  assert.equal(blobUrl('javascript:alert(1)', 'logos'), null);
+});
+
+test('profile photos validate the same way', () => {
+  assert.deepEqual(validateProfile({ photoUrl: '' }), { ok: true, value: { photoUrl: '' } });
+  assert.equal(validateProfile({ photoUrl: `${BLOB}/profile/me.jpg` }).ok, true);
+  assert.equal(validateProfile({ photoUrl: `${BLOB}/logos/me.jpg` }).ok, false);
+  assert.equal(validateProfile({ photoUrl: 'https://example.com/me.jpg' }).ok, false);
+});
+
+test('upload kinds: images only for logos and photos, no prototype tricks', () => {
+  assert.ok(uploadRule('certificate').types.includes('application/pdf'));
+  assert.ok(!uploadRule('logo').types.includes('application/pdf'));
+  assert.ok(!uploadRule('photo').types.includes('application/pdf'));
+  assert.equal(uploadRule('logo').folder, 'logos');
+  assert.equal(uploadRule('photo').folder, 'profile');
+  assert.equal(uploadRule('nope'), null);
+  assert.equal(uploadRule('constructor'), null);
+  assert.equal(uploadRule('__proto__'), null);
+});
