@@ -431,3 +431,7 @@ h1 { font-size: clamp(46px, 6.4vw, 100px); }
 /* certification logos */
 .cert-top { display: flex; align-items: center; gap: 14px; }
 .cert-logo { flex: none; width: 44px; height: 44px; object-fit: contain; background: var(--paper); border: 2px solid var(--paper); padding: 5px; }
+
+/* four project cards sit two by two */
+.work-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 900px) { .work-list { grid-template-columns: 1fr; } }
