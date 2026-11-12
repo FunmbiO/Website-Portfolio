@@ -206,7 +206,7 @@
     "url": "https://opus-lake.vercel.app",
     "urlLabel": "opus-lake.vercel.app",
     "repo": "https://github.com/FunmbiO/Opus",
-    "summary": "Opus is a personal assistant I built for my own email and subscriptions. It sorts my inbox, flags what needs a reply, drafts the replies, keeps an eye on what I'm paying for and puts anything with consequences in an approval queue. It never sends, deletes or cancels anything by itself. The demo here is a separate public build with made-up sample data and no server behind it. The real assistant is private and runs on my own machine.",
+    "summary": "Opus is a personal assistant I built for my own email and subscriptions. It sorts my inbox, flags what needs a reply, drafts the replies, keeps an eye on what I'm paying for and puts anything with consequences in an approval queue. It never sends, deletes or cancels anything by itself. The demo here is a separate public build with made-up sample data and no server behind it. The real assistant is private and runs behind Tailscale.",
     "stack": [
       "React + Vite",
       "Node + TypeScript",
