@@ -37,3 +37,12 @@ test('the live-build count in the hero matches the number of live frames', () =>
   assert.ok(home.includes(`${live} of those builds are live`), `hero should say ${live} builds are live`);
   assert.ok(home.includes(`${live} builds live`), `hero chip should say ${live} builds live`);
 });
+
+test('the Opus demo is framed with the embed flag and a minimal sandbox, and links to its repo', () => {
+  assert.ok(home.includes('data-src="https://opus-lake.vercel.app/?embed=1"'), 'hero frame should load the embed view');
+  assert.ok(home.includes('<iframe title="Opus live demo"'), 'work card thumbnail is missing');
+  assert.match(home, /data-site="opus"[^>]*sandbox="allow-scripts allow-same-origin"/);
+  assert.ok(frameSrc.includes('https://opus-lake.vercel.app'));
+  assert.ok(!frameSrc.some((o) => o.includes('*')), 'frame-src must not use wildcards');
+  assert.ok(home.includes('https://github.com/FunmbiO/Opus'));
+});

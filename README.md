@@ -6,8 +6,8 @@ the certifications backend. Deployed on Vercel. No build step.
 
 ## What's on the page
 
-- **Live preview** — Jaded Media and Edgeline Exports loaded in a scaled frame, with a desktop and mobile toggle
-- **Work** — four cards (Jaded Media, Edgeline Exports, NitroDrp and this site), each with the skills it shows and a link to its case study
+- **Live preview** — Jaded Media, Edgeline Exports, NitroDrp and the Opus demo loaded in a scaled frame, with a desktop and mobile toggle
+- **Work** — five cards (Jaded Media, Edgeline Exports, NitroDrp, Opus and this site), each with the skills it shows and a link to its case study
 - **Case studies** — `/work/<slug>`, generated from `data/projects.json`
 - **About, What I do, Toolkit** — short, factual sections
 - **Certifications** — a dedicated page plus a featured block on the home page, each entry linking to the official certificate
