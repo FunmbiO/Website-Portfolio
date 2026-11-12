@@ -41,18 +41,21 @@ that site's `Content-Security-Policy` and `X-Frame-Options` headers.
 
 ## Design
 
-Neo-brutalist: heavy italic uppercase type with outlined second words, thick black borders, hard offset
-shadows, a black frame and halftone texture on the hero. Deep sage and black are the main colours.
+Neo-brutalist: heavy italic uppercase type with outlined second words, thick borders, hard offset
+shadows and halftone texture. The palette is called Night Moss: black first, one deep-green band for the
+projects and contact, tangerine for buttons, burgundy for shadows and rules.
 Colours and fonts are CSS variables at the top of `styles.css`.
 
 | Token | Hex | Used for |
 | --- | --- | --- |
-| `--black` | `#0B0B0B` | Main dark ground, borders, primary buttons |
-| `--night` | `#111312` | Panels and alternate dark bands |
-| `--sage` | `#80907A` | Main light ground: nav, hero, project cards, contact |
-| `--sage-3` | `#B7C1AF` | Tech stack panel |
-| `--green` / `--green-hi` | `#06281E` / `#3F9E7B` | Deep green marks: live dots, focus ring, top line |
-| `--burgundy` | `#590907` | Hard shadows and thin section rules |
+| `--black` | `#0A0A0A` | Main ground: nav, sections, footer |
+| `--night` / `--night-2` | `#130B0E` / `#1B1013` | Hero, cards and panels, tinted warm toward burgundy |
+| `--moss` | `#0F3323` | The one green band: projects and contact |
+| `--mark` | `#2E9468` | Small green marks: live dot, status dot |
+| `--burgundy` / `--burgundy-hi` | `#650015` / `#A3173A` | Hard shadows, nav rule / thin rules that must show on black |
+| `--tangerine` / `--rust` | `#FF6A1A` / `#B8420F` | Buttons, focus ring, selected tabs / button shadows |
+| `--stone` | `#F2DDB4` | Project cards and the tech stack panel |
+| `--paper` | `#F5F7EE` | Text on dark |
 
 Fonts: Archivo (italic display), Hanken Grotesk (body), JetBrains Mono (small labels).
 
