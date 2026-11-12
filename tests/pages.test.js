@@ -48,3 +48,9 @@ test('sitemap lists every public page and matches the committed file', () => {
   assert.ok(!xml.includes('/admin') && !xml.includes('/api'));
   assert.equal(readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8'), xml);
 });
+
+test('no public file still points at the old jaded-works address', () => {
+  for (const f of ['index.html', 'certifications.html', 'robots.txt', 'sitemap.xml', ...projects.map((p) => `work/${p.slug}.html`)]) {
+    assert.ok(!readFileSync(path.join(ROOT, f), 'utf8').includes('jaded-works.vercel.app'), `${f} still mentions jaded-works.vercel.app`);
+  }
+});
