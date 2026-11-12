@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opus — case study | FunmbiO</title>
+<meta name="description" content="Opus: Personal assistant for my inbox and subscriptions. Designer &amp; developer. Skills shown: Back-end development, AI and automation, Front-end development, Security and safety, Delivery.">
+<link rel="canonical" href="https://jaded-works.vercel.app/work/opus">
+<meta property="og:title" content="Opus — case study | FunmbiO">
+<meta property="og:description" content="Opus is a personal assistant I built for my own email and subscriptions. It sorts my inbox, flags what needs a reply, drafts the replies, keeps an eye on what I&#39;m paying for and puts anything with consequences in an approval queue. It never sends, deletes or cancels anything by itself. The demo here is a separate public build with made-up sample data and no server behind it. The real assistant is private and runs on my own machine.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://jaded-works.vercel.app/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,700;0,800;0,900;1,300;1,700;1,800;1,900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Opus","description":"Opus is a personal assistant I built for my own email and subscriptions. It sorts my inbox, flags what needs a reply, drafts the replies, keeps an eye on what I'm paying for and puts anything with consequences in an approval queue. It never sends, deletes or cancels anything by itself. The demo here is a separate public build with made-up sample data and no server behind it. The real assistant is private and runs on my own machine.","creator":{"@type":"Person","name":"FunmbiO","url":"https://jaded-works.vercel.app"},"url":"https://jaded-works.vercel.app/work/opus","keywords":"React + Vite, Node + TypeScript, Claude, SQLite, Docker + Tailscale"}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topline"></div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="FunmbiO, home"><b>Funmbi</b><span>Portfolio</span></a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/#work" aria-current="page">Projects</a></li>
+        <li><a href="/certifications">Certifications</a></li>
+        <li class="hide-sm"><a href="/#about">About</a></li>
+        <li class="hide-sm"><a href="/#services">Services</a></li>
+        <li class="hide-sm"><a href="/#contact">Contact</a></li>
+        <li class="hide-sm slash" aria-hidden="true">/</li>
+        <li class="hide-sm"><a class="icon-link" href="https://github.com/FunmbiO" target="_blank" rel="noopener" aria-label="GitHub"><img src="/assets/icons/github.svg" alt="" width="20" height="20"></a></li>
+        <li><a class="btn sm" href="mailto:funmbiolajubu@gmail.com?subject=Hello">Email me <i>[ ↗ ]</i></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="case-hero halftone">
+    <div class="wrap case-page">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/#work">Projects</a><span aria-hidden="true">/</span><span>Opus</span></nav>
+      <div class="case-head">
+        <span class="tagchip">Personal assistant for my inbox and subscriptions</span>
+        <h1>Opus</h1>
+        <p class="lede">Opus is a personal assistant I built for my own email and subscriptions. It sorts my inbox, flags what needs a reply, drafts the replies, keeps an eye on what I&#39;m paying for and puts anything with consequences in an approval queue. It never sends, deletes or cancels anything by itself. The demo here is a separate public build with made-up sample data and no server behind it. The real assistant is private and runs on my own machine.</p>
+        <dl class="case-facts">
+          <div><dt>My role</dt><dd>Designer &amp; developer</dd></div>
+          <div><dt>Built with</dt><dd>React + Vite · Node + TypeScript · Claude · SQLite · Docker + Tailscale</dd></div>
+        </dl>
+        <div class="hero-actions"><a class="btn" href="https://opus-lake.vercel.app" target="_blank" rel="noopener">Visit opus-lake.vercel.app ↗</a><a class="btn ghost" href="https://github.com/FunmbiO/Opus" target="_blank" rel="noopener">GitHub ↗</a><a class="btn ghost" href="/#work">All projects</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ground ground-black">
+    <div class="wrap case-page">
+      <section class="case-block" aria-labelledby="h-skills">
+        <div class="sec-title"><h2 id="h-skills">Skills <span class="out">shown</span></h2><i class="rule"></i></div>
+        <div class="skill-grid">
+          <div class="skill"><h3>Back-end development</h3><ul><li>A Node and TypeScript agent that talks to Claude</li><li>SQLite for storage</li><li>A small, fixed list of tools the model is allowed to use</li></ul></div>
+          <div class="skill"><h3>AI and automation</h3><ul><li>Triage, drafting and subscription tracking with Claude</li><li>Picking cheaper models for the easy work</li><li>Spend caps and alerts</li></ul></div>
+          <div class="skill"><h3>Front-end development</h3><ul><li>A React and Vite dashboard</li><li>An approval queue with keyboard shortcuts</li><li>An installable iPhone web app</li><li>A static sample-data demo</li></ul></div>
+          <div class="skill"><h3>Security and safety</h3><ul><li>A design where the model can&#39;t send, delete or cancel</li><li>A check script that enforces it</li><li>Private by default: Docker and Tailscale, no open port</li></ul></div>
+          <div class="skill"><h3>Delivery</h3><ul><li>Docker Compose for the private app</li><li>The public demo deployed as a static site on Vercel</li></ul></div>
+        </div>
+      </section>
+
+      <section class="case-block" aria-labelledby="h-notes">
+        <div class="sec-title"><h2 id="h-notes">What's <span class="out">in it</span></h2><i class="rule"></i></div>
+        <ul class="notes">
+          <li>It can&#39;t send, delete, trash, label or cancel anything. The model only gets the tools in one file, none of them do those things, and a check script (npm run safety) fails if that changes.</li>
+          <li>Anything with consequences waits in an approval queue. Approving only makes Opus write out the steps for me. It still never cancels or sends for me.</li>
+          <li>It drafts replies into Gmail Drafts and flags what needs an answer, so I read and send them myself.</li>
+          <li>It watches its own cost. Cheap triage runs on Haiku, drafts run on Sonnet, bulk senders are sorted by plain rules for free, and there&#39;s a per-run cap and a spending alert.</li>
+          <li>The real one runs behind Tailscale with no port open to the internet, and the dashboard installs on an iPhone as a web app.</li>
+          <li>The demo on this site is a static build with sample data. It makes no network calls, so nothing in it is my real email or money.</li>
+        </ul>
+      </section>
+
+      <nav class="case-next" aria-label="Next project">
+        <span class="mono">Next project</span>
+        <a href="/work/portfolio">This portfolio →</a>
+      </nav>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="legal">
+      <span>Open to projects</span>
+      <span>© <span id="year">2026</span> FunmbiO</span>
+      <span><a href="/#work">Projects</a> · <a href="/certifications">Certifications</a> · <a href="https://github.com/FunmbiO" target="_blank" rel="noopener">GitHub</a></span>
+    </div>
+  </div>
+</footer>
+<script src="/js/common.js" defer></script>
+</body>
+</html>

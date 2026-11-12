@@ -88,7 +88,7 @@ export function renderProject(p, all) {
           <div><dt>My role</dt><dd>${esc(p.role)}</dd></div>
           <div><dt>Built with</dt><dd>${p.stack.map(esc).join(' · ')}</dd></div>
         </dl>
-        <div class="hero-actions">${live}<a class="btn ghost" href="/#work">All projects</a></div>
+        <div class="hero-actions">${live}${p.repo ? `<a class="btn ghost" href="${esc(p.repo)}" target="_blank" rel="noopener">GitHub ↗</a>` : ''}<a class="btn ghost" href="/#work">All projects</a></div>
       </div>
     </div>
   </section>
