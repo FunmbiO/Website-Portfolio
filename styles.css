@@ -1,24 +1,24 @@
 /* ==========================================================================
-   Neo-brutalist UI: heavy italic type, outlined words, thick black borders,
-   hard offset shadows. Main colours: deep sage and black. Deep green marks,
-   burgundy rules and shadows. No brown.
+   Neo-brutalist UI: heavy italic type, outlined words, thick borders, hard
+   offset shadows. Night Moss palette: black first, one deep-green band,
+   tangerine for buttons, burgundy #650015 for shadows and rules.
    ========================================================================== */
 
 :root {
-  --black: #0B0B0B;
-  --night: #111312;
-  --night-2: #181B19;
-  --sage: #80907A;
-  --sage-2: #97A590;
-  --sage-3: #B7C1AF;
-  --green: #06281E;
-  --green-2: #0B3B2C;
-  --green-hi: #3F9E7B;
-  --burgundy: #590907;
-  --burgundy-hi: #8C2A24;
-  --paper: #EEF1E9;
-  --grey: #9AA096;
-  --olive: #26301F;
+  --black: #0A0A0A;
+  --night: #130B0E;
+  --night-2: #1B1013;
+  --moss: #0F3323;
+  --moss-2: #0A2619;
+  --mark: #2E9468;
+  --burgundy: #650015;
+  --burgundy-hi: #A3173A;
+  --tangerine: #FF6A1A;
+  --rust: #B8420F;
+  --stone: #F2DDB4;
+  --paper: #F5F7EE;
+  --grey: #A8A39B;
+  --olive: #5A1A28;
 
   --font-display: 'Archivo', 'Arial Black', sans-serif;
   --font-body: 'Hanken Grotesk', system-ui, sans-serif;
@@ -41,7 +41,7 @@ img, svg { max-width: 100%; display: block; }
 p { margin: 0; }
 ul { list-style: none; margin: 0; padding: 0; }
 a { color: inherit; text-decoration: none; }
-::selection { background: var(--green-2); color: var(--paper); }
+::selection { background: var(--tangerine); color: var(--black); }
 [hidden] { display: none !important; }
 .mono { font-family: var(--font-mono); }
 .muted { color: var(--grey); }
@@ -49,11 +49,11 @@ a { color: inherit; text-decoration: none; }
 .fine { font-size: 12px; opacity: .8; }
 
 a, button, input, textarea, summary { outline: 2px solid transparent; outline-offset: 6px; }
-:focus-visible { outline: 3px solid var(--green-hi); outline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--tangerine); outline-offset: 3px; }
 
 .skip { position: absolute; left: 16px; top: -80px; z-index: 100; background: var(--black); color: var(--paper); padding: 12px 20px; border: var(--border); font-weight: 700; transition: top var(--m-out) var(--m-ease); }
 .skip:focus { top: 12px; }
-.topline { height: 3px; background: var(--green-hi); }
+.topline { height: 3px; background: var(--burgundy); }
 
 .wrap { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
 .section { padding: var(--section) 0; }
@@ -67,7 +67,7 @@ h3 { font-weight: 800; font-size: 22px; line-height: 1.05; letter-spacing: -.02e
 .label { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
 .eyebrow { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--grey); }
 .eyebrow::before { content: '// '; }
-.lede { font-size: 18px; max-width: 52ch; color: var(--olive); font-weight: 500; }
+.lede { font-size: 18px; max-width: 52ch; color: var(--grey); font-weight: 500; }
 
 /* section heading: big italic title, then a thin burgundy rule */
 .sec-title { display: flex; align-items: flex-end; gap: 24px; margin-bottom: 48px; }
@@ -81,8 +81,9 @@ h3 { font-weight: 800; font-size: 22px; line-height: 1.05; letter-spacing: -.02e
 .ground { padding: var(--section) 0; }
 .ground-black { background: var(--black); color: var(--paper); }
 .ground-night { background: var(--night); color: var(--paper); }
-.ground-sage { background: var(--sage); color: var(--black); --stroke: var(--black); }
-.halftone { background-image: radial-gradient(rgba(0, 0, 0, .16) 1px, transparent 1.3px); background-size: 6px 6px; }
+.ground-moss { background: var(--moss); color: var(--paper); --stroke: var(--paper); --shadow-c: var(--black); }
+.halftone { background-image: radial-gradient(rgba(245, 247, 238, .08) 1px, transparent 1.3px); background-size: 6px 6px; }
+.ground-moss.halftone { background-image: radial-gradient(rgba(0, 0, 0, .22) 1px, transparent 1.3px); }
 
 /* ---------- buttons ---------- */
 .btn {
