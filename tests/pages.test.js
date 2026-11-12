@@ -22,7 +22,7 @@ test('rendered pages show the name, role, skills and a canonical link', () => {
     assert.ok(html.includes(`<h1>${esc(p.name)}</h1>`));
     assert.ok(html.includes(esc(p.role)));
     assert.ok(html.includes('Skills shown'));
-    assert.ok(html.includes(`rel="canonical" href="https://jaded-works.vercel.app/work/${p.slug}"`));
+    assert.ok(html.includes(`rel="canonical" href="https://olufunmbidev.vercel.app/work/${p.slug}"`));
     for (const g of p.skills) assert.ok(html.includes(esc(g.group)));
   }
 });
@@ -44,7 +44,7 @@ test('committed pages match the data (run: node scripts/build-pages.mjs)', () =>
 
 test('sitemap lists every public page and matches the committed file', () => {
   const xml = renderSitemap(projects);
-  for (const u of ['/', '/certifications', ...projects.map((p) => `/work/${p.slug}`)]) assert.ok(xml.includes(`https://jaded-works.vercel.app${u}</loc>`), u);
+  for (const u of ['/', '/certifications', ...projects.map((p) => `/work/${p.slug}`)]) assert.ok(xml.includes(`https://olufunmbidev.vercel.app${u}</loc>`), u);
   assert.ok(!xml.includes('/admin') && !xml.includes('/api'));
   assert.equal(readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8'), xml);
 });
