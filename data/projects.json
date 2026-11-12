@@ -199,6 +199,73 @@
     ]
   },
   {
+    "slug": "opus",
+    "name": "Opus",
+    "role": "Designer & developer",
+    "kind": "Personal assistant for my inbox and subscriptions",
+    "url": "https://opus-lake.vercel.app",
+    "urlLabel": "opus-lake.vercel.app",
+    "repo": "https://github.com/FunmbiO/Opus",
+    "summary": "Opus is a personal assistant I built for my own email and subscriptions. It sorts my inbox, flags what needs a reply, drafts the replies, keeps an eye on what I'm paying for and puts anything with consequences in an approval queue. It never sends, deletes or cancels anything by itself. The demo here is a separate public build with made-up sample data and no server behind it. The real assistant is private and runs on my own machine.",
+    "stack": [
+      "React + Vite",
+      "Node + TypeScript",
+      "Claude",
+      "SQLite",
+      "Docker + Tailscale"
+    ],
+    "highlights": [
+      "It can't send, delete, trash, label or cancel anything. The model only gets the tools in one file, none of them do those things, and a check script (npm run safety) fails if that changes.",
+      "Anything with consequences waits in an approval queue. Approving only makes Opus write out the steps for me. It still never cancels or sends for me.",
+      "It drafts replies into Gmail Drafts and flags what needs an answer, so I read and send them myself.",
+      "It watches its own cost. Cheap triage runs on Haiku, drafts run on Sonnet, bulk senders are sorted by plain rules for free, and there's a per-run cap and a spending alert.",
+      "The real one runs behind Tailscale with no port open to the internet, and the dashboard installs on an iPhone as a web app.",
+      "The demo on this site is a static build with sample data. It makes no network calls, so nothing in it is my real email or money."
+    ],
+    "skills": [
+      {
+        "group": "Back-end development",
+        "items": [
+          "A Node and TypeScript agent that talks to Claude",
+          "SQLite for storage",
+          "A small, fixed list of tools the model is allowed to use"
+        ]
+      },
+      {
+        "group": "AI and automation",
+        "items": [
+          "Triage, drafting and subscription tracking with Claude",
+          "Picking cheaper models for the easy work",
+          "Spend caps and alerts"
+        ]
+      },
+      {
+        "group": "Front-end development",
+        "items": [
+          "A React and Vite dashboard",
+          "An approval queue with keyboard shortcuts",
+          "An installable iPhone web app",
+          "A static sample-data demo"
+        ]
+      },
+      {
+        "group": "Security and safety",
+        "items": [
+          "A design where the model can't send, delete or cancel",
+          "A check script that enforces it",
+          "Private by default: Docker and Tailscale, no open port"
+        ]
+      },
+      {
+        "group": "Delivery",
+        "items": [
+          "Docker Compose for the private app",
+          "The public demo deployed as a static site on Vercel"
+        ]
+      }
+    ]
+  },
+  {
     "slug": "portfolio",
     "name": "This portfolio",
     "role": "Designer & developer",
