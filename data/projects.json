@@ -120,8 +120,9 @@
     "name": "NitroDrp",
     "role": "Designer & developer",
     "kind": "Self-hosted file transfer app",
-    "url": "https://nitrodrp-demo.vercel.app",
-    "urlLabel": "nitrodrp-demo.vercel.app",
+    "url": "https://demo.jadedmedia.ca",
+    "urlLabel": "demo.jadedmedia.ca",
+    "embed": "https://demo.jadedmedia.ca/?embed=1",
     "summary": "I got tired of paying for WeTransfer, so I built a prettier one. You upload big files, get an unguessable link, and pick an expiry, an optional password and a download limit. The live demo runs entirely in your browser, so nothing is actually uploaded. The real app is private and runs on my own server.",
     "stack": [
       "ASP.NET Core 10",

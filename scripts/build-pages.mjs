@@ -95,7 +95,13 @@ export function renderProject(p, all) {
 
   <section class="ground ground-black">
     <div class="wrap case-page">
-      <section class="case-block" aria-labelledby="h-skills">
+${p.embed ? `      <section class="case-block" aria-labelledby="h-demo">
+        <div class="sec-title"><h2 id="h-demo">Try <span class="out">it</span></h2><i class="rule"></i></div>
+        <iframe id="nitrodrp" src="${esc(p.embed)}" title="${esc(p.name)} demo" style="width:100%;border:0;height:700px"></iframe>
+        <script src="/js/nitrodrp-embed.js" defer></script>
+      </section>
+
+` : ''}      <section class="case-block" aria-labelledby="h-skills">
         <div class="sec-title"><h2 id="h-skills">Skills <span class="out">shown</span></h2><i class="rule"></i></div>
         <div class="skill-grid">
 ${p.skills.map((g) => `          <div class="skill"><h3>${esc(g.group)}</h3><ul>${g.items.map((it) => `<li>${esc(it)}</li>`).join('')}</ul></div>`).join('\n')}
