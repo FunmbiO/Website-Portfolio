@@ -68,12 +68,12 @@
       <section class="case-block" aria-labelledby="h-skills">
         <div class="sec-title"><h2 id="h-skills">Skills <span class="out">shown</span></h2><i class="rule"></i></div>
         <div class="skill-grid">
-          <div class="skill"><h3>Back-end development</h3><ul><li>ASP.NET Core minimal APIs</li><li>Business rules behind interfaces, tested with in-memory fakes</li><li>Streaming a ZIP64 archive in flat memory</li></ul></div>
-          <div class="skill"><h3>Cloud and infrastructure</h3><ul><li>S3 multipart uploads with presigned URLs</li><li>CloudFront signed URLs and cache invalidation</li><li>DynamoDB with TTL expiry</li><li>Terraform for the bucket, CDN, IAM user and budget alert</li></ul></div>
-          <div class="skill"><h3>Front-end development</h3><ul><li>React and TypeScript with Vite</li><li>A chunked uploader with retries and resume</li><li>A browser-only demo mode that replaces the whole backend</li></ul></div>
-          <div class="skill"><h3>Security</h3><ul><li>PBKDF2 password hashing</li><li>Per-share owner keys stored only as hashes</li><li>Rate limiting, stricter on password attempts</li><li>A least-privilege IAM identity</li></ul></div>
-          <div class="skill"><h3>Testing</h3><ul><li>Tests for share rules, the HTTP pipeline, zip streaming, expiry, concurrency, resume and CloudFront signatures</li></ul></div>
-          <div class="skill"><h3>Delivery</h3><ul><li>Docker Compose and a Cloudflare Tunnel for the private app</li><li>The demo deployed as a static site on Vercel</li></ul></div>
+          <div class="skill"><h3>Back-end development</h3><ul><li>ASP.NET Core minimal APIs</li><li>Business rules behind interfaces, tested with in-memory fakes</li><li>Streaming a ZIP64 archive in flat memory</li><li>Passkey (WebAuthn) sign-in and sessions</li></ul></div>
+          <div class="skill"><h3>Cloud and infrastructure</h3><ul><li>A Lightsail server running the app with Docker Compose and Caddy</li><li>S3 multipart uploads with presigned URLs</li><li>DynamoDB with TTL expiry</li><li>Amazon SES for email, with DKIM</li><li>Terraform for the AWS resources, with remote state in S3</li></ul></div>
+          <div class="skill"><h3>Front-end development</h3><ul><li>React and TypeScript with Vite</li><li>A chunked uploader with retries and resume</li><li>An installable phone app (PWA)</li><li>A browser-only demo mode that replaces the whole backend</li></ul></div>
+          <div class="skill"><h3>Security</h3><ul><li>PBKDF2 password hashing</li><li>Per-share owner keys stored only as hashes</li><li>Rate limits that forged headers can&#39;t dodge</li><li>A least-privilege AWS identity</li></ul></div>
+          <div class="skill"><h3>Testing</h3><ul><li>138 API tests and 45 web tests</li><li>A browser test of the demo, Terraform and script tests</li><li>An end-to-end smoke test against the live site</li></ul></div>
+          <div class="skill"><h3>Delivery</h3><ul><li>CI for the API, web, demo, scripts and Terraform</li><li>Reproducible, pinned builds</li><li>The demo deployed as a static site</li></ul></div>
         </div>
       </section>
 

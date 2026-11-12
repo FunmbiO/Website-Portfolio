@@ -148,16 +148,18 @@
         "items": [
           "ASP.NET Core minimal APIs",
           "Business rules behind interfaces, tested with in-memory fakes",
-          "Streaming a ZIP64 archive in flat memory"
+          "Streaming a ZIP64 archive in flat memory",
+          "Passkey (WebAuthn) sign-in and sessions"
         ]
       },
       {
         "group": "Cloud and infrastructure",
         "items": [
+          "A Lightsail server running the app with Docker Compose and Caddy",
           "S3 multipart uploads with presigned URLs",
-          "CloudFront signed URLs and cache invalidation",
           "DynamoDB with TTL expiry",
-          "Terraform for the bucket, CDN, IAM user and budget alert"
+          "Amazon SES for email, with DKIM",
+          "Terraform for the AWS resources, with remote state in S3"
         ]
       },
       {
@@ -165,6 +167,7 @@
         "items": [
           "React and TypeScript with Vite",
           "A chunked uploader with retries and resume",
+          "An installable phone app (PWA)",
           "A browser-only demo mode that replaces the whole backend"
         ]
       },
@@ -173,21 +176,24 @@
         "items": [
           "PBKDF2 password hashing",
           "Per-share owner keys stored only as hashes",
-          "Rate limiting, stricter on password attempts",
-          "A least-privilege IAM identity"
+          "Rate limits that forged headers can't dodge",
+          "A least-privilege AWS identity"
         ]
       },
       {
         "group": "Testing",
         "items": [
-          "Tests for share rules, the HTTP pipeline, zip streaming, expiry, concurrency, resume and CloudFront signatures"
+          "138 API tests and 45 web tests",
+          "A browser test of the demo, Terraform and script tests",
+          "An end-to-end smoke test against the live site"
         ]
       },
       {
         "group": "Delivery",
         "items": [
-          "Docker Compose and a Cloudflare Tunnel for the private app",
-          "The demo deployed as a static site on Vercel"
+          "CI for the API, web, demo, scripts and Terraform",
+          "Reproducible, pinned builds",
+          "The demo deployed as a static site"
         ]
       }
     ]
