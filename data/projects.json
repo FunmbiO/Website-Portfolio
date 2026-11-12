@@ -134,11 +134,12 @@
       "Docker"
     ],
     "highlights": [
-      "File bytes never touch my server. The API only signs URLs, and the browser sends 16 MiB parts straight to S3, so multi-GB files work and my home connection isn't the bottleneck.",
-      "Uploads resume after a reload. Pick the same files again and it only sends the parts S3 doesn't have yet.",
-      "Links expire on their own. The API refuses expired links, DynamoDB deletes the metadata and S3 rules delete the files, so there's no cleanup job.",
-      "Download limits can't be beaten by racing. The count is one conditional database update, and a concurrency test backs it up.",
-      "Downloads go through CloudFront with short-lived signed URLs, since S3 to CloudFront transfer is free. Passwords are hashed with PBKDF2-SHA256 at 210,000 iterations.",
+      "File bytes never touch my server. The API only signs URLs, and the browser sends 16 MiB parts straight to S3, so multi-GB files work. Each part retries and the upload resumes after a reload.",
+      "Links expire on their own. The API refuses expired links, DynamoDB TTL deletes the metadata and S3 lifecycle rules delete the files, so there's no cleanup job.",
+      "Download limits can't be beaten by racing. The count is one conditional database write, and a concurrency test backs it up.",
+      "It runs on a small always-on Lightsail server behind Caddy with automatic HTTPS. Terraform builds the AWS side, with its state in its own versioned S3 bucket.",
+      "Links can be emailed through Amazon SES. The sender gets the replies, the password is never in the email, and each link has a cap on how many it can send.",
+      "Sign in with Face ID or a fingerprint (passkeys) and see the same links on your phone and laptop. It also installs on a phone as a home-screen app.",
       "“Download all” streams a .zip on the fly in flat memory, checked with a 4.8 GB archive."
     ],
     "skills": [

@@ -80,11 +80,12 @@
       <section class="case-block" aria-labelledby="h-notes">
         <div class="sec-title"><h2 id="h-notes">What's <span class="out">in it</span></h2><i class="rule"></i></div>
         <ul class="notes">
-          <li>File bytes never touch my server. The API only signs URLs, and the browser sends 16 MiB parts straight to S3, so multi-GB files work and my home connection isn&#39;t the bottleneck.</li>
-          <li>Uploads resume after a reload. Pick the same files again and it only sends the parts S3 doesn&#39;t have yet.</li>
-          <li>Links expire on their own. The API refuses expired links, DynamoDB deletes the metadata and S3 rules delete the files, so there&#39;s no cleanup job.</li>
-          <li>Download limits can&#39;t be beaten by racing. The count is one conditional database update, and a concurrency test backs it up.</li>
-          <li>Downloads go through CloudFront with short-lived signed URLs, since S3 to CloudFront transfer is free. Passwords are hashed with PBKDF2-SHA256 at 210,000 iterations.</li>
+          <li>File bytes never touch my server. The API only signs URLs, and the browser sends 16 MiB parts straight to S3, so multi-GB files work. Each part retries and the upload resumes after a reload.</li>
+          <li>Links expire on their own. The API refuses expired links, DynamoDB TTL deletes the metadata and S3 lifecycle rules delete the files, so there&#39;s no cleanup job.</li>
+          <li>Download limits can&#39;t be beaten by racing. The count is one conditional database write, and a concurrency test backs it up.</li>
+          <li>It runs on a small always-on Lightsail server behind Caddy with automatic HTTPS. Terraform builds the AWS side, with its state in its own versioned S3 bucket.</li>
+          <li>Links can be emailed through Amazon SES. The sender gets the replies, the password is never in the email, and each link has a cap on how many it can send.</li>
+          <li>Sign in with Face ID or a fingerprint (passkeys) and see the same links on your phone and laptop. It also installs on a phone as a home-screen app.</li>
           <li>“Download all” streams a .zip on the fly in flat memory, checked with a 4.8 GB archive.</li>
         </ul>
       </section>
