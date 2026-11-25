@@ -43,7 +43,7 @@ that site's `Content-Security-Policy` and `X-Frame-Options` headers.
 
 Neo-brutalist: heavy italic uppercase type with outlined second words, thick borders, hard offset
 shadows and halftone texture. The palette is called Night Moss: black first, one deep-green band for the
-projects and contact, tangerine for buttons, burgundy for shadows and rules.
+projects and contact, stone for buttons and highlights, burgundy for shadows and rules.
 Colours and fonts are CSS variables at the top of `styles.css`.
 
 | Token | Hex | Used for |
@@ -53,8 +53,8 @@ Colours and fonts are CSS variables at the top of `styles.css`.
 | `--moss` | `#0F3323` | The one green band: projects and contact |
 | `--mark` | `#2E9468` | Small green marks: live dot, status dot |
 | `--burgundy` / `--burgundy-hi` | `#650015` / `#A3173A` | Hard shadows, nav rule / thin rules that must show on black |
-| `--tangerine` / `--rust` | `#FF6A1A` / `#B8420F` | Buttons, focus ring, selected tabs / button shadows |
-| `--stone` | `#F2DDB4` | Project cards and the tech stack panel |
+| `--stone` / `--accent` | `#F2DDB4` | The accent: buttons, focus ring, selected tabs, labels. Also the project cards and tech stack panel |
+| `--accent-shadow` | `#A3173A` | Button shadows (the bright burgundy) |
 | `--paper` | `#F5F7EE` | Text on dark |
 
 Fonts: Archivo (italic display), Hanken Grotesk (body), JetBrains Mono (small labels).
