@@ -1,7 +1,7 @@
 /* ==========================================================================
    Neo-brutalist UI: heavy italic type, outlined words, thick borders, hard
    offset shadows. Night Moss palette: black first, one deep-green band,
-   tangerine for buttons, burgundy #650015 for shadows and rules.
+   stone for buttons and highlights, burgundy #650015 for shadows and rules.
    ========================================================================== */
 
 :root {
@@ -13,9 +13,9 @@
   --mark: #2E9468;
   --burgundy: #650015;
   --burgundy-hi: #A3173A;
-  --tangerine: #FF6A1A;
-  --rust: #B8420F;
   --stone: #F2DDB4;
+  --accent: var(--stone);
+  --accent-shadow: var(--burgundy-hi);
   --paper: #F5F7EE;
   --grey: #A8A39B;
   --olive: #5A1A28;
