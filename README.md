@@ -11,6 +11,7 @@ the certifications backend. Deployed on Vercel. No build step.
 - **Case studies** — `/work/<slug>`, generated from `data/projects.json`
 - **About, What I do, Toolkit** — short, factual sections
 - **Certifications** — a dedicated page plus a featured block on the home page, each entry linking to the official certificate
+- **Resume** — `/resume`, a print-friendly page (Save as PDF) linked from the top bar. It leaves out the phone number and is marked `noindex`
 - **Contact** — email link
 
 ## Editing projects and case studies

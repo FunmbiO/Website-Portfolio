@@ -46,3 +46,12 @@ test('the Opus demo is framed with the embed flag and a minimal sandbox, and lin
   assert.ok(!frameSrc.some((o) => o.includes('*')), 'frame-src must not use wildcards');
   assert.ok(home.includes('https://github.com/FunmbiO/Opus'));
 });
+
+test('every public page has a Resume button beside Email me, and the resume page exists', () => {
+  for (const f of ['index.html', 'certifications.html', '404.html', 'resume.html', ...loadProjects().map((p) => `work/${p.slug}.html`)]) {
+    const html = readFileSync(path.join(ROOT, f), 'utf8');
+    assert.match(html, /<a class="btn sm ghost" href="\/resume"[^>]*>Resume<\/a><\/li>\s*<li><a class="btn sm" href="mailto:/, `${f} is missing the Resume button`);
+  }
+  const resume = readFileSync(path.join(ROOT, 'resume.html'), 'utf8');
+  assert.ok(!/\(506\)|588-6081/.test(resume), 'the phone number should not be on the public page');
+});
