@@ -70,6 +70,7 @@ export function renderProject(p, all) {
         <li class="hide-sm"><a href="/#contact">Contact</a></li>
         <li class="hide-sm slash" aria-hidden="true">/</li>
         <li class="hide-sm"><a class="icon-link" href="https://github.com/FunmbiO" target="_blank" rel="noopener" aria-label="GitHub"><img src="/assets/icons/github.svg" alt="" width="20" height="20"></a></li>
+        <li><a class="btn sm ghost" href="/resume">Resume</a></li>
         <li><a class="btn sm" href="mailto:funmbiolajubu@gmail.com?subject=Hello">Email me <i>[ ↗ ]</i></a></li>
       </ul>
     </nav>
